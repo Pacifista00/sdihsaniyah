@@ -1,42 +1,34 @@
-<!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-    <div class="container">
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+        class="container-fluid container-lg position-relative d-flex align-items-center justify-content-between bg-white pill-navbar shadow">
 
-        <a href="{{ url('/') }}" class="navbar-brand">
-            <h3 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>SD Ihsaniyah 1 Tegal</h3>
+        <a href="index.html" class="logo d-flex align-items-center">
+            <img src="{{ asset('images/logosd.png') }}" alt="" class="ms-2 me-3">
+            <h1 class="sitename my-text-primary fs-5">SD Ihsaniyah 1 Kota Tegal</h1>
         </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav mx-auto">
-                <a href="{{ url('/') }}"
-                    class="nav-item nav-link {{ $active == 'index' ? 'active' : '' }}">Home</a>
-                <a href="{{ url('/tentang-kami') }}"
-                    class="nav-item nav-link {{ $active == 'tentang-kami' ? 'active' : '' }}">Tentang Kami</a>
-                <a href="{{ url('/program') }}"
-                    class="nav-item nav-link {{ $active == 'program' ? 'active' : '' }}">Program Sekolah</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Menu</a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                        <a href="{{ url('/fasilitas') }}"
-                            class="dropdown-item {{ $active == 'fasilitas' ? 'active' : '' }}">Fasilitas Sekolah</a>
-                        <a href="{{ url('/ekstrakulikuler') }}"
-                            class="dropdown-item {{ $active == 'ekstrakulikuler' ? 'active' : '' }}">Ekstrakulikuler</a>
-                        <a href="{{ url('/prestasi-sekolah') }}"
-                            class="dropdown-item {{ $active == 'prestasi-siswa' ? 'active' : '' }}">Prestasi Siswa</a>
-                        <a href="{{ url('/kegiatan') }}"
-                            class="dropdown-item {{ $active == 'kegiatan' ? 'active' : '' }}">Kegiatan Kami</a>
 
-                    </div>
-                </div>
-                <a href="{{ url('/kontak') }}"
-                    class="nav-item nav-link {{ $active == 'kontak' ? 'active' : '' }}">Kontak Kami</a>
-            </div>
-            <a href="https://wa.me/6287899101232?text=Assalamualaikum%20Saya%20Mau%20bertanya%20tentang%20..................."
-                class="btn btn-primary rounded-pill px-3 d-none d-lg-block">WhatsApp<i
-                    class="fa fa-arrow-right ms-3"></i></a>
-        </div>
+        <nav id="navmenu" class="navmenu py-2">
+            <ul>
+                <li><a href="{{ url('/') }}" class="active hover-underline">Beranda</a></li>
+                <li><a href="{{ url('/tentang-kami') }}" class="text-dark hover-underline">Tentang Kami</a></li>
+                <li><a href="{{ url('/program') }}" class="text-dark hover-underline">Program Sekolah</a></li>
+                <li class="dropdown" class="text-dark"><a href="#" class="text-dark"><span>Informasi</span><i
+                            class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li><a href="{{ url('/fasilitas') }}">Fasilitas</a></li>
+                        <li><a href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a></li>
+                        <li><a href="{{ url('/prestasi-siswa') }}">Prestasi Siswa</a></li>
+                        <li><a href="{{ url('/kegiatan') }}">Kegiatan</a></li>
+                        <li><a href="{{ url('/daftar-spmb') }}">Daftar SPMB</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url('/kontak') }}" class="text-dark hover-underline">Kontak</a></li>
+                <li class="ms-3">
+                    <button type="button" class="btn-kids rounded-pill px-4">Daftar</button>
+                </li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list text-secondary"></i>
+        </nav>
+
     </div>
-</nav>
-<!-- Navbar End -->
+</header>
