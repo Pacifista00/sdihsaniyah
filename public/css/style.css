@@ -1,504 +1,646 @@
-/********** Template CSS **********/
-:root {
-    --primary: #44a357;
-    --light: #FFF5F3;
-    --dark: #103741;
+.my-text-primary {
+    color: #44a357 !important;
+}
+.my-bg-primary {
+    background-color: #44a357 !important;
+}
+.my-bg-orange {
+    background-color: #f8981d !important;
+    color: #ffffff;
+}
+.my-bg-gray {
+    background-color: #f9f6f3 !important;
+    color: #333446;
+}
+.btn-green i {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.back-to-top {
-    position: fixed;
-    display: none;
-    right: 45px;
-    bottom: 45px;
-    z-index: 99;
+.btn-green:hover i {
+    transform: rotate(45deg);
 }
 
-
-/*** Spinner ***/
-#spinner {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
-}
-
-#spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
-    visibility: visible;
-    opacity: 1;
-}
-
-
-/*** Button ***/
-.btn {
-    font-weight: 500;
-    transition: .5s;
-}
-
-.btn.btn-primary {
-    color: #FFFFFF;
-}
-
-.btn-square {
-    width: 38px;
-    height: 38px;
-}
-
-.btn-sm-square {
-    width: 32px;
-    height: 32px;
-}
-
-.btn-lg-square {
-    width: 48px;
-    height: 48px;
-}
-
-.btn-square,
-.btn-sm-square,
-.btn-lg-square {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: normal;
-    border-radius: 50px;
-}
-
-
-/*** Heading ***/
-h1,
-h2,
-h3,
-h4,
-.h1,
-.h2,
-.h3,
-.h4,
-.display-1,
-.display-2,
-.display-3,
-.display-4,
-.display-5,
-.display-6 {
-    font-family: 'Lobster Two', cursive;
-    font-weight: 700;
-}
-
-h5,
-h6,
-.h5,
-.h6 {
-    font-weight: 600;
-}
-
-.font-secondary {
-    font-family: 'Lobster Two', cursive;
-}
-
-
-/*** Navbar ***/
-.navbar .navbar-nav .nav-link {
-    padding: 30px 15px;
-    color: var(--dark);
-    font-weight: 500;
-    outline: none;
-}
-
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
-}
-
-.navbar.sticky-top {
-    top: -100px;
-    transition: .5s;
-}
-
-.navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 5px;
-    transition: .5s;
-}
-
-.navbar .dropdown-toggle[aria-expanded=true]::after {
-    transform: rotate(-180deg);
-}
-
-@media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link  {
-        margin-right: 0;
-        padding: 10px 0;
+@media (min-width: 1024px) {
+    .pill-navbar {
+        border-radius: 50px; /* atau 9999px untuk full pill */
     }
-
-    .navbar .navbar-nav {
-        margin-top: 15px;
-        border-top: 1px solid #EEEEEE;
-    }
-}
-
-@media (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        top: calc(100% - 15px);
-        margin-top: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: .5s;
-        
-    }
-
-    .navbar .nav-item:hover .dropdown-menu {
-        top: 100%;
-        visibility: visible;
-        transition: .5s;
-        opacity: 1;
-    }
-}
-
-
-/*** Header ***/
-.header-carousel::before,
-.header-carousel::after,
-.page-header::before,
-.page-header::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 10px;
-    top: 0;
-    left: 0;
-    background: url(../images/bg-header-top.png) center center repeat-x;
-    z-index: 1;
-}
-
-.header-carousel::after,
-.page-header::after {
-    height: 19px;
-    top: auto;
-    bottom: 0;
-    background: url(../images/bg-header-bottom.png) center center repeat-x;
-}
-
-@media (max-width: 768px) {
-    .header-carousel .owl-carousel-item {
-        position: relative;
-        min-height: 500px;
-    }
-    
-    .header-carousel .owl-carousel-item img {
+    .hover-underline::after {
+        content: "";
         position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        left: 0;
+        bottom: -2px; /* Jarak dari teks */
+        width: 0;
+        height: 2px;
+        background-color: #44a357; /* Warna garis */
+        transition: width 0.5s ease;
     }
+    /* .head-about{
+    width: 35% !important;
+  } */
 
-    .header-carousel .owl-carousel-item p {
-        font-size: 16px !important;
-        font-weight: 400 !important;
+    .my-text-heading {
+        font-size: 4.7rem !important;
     }
-
-    .header-carousel .owl-carousel-item h1 {
-        font-size: 30px;
-        font-weight: 600;
+    .ppdb-section {
+        margin-top: -400px !important;
     }
-}
-
-.header-carousel .owl-nav {
-    position: absolute;
-    top: 50%;
-    right: 8%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-}
-
-.header-carousel .owl-nav .owl-prev,
-.header-carousel .owl-nav .owl-next {
-    margin: 7px 0;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    background: transparent;
-    border: 1px solid #FFFFFF;
-    border-radius: 45px;
-    font-size: 22px;
-    transition: .5s;
-}
-
-.header-carousel .owl-nav .owl-prev:hover,
-.header-carousel .owl-nav .owl-next:hover {
-    background: var(--primary);
-    border-color: var(--primary);
-}
-
-.page-header {
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/sampulall.jpg) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-    color: rgba(255, 255, 255, .5);
-}
-
-
-/*** Facility ***/
-.facility-item .facility-icon {
-    position: relative;
-    margin: 0 auto;
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.facility-item .facility-icon::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, .9);
-    transition: .5s;
-    z-index: 1;
-}
-
-.facility-item .facility-icon span {
-    position: absolute;
-    content: "";
-    width: 15px;
-    height: 30px;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-}
-
-.facility-item .facility-icon span:last-child {
-    left: auto;
-    right: 0;
-}
-
-.facility-item .facility-icon i {
-    position: relative;
-    z-index: 2;
-}
-
-.facility-item .facility-text {
-    position: relative;
-    min-height: 250px;
-    padding: 30px;
-    border-radius: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.facility-item .facility-text::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, .9);
-    transition: .5s;
-    z-index: 1;
-}
-
-.facility-item .facility-text * {
-    position: relative;
-    z-index: 2;
-}
-
-.facility-item:hover .facility-icon::before,
-.facility-item:hover .facility-text::before {
-    background: transparent;
-}
-
-.facility-item * {
-    transition: .5s;
-}
-
-.facility-item:hover * {
-    color: #FFFFFF !important;
-}
-
-
-/*** About ***/
-.about-img img {
-    transition: .5s;
-}
-
-.about-img img:hover {
-    background: var(--primary) !important;
-}
-
-
-/*** Classes ***/
-.classes-item {
-    transition: .5s;
-}
-
-.classes-item:hover {
-    margin-top: -10px;
-}
-
-
-/*** Team ***/
-.team-item .team-text {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: #FFFFFF;
-    border: 17px solid var(--light);
-    border-radius: 250px;
-    transition: .5s;
-}
-
-.team-item:hover .team-text {
-    border-color: var(--primary);
-}
-
-
-/*** Testimonial ***/
-.testimonial-carousel {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-
-@media (min-width: 576px) {
-    .testimonial-carousel {
-        padding-left: 4rem;
-        padding-right: 4rem;
+    .ppdb-section .container {
+        margin-top: 400px !important;
     }
 }
 
-.testimonial-carousel .testimonial-item .border {
-    border: 1px dashed rgba(0, 185, 142, .3) !important;
-}
-
-.testimonial-carousel .owl-nav {
-    position: absolute;
+/* Efek saat hover */
+.hover-underline:hover::after {
     width: 100%;
-    height: 45px;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
 }
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
+.hover-underline {
     position: relative;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    background: var(--primary);
-    border-radius: 45px;
-    font-size: 20px;
-    transition: .5s;
+    text-decoration: none; /* Hilangkan underline default */
 }
 
-.testimonial-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover {
-    background: var(--dark);
-}
-
-
-/*** Footer ***/
-.footer .btn.btn-social {
-    margin-right: 5px;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 45px;
-    transition: .3s;
-}
-
-.footer .btn.btn-social:hover {
-    border-color: var(--primary);
-    background: var(--primary);
-}
-
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    text-align: left;
+.btn-white {
+    background-color: #ffffff; /* putih */
+    color: #f8981d; /* hijau dari tombol sebelumnya */
+    border: none;
+    padding: 0.7rem 1.8rem;
     font-size: 16px;
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.footer .btn.btn-link::before {
+/* Hover */
+.btn-white:hover {
+    background-color: #f4f4f4; /* abu-abu muda */
+    color: #f8981d; /* hijau lebih gelap */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Active */
+.btn-white:active {
+    background-color: #eaeaea; /* abu-abu lebih gelap */
+    color: #f8981d; /* hijau lebih gelap lagi */
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-green {
+    /* Tampilan dasar tombol */
+    background-color: #44a357; /* Warna hijau yang Anda berikan */
+    color: white; /* Warna teks putih */
+    border: none;
+    padding: 0.7rem 1.8rem;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek saat kursor diarahkan (hover) */
+.btn-green:hover {
+    background-color: #3b8e4e; /* Warna hijau yang sedikit lebih gelap */
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Efek saat tombol diklik (active) */
+.btn-green:active {
+    background-color: #327541 !important; /* Warna hijau yang lebih gelap lagi */
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-orange {
+    /* Tampilan dasar tombol */
+    background-color: #f8981d; /* Warna oranye dasar */
+    color: white; /* Warna teks putih */
+    border: none;
+    padding: 0.7rem 1.8rem;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover */
+.btn-orange:hover {
+    background-color: #da7d12; /* Warna oranye sedikit lebih gelap */
+    transform: translateY(-2px);
+    color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Active */
+.btn-orange:active {
+    background-color: #b9660f !important; /* Warna oranye lebih gelap lagi */
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-kids {
+    /* Tampilan dasar tombol */
+    background-color: #44a357; /* Warna hijau yang Anda berikan */
+    color: white; /* Warna teks putih */
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek saat kursor diarahkan (hover) */
+.btn-kids:hover {
+    background-color: #3b8e4e; /* Warna hijau yang sedikit lebih gelap */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Efek saat tombol diklik (active) */
+.btn-kids:active {
+    background-color: #327541; /* Warna hijau yang lebih gelap lagi */
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-pulse {
+    padding: 0.7rem 1.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #44a357;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+    transition: transform 0.2s ease;
+}
+
+.btn-pulse i {
+    vertical-align: middle;
+    display: inline-block;
+}
+.btn-jumbotron {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #44a357;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.btn-jumbotron i {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Animasi berdetak */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Hover → berhenti animasi */
+.btn-pulse:hover {
+    animation-play-state: paused;
+}
+
+/* Klik → efek mengecil sebentar */
+.btn-pulse:active {
+    transform: scale(0.95);
+}
+
+.hero {
+    transition: background-image 0.6s ease-in-out;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.btn-anim {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 6px; jarak antara teks dan icon */
+    overflow: hidden;
     position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 10px;
+    transition: all 0.3s ease;
 }
 
-.footer .btn.btn-link:hover {
-    color: var(--primary) !important;
-    letter-spacing: 1px;
-    box-shadow: none;
+.btn-anim i {
+    position: absolute;
+    right: 21px;
+    opacity: 0; /* icon awal transparan */
+    transform: translateX(-5px); /* agak geser kiri */
+    transition: all 0.3s ease;
 }
 
-.footer .form-control {
-    border-color: rgba(255,255,255,0.5);
+.btn-anim span {
+    transition: all 0.3s ease;
 }
 
-.footer .copyright {
-    padding: 25px 0;
-    font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
+.btn-anim:hover span {
+    transform: translateX(-9px); /* teks geser kiri */
 }
 
-.footer .copyright a {
-    color: #FFFFFF;
+.btn-anim:hover i {
+    opacity: 1; /* icon muncul */
+    transform: translateX(5px); /* icon geser kanan */
 }
 
-.footer .footer-menu a {
-    margin-right: 15px;
-    padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
+.my-text-heading {
+    font-size: 2.7rem;
 }
 
-.footer .copyright a:hover,
-.footer .footer-menu a:hover {
-    color: var(--primary) !important;
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* rasio 16:9 */
+    height: 0;
 }
 
-.footer .footer-menu a:last-child {
-    margin-right: 0;
-    padding-right: 0;
-    border-right: none;
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.ppdb-section {
+    margin-top: -200px;
+}
+.ppdb-section .container {
+    margin-top: 180px;
+}
+
+.rotating {
+    animation: spin 12s linear infinite; /* 8 detik per putaran */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.img-right-pill {
+    width: 100%;
+    height: 408px;
+    object-fit: cover;
+    display: block;
+
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 9999px;
+}
+
+/* Gambar kanan atas: lancip di kanan atas */
+.img-left-top-pill {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+}
+
+/* Gambar kanan bawah: lancip di kiri bawah */
+.img-left-bottom-pill {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 0;
+}
+
+.gap-kurikulum {
+    gap: 8px !important;
+}
+
+/* Gambar kiri: lancip di kanan bawah */
+.img-right-pill {
+    aspect-ratio: 1 / 1;
+    /* bentuk kotak */
+    object-fit: cover;
+    width: 100%;
+    display: block;
+
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 9999px;
+}
+
+/* Gambar kanan atas: lancip di kanan atas */
+.img-left-top-pill {
+    aspect-ratio: 1 / 1;
+    /* bentuk kotak */
+    object-fit: cover;
+    width: 100%;
+    display: block;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+}
+
+/* Gambar kanan bawah: lancip di kiri bawah */
+.img-left-bottom-pill {
+    aspect-ratio: 1 / 1;
+    /* bentuk kotak */
+    object-fit: cover;
+    width: 100%;
+    display: block;
+
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 0;
+}
+
+.gap-kurikulum {
+    gap: 8px !important;
+}
+
+.card-ppdb {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-bottom: 1rem;
+}
+
+/* Tambahkan efek hover agar lebih interaktif */
+.card-ppdb:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-img-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 350px; /* opsional */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.testimonial-img-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3); /* transparan hitam */
+    color: white;
+}
+
+.overlay-text h3,
+.overlay-text h4,
+.overlay-text p {
+    margin: 5px 0;
+}
+
+.ppdb-section {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1472%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1473%26quot%3b)'%3e%3c/rect%3e%3cpath d='M1440 0L1243.47 0L1440 264.16z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1243.47 0L1440 264.16L1440 387.69000000000005L620.83 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M620.83 0L1440 387.69000000000005L1440 420.31000000000006L508.70000000000005 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M508.70000000000005 0L1440 420.31000000000006L1440 477.13000000000005L503.61000000000007 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 560L652.22 560L0 384.9z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 384.9L652.22 560L1001.1600000000001 560L0 259.64z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 259.64L1001.1600000000001 560L1202.41 560L0 129.5z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 129.5L1202.41 560L1221.93 560L0 66.24000000000001z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1472'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1473'%3e%3cstop stop-color='rgba(68%2c 163%2c 87%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(68%2c 163%2c 87%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: cover; /* atau '100% 100%' kalau mau benar-benar stretch */
+    background-position: center;
+}
+.parallax-bg {
+    background-image: url("../images/sampul5.jpg"); /* ganti dengan path gambar kamu */
+    background-attachment: fixed; /* inti parallax */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+/* Opsional: beri overlay gelap biar teks lebih kontras */
+.parallax-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+.taped-photo {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 0.5rem solid white;
+}
+
+/* Efek pita */
+.taped-photo::before,
+.taped-photo::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 35px;
+    background-color: rgba(224, 224, 224, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.taped-photo::before {
+    top: -18px;
+    left: -19px;
+    transform: rotate(-15deg);
+}
+
+.taped-photo::after {
+    bottom: -10px;
+    right: -19px;
+    transform: rotate(15deg);
+}
+
+/* Ukuran foto */
+.big-photo {
+    width: 300px;
+    height: 300px;
+    transform: rotate(3deg);
+    z-index: 2;
+}
+
+.small-photo {
+    width: 180px;
+    height: 180px;
+    z-index: 3;
+}
+.small-photo {
+    width: 180px;
+    height: 180px;
+    z-index: 3;
+}
+
+/* Posisi relatif di kanan */
+.photo-stack {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.photo-stack .small-1 {
+    position: absolute;
+    bottom: 0;
+    left: -65px;
+    transform: rotate(-5deg);
+}
+
+.photo-stack .small-2 {
+    position: absolute;
+    bottom: 0;
+    right: -85px;
+    transform: rotate(8deg);
+}
+.img-kegiatan {
+    height: 250px !important;
+    width: 100%;
+    object-fit: cover; /* potong gambar agar proporsional */
+    object-position: center; /* fokus di tengah gambar */
+}
+.my-testi-img {
+    width: 150px; /* ukuran lebar */
+    height: 150px; /* tinggi sama dengan lebar */
+    border-radius: 50%; /* membuat bulat */
+    object-fit: cover; /* menjaga rasio gambar */
+    object-position: center; /* fokus di tengah */
+}
+.circle-img {
+    width: 400px; /* ukuran default */
+    height: 400px; /* sama dengan width biar bulat */
+    border-radius: 50%;
+    object-fit: cover; /* potong gambar supaya proporsional */
+    object-position: center;
+}
+
+.circle-img-small {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.circle-img,
+.circle-img-small {
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 10px solid #f0f0f0; /* putih agak abu-abu */
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.circle-img:hover,
+.circle-img-small:hover {
+    border-color: #44a357; /* hijau Bootstrap */
+    transform: scale(1.05);
+}
+.circle-img:hover,
+.circle-img-small:hover {
+    border-color: #44a357;
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.5);
+    transform: scale(1.05);
+}
+
+.square-img {
+    position: relative;
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+}
+
+.square-img img {
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.square-img figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #333446;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transform: translateY(100%); /* default sembunyi */
+    transition: transform 0.4s ease;
+}
+
+/* Efek hover 3D */
+.square-img:hover {
+    transform: rotateY(8deg) rotateX(4deg) scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.square-img:hover img {
+    transform: scale(1.05);
+}
+
+.square-img:hover figcaption {
+    transform: translateY(2%);
+}
+
+/* Di layar kecil (mobile < lg) langsung tampil tanpa hover */
+@media (max-width: 991px) {
+    .square-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .square-img figcaption {
+        transform: translateY(0) !important;
+    }
 }
