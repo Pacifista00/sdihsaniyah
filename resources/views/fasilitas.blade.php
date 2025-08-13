@@ -1,167 +1,112 @@
 @extends('layouts.main')
 @section('content')
-    <div class="bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner"
-            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
+    @include('partials.navbar')
 
-        @include('partials.navbar')
-
-        <!-- Page Header End -->
-        <div class="py-5 page-header position-relative mb-5">
-            <div class="container py-5">
-                <h1 class="display-2 text-white animated slideInDown mb-4">Fasilitas</h1>
-                <nav aria-label="breadcrumb animated slideInDown">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Fasilitas</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">Fasilitas</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-        <!-- Page Header End -->
+    <main class="main">
 
 
-        <!-- Classes Start -->
-        <div class="container-xxl py-5">
+        <section id="call-to-action" class="call-to-action section my-bg-orange parallax-bg">
+
             <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">FASILITAS UNGGULAN</h1>
-                    <p>Untuk menunjang segala proses belajar mengajar, kami memiliki fasilitas yang sangat lengkap
-                        diantaranya.</p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="{{ asset('images/classes-1.jpg') }}"
-                                    alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Ruang kelas yang nyaman, bersih
-                                    dan ber AC</a>
-                            </div>
-                        </div>
-                    </div>
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="mt-5 pt-lg-5">
 
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="{{ asset('images/classes-1.jpg') }}"
-                                    alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Media Pembelajaran Lengkap</a>
-                            </div>
-                        </div>
+                        <h1 class="my-text-heading">Fasilitas Sekolah</h1>
+                        <h6 class="text-base"><a href="{{ url('/') }}" class="text-white fw-semibold">SD Ihsaniyah 1 Kota
+                                Tegal</a><i class="bi bi-chevron-right fs-6 mx-1"></i>Fasilitas Sekolah</h6>
                     </div>
-
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="{{ asset('images/lab.jpg') }}" alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">LAB KOMPUTER</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="{{ asset('images/classes-1.jpg') }}"
-                                    alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Perpustakaan dengan akreditasi
-                                    A</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="{{ asset('images/classes-1.jpg') }}"
-                                    alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Kantin Sehat bersertifikat
-                                    BPOM</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="{{ asset('images/classes-1.jpg') }}"
-                                    alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Taman Edukasi</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="{{ asset('images/abot2.jpg') }}" alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Gazebo</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="{{ asset('images/abot2.jpg') }}"
-                                    alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Tempat cuci tangan</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="classes-item">
-                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="{{ asset('images/abot2.jpg') }}"
-                                    alt="">
-                            </div>
-                            <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Toilet Bersih</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                        <h1 class="mb-3">FASILITAS LAIN NYA</h1>
-                        <P>▪Ruang UKS bersih </p>
-                        <P>▪Tempat cuci tangan di 59 titik </p>
-                        <P>▪Green House</p>
-                        <P>▪Area Outbound</p>
-                    </div>
-
                 </div>
             </div>
-        </div>
-        <!-- Classes End -->
 
-        @include('partials.footer')
+        </section>
+        <section>
+            <div class="container">
+                <div class="my-5 text-center">
+                    <h1 class="fs-1 text-dark mb-3">FASILITAS SEKOLAH</h1>
+                    <p class="text-dark fs-6">Untuk menunjang segala proses belajar mengajar, kami memiliki fasilitas yang
+                        sangat lengkap diantaranya.</p>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-lg-4 text-center">
+                        <figure class="square-img mb-5 rounded-5 mx-auto">
+                            <img src="{{ asset(path: 'images/sampul2.jpeg') }}" alt="Mountains">
+                            <figcaption>The Day</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 col-lg-4 text-center">
+                        <figure class="square-img mb-5 rounded-5 mx-auto">
+                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Mountains">
+                            <figcaption>The Day</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 col-lg-4 text-center">
+                        <figure class="square-img mb-5 rounded-5 mx-auto">
+                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Mountains">
+                            <figcaption>The Day</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 col-lg-4 text-center">
+                        <figure class="square-img mb-5 rounded-5 mx-auto">
+                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Mountains">
+                            <figcaption>The Day</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 col-lg-4 text-center">
+                        <figure class="square-img mb-5 rounded-5 mx-auto">
+                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Mountains">
+                            <figcaption>The Day</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 col-lg-4 text-center">
+                        <figure class="square-img mb-5 rounded-5 mx-auto">
+                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Mountains">
+                            <figcaption>The Day</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact section">
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
+            <div class="container" data-aos="fade" data-aos-delay="100">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-6">
+                        <div class="info-item d-flex flex-column" data-aos="fade-up" data-aos-delay="200">
+                            <div class="text-center">
+                                <img src="{{ asset('images/kids.png') }}" alt="" class="w-75">
+                            </div>
+                        </div><!-- End Info Item -->
+
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="container mb-5">
+                            <h1 class="fs-1 text-dark">Kami ingin mendengar sesuatu darimu</h1>
+                        </div>
+                        <ul>
+                            <li class="mb-3">Media pembelajaran yang lengkap</li>
+                            <li class="mb-3">Media pembelajaran yang lengkap</li>
+                            <li class="mb-3">Media pembelajaran yang lengkap</li>
+                            <li class="mb-3">Media pembelajaran yang lengkap</li>
+                        </ul>
+                    </div><!-- End Contact Form -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    @include('partials.footer')
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
 @endsection
