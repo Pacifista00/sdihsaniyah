@@ -42,7 +42,7 @@
             <div class="container">
                 <div class="text-center">
                     <h1 class="fs-1 text-dark my-4">Program Ekstrakurikuler
-                        Olahraga & Kepemimpinan</h1>
+                        Seni & Akademik</h1>
                     <div class="row">
                         <div class="col-6 col-lg-4 mb-3">Drum Band 1</div>
                         <div class="col-6 col-lg-4 mb-3">Drum Band 2</div>

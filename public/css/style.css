@@ -748,6 +748,56 @@
     transform: scale(1.05) rotate(0deg);
 }
 
+.img-list-berita {
+    width: 100%; /* lebar sesuai parent */
+    height: 250px; /* tinggi tetap */
+    object-fit: cover; /* crop agar proporsional */
+}
+
+.badge-tanggal {
+    position: absolute;
+    bottom: 10px; /* jarak dari bawah gambar */
+    left: 10px; /* jarak dari kiri gambar */
+    background-color: rgba(0, 0, 0, 0.7); /* hijau semi transparan */
+    color: #fff;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: none;
+    border: 1px solid #44a357;
+}
+.contact-card {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+.contact-card i {
+    font-size: 1.5rem;
+    color: #198754; /* hijau */
+    min-width: 30px;
+    text-align: center;
+}
+.contact-card .text {
+    flex: 1;
+}
+.contact-card .text small {
+    display: block;
+    color: #555;
+}
+.contact-card:hover {
+    background-color: #e6f4ea;
+}
+
 /* Responsif di layar kecil (mobile < lg) */
 @media (max-width: 991px) {
     .profile-image-large {
