@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JumbotronController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,4 +32,11 @@ Route::get('/kontak', [HomeController::class, 'kontak']);
 Route::get('/daftar-spmb', [HomeController::class, 'spmb']);
 
 Route::get('/login', [AuthController::class, 'index']);
-Route::get('/jumbotron', [DashboardController::class, 'jumbotron']);
+
+Route::get('/dashboard/jumbotron', [DashboardController::class, 'jumbotron']);
+
+
+
+Route::post('/dashboard/jumbotron/insert', [JumbotronController::class, 'store']);
+Route::put('/dashboard/jumbotron/update/{id}', [JumbotronController::class, 'update']);
+Route::delete('/dashboard/jumbotron/delete/{id}', [JumbotronController::class, 'destroy']);
