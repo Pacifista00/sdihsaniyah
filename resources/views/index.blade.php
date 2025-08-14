@@ -110,7 +110,7 @@
             </div><!-- End Section Title -->
             <div class="container">
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/phWxA89Dy94?si=d6ogLXULkS4gOZtQ" class=" position-absolute"
+                    <iframe src="https://www.youtube.com/embed/qDaaq-9Rypc?si=ibviU1YAGMyKTnxA" class=" position-absolute"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -242,14 +242,14 @@
 
 
                     <!-- <div class="row g-2" style="height:400px;">
-                                                                                                            <div class="col-6 d-flex flex-column gap-kurikulum">
-                                                                                                              <img src="assets/img/working-1.jpg" alt="" class="img-left-top-pill ms-auto">
-                                                                                                              <img src="assets/img/working-1.jpg" alt="" class="img-left-bottom-pill ms-auto">
-                                                                                                            </div>
-                                                                                                            <div class="col-6">
-                                                                                                              <img src="assets/img/working-1.jpg" alt="" class="img-right-pill">
-                                                                                                            </div>
-                                                                                                          </div> -->
+                                                                                                                        <div class="col-6 d-flex flex-column gap-kurikulum">
+                                                                                                                          <img src="assets/img/working-1.jpg" alt="" class="img-left-top-pill ms-auto">
+                                                                                                                          <img src="assets/img/working-1.jpg" alt="" class="img-left-bottom-pill ms-auto">
+                                                                                                                        </div>
+                                                                                                                        <div class="col-6">
+                                                                                                                          <img src="assets/img/working-1.jpg" alt="" class="img-right-pill">
+                                                                                                                        </div>
+                                                                                                                      </div> -->
 
                 </div>
 

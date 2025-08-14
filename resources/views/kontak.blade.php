@@ -1,202 +1,111 @@
-<div class="container-xxl bg-white p-0">
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
+@extends('layouts.main')
+@section('content')
+    @include('partials.navbar')
+
+    <main class="main">
 
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-        <a href="index.html" class="navbar-brand">
-            <h3 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>SD Ihsaniyah 1 Tegal</h3>
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav mx-auto">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">Tentang Kami</a>
-                <a href="classes.html" class="nav-item nav-link">Program Sekolah</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Menu</a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                        <a href="fasilitas.html" class="dropdown-item">Fasilitas Sekolah</a>
-                        <a href="ekstra.html" class="dropdown-item">Ekstrakulikuler</a>
-                        <a href="prestasi.html" class="dropdown-item">Prestasi Siswa</a>
-                        <a href="kegiatan.html" class="dropdown-item">Kegiatan Kami</a>
+        <section id="call-to-action" class="call-to-action section my-bg-orange parallax-bg">
 
+            <div class="container">
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="mt-5 pt-lg-5">
+
+                        <h1 class="my-text-heading">Kontak Kami</h1>
+                        <h6 class="text-base"><a href="{{ url('/') }}" class="text-white fw-semibold">SD Ihsaniyah 1 Kota
+                                Tegal</a><i class="bi bi-chevron-right fs-6 mx-1"></i>Kontak</h6>
                     </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Kontak Kami</a>
-            </div>
-            <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">WhatsApp<i
-                    class="fa fa-arrow-right ms-3"></i></a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-    <!-- Page Header End -->
-    <div class="container-xxl py-5 page-header position-relative mb-5">
-        <div class="container py-5">
-            <h1 class="display-2 text-white animated slideInDown mb-4">Kontak Kami</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Kontak</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">Kontak Kami</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
-
-    <!-- Contact Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="mb-3">Kontak & Alamat Kami</h1>
-                <p>Segera Hubungi atau datang langsung ke lokasi jika ada keperluan</p>
-            </div>
-            <div class="row g-4 mb-5">
-                <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
-                        style="width: 75px; height: 75px;">
-                        <i class="fa fa-map-marker-alt fa-2x text-primary"></i>
-                    </div>
-                    <h6>Jl. Nakula No. 41 Tegal </h6>
-                </div>
-                <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
-                        style="width: 75px; height: 75px;">
-                        <i class="fa fa-envelope-open fa-2x text-primary"></i>
-                    </div>
-                    <h6>webihsaniyah1@gmail.com</h6>
-                </div>
-                <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
-                        style="width: 75px; height: 75px;">
-                        <i class="fa fa-phone-alt fa-2x text-primary"></i>
-                    </div>
-                    <h6>WA : 0878-9910-1232 </h6>
-                    <h6>Tlp : 0283 – 341942 </h6>
                 </div>
             </div>
-            <div class="bg-light rounded">
-                <div class="row g-0">
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                        <div class="h-100 d-flex flex-column justify-content-center p-5">
-                            <p class="mb-4">SD Ihsaniyah 1 Kota Tegal, Jalan Nakula, Kejambon, Kota Tegal, Jawa
-                                Tengah<a
-                                    href="https://www.google.com/maps/place/SD+Ihsaniyah+1+Kota+Tegal,+Jalan+Nakula,+Kejambon,+Kota+Tegal,+Jawa+Tengah/@-6.8815959,109.1391198,17.02z/data=!4m6!3m5!1s0x2e6fb9eac19f0389:0xaf5bf0346e498ec1!8m2!3d-6.8819055!4d109.1413764!16s%2Fg%2F11sc9_tq1s?hl=id&entry=ttu"></a>.
-                            </p>
-                            <form>
-                                <div class="row g-3">
 
-                                    <div class="col-12">
-                                        <a href="https://www.google.com/maps/place/SD+Ihsaniyah+1+Kota+Tegal,+Jalan+Nakula,+Kejambon,+Kota+Tegal,+Jawa+Tengah/@-6.8815959,109.1391198,17.02z/data=!4m6!3m5!1s0x2e6fb9eac19f0389:0xaf5bf0346e498ec1!8m2!3d-6.8819055!4d109.1413764!16s%2Fg%2F11sc9_tq1s?hl=id&entry=ttu"
-                                            class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Klik Untuk Lihat
-                                            Maps<i class="fa fa-arrow-right ms-3"></i></a>
+        </section>
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Kontak - Kiri -->
+                    <div class="col-lg-6 mb-4">
+                        <h1 class="fs-1 text-dark">Hubungi Kami</h1>
+                        <p class="text-dark fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
 
+                        <div class="my-4">
+                            <div class="contact-card"> <i class="bi bi-whatsapp"></i>
+                                <div class="text"> <small>WhatsApp Call Center</small> <strong>628112642733</strong>
+                                </div>
+                            </div>
+                            <div class="contact-card"> <i class="bi bi-envelope"></i>
+                                <div class="text"> <small>Email</small> <strong>info@sdmuhsapen-yog.sch.id</strong> </div>
+                            </div>
+                            <div class="contact-card"> <i class="bi bi-telephone"></i>
+                                <div class="text"> <small>Telepon</small> <strong>0274556674</strong> </div>
+                            </div>
+                            <div class="contact-card"> <i class="bi bi-clock"></i>
+                                <div class="text"> <small>Jam Kerja</small> <strong>Senin-Jumat 07:00-14:30
+                                        WIB</strong> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lokasi / Google Maps - Kanan -->
+                    <div class="col-lg-6">
+                        <h1 class="text-dark text-center mb-4">Lokasi</h1>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0726521495976!2d109.13880147590629!3d-6.881900167341194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb9eac19f0389%3A0xaf5bf0346e498ec1!2sSD%20Ihsaniyah%201%20Kota%20Tegal!5e0!3m2!1sid!2sid!4v1755136316855!5m2!1sid!2sid"
+                            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="info-item d-flex flex-column" data-aos="fade-up" data-aos-delay="200">
+                            <div class="mb-5">
+                                <h1 class="fs-1 text-dark">Sosial Media Kami</h1>
+                                <p class="text-dark fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <div class="my-5 row">
+                                    <div class="col-lg-4">
+                                        <div class="contact-card">
+                                            <i class="bi bi-instagram"></i>
+                                            <div class="text">
+                                                <small>Instagram</small>
+                                                <strong>628112642733</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="contact-card">
+                                            <i class="bi bi-facebook"></i>
+                                            <div class="text">
+                                                <small>Facebook</small>
+                                                <strong>info@sdmuhsapen-yog.sch.id</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="contact-card">
+                                            <i class="bi bi-youtube"></i>
+                                            <div class="text">
+                                                <small>Youtube</small>
+                                                <strong>0274556674</strong>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
-                        <div class="position-relative h-100">
-                            <img src="img/map.jpg">
-                        </div>
+                            </div>
+
+                        </div><!-- End Info Item -->
+
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Contact End -->
+        </section>
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-white mb-4">Get In Touch</h3>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Nakula No. 41 Tegal </p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0283 – 341942 </p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>webihsaniyah1@gmail.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i
-                                class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-white mb-4">Quick Links</h3>
-                    <a class="btn btn-link text-white-50" href="about.html">Tentang Kami</a>
-                    <a class="btn btn-link text-white-50" href="contact.html">Kontak Kami</a>
-                    <a class="btn btn-link text-white-50" href="fasilitas.html">Fasilitas</a>
-                    <a class="btn btn-link text-white-50" href="">PPDB</a>
-                    <a class="btn btn-link text-white-50"
-                        href="https://wa.me/6287899101232?text=Assalamualaikum%20Saya%20Mau%20bertanya%20tentang%20...................">WhatsApp</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-white mb-4">Photo Gallery</h3>
-                    <div class="row g-2 pt-2">
-                        <div class="col-4">
-                            <img class="img-fluid rounded bg-light p-1" src="img/abot1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded bg-light p-1" src="img/abot2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded bg-light p-1" src="img/abot3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded bg-light p-1" src="img/ek1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded bg-light p-1" src="img/ek2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded bg-light p-1" src="img/ek3.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">SD IHSANIYAH 1 KOTA TEGAL</a>
+    </main>
 
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://rajacoding.asia/">rajacoding</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Tentang</a>
-                            <a href="">Kontak</a>
+    @include('partials.footer')
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-</div>
+    <!-- Preloader -->
+    <div id="preloader"></div>
+@endsection

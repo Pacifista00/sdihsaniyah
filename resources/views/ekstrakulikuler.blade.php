@@ -1,149 +1,90 @@
 @extends('layouts.main')
 @section('content')
-    <div class="bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner"
-            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
+    @include('partials.navbar')
 
-        @include('partials.navbar')
-
-        <!-- Page Header End -->
-        <div class="py-5 page-header position-relative mb-5">
-            <div class="container py-5">
-                <h1 class="display-2 text-white animated slideInDown mb-4">Ekstrakulikuler</h1>
-                <nav aria-label="breadcrumb animated slideInDown">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">Ekstrakulikuler</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-        <!-- Page Header End -->
+    <main class="main">
 
 
-        <!-- About Start -->
-        <div class="container-xxl py-5">
+        <section id="call-to-action" class="call-to-action section my-bg-orange parallax-bg">
+
             <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="mb-4">Program Unggulan</p>
-                        </h1>
-                        <p class="mb-4">
-                        <p>ᴥ Tahfidzul Qur'an </p>
-                        <p>ᴥ English Program </p>
-                        <p>ᴥ Robotic Class </p>
-                        <p>ᴥ Pantomim </p>
-                        <p>ᴥ Paduan Suara </p>
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="mt-5 pt-lg-5">
 
-
-                        </p>
-
-
-                        <div class="row g-4 align-items-center">
-
-
-                        </div>
+                        <h1 class="my-text-heading">Ekstrakurikuler</h1>
+                        <h6 class="text-base"><a href="{{ url('/') }}" class="text-white fw-semibold">SD Ihsaniyah 1 Kota
+                                Tegal</a><i class="bi bi-chevron-right fs-6 mx-1"></i>Ekstrakurikuler</h6>
                     </div>
-                    <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <img class="img-fluid w-75 rounded-circle bg-light p-3" src="img/ek3.jpg" alt="">
-                            </div>
-                            <div class="col-6 text-start" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/abot2.jpg" alt="">
-                            </div>
-                            <div class="col-6 text-end" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/abot3.jpg" alt="">
-                            </div>
-                        </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="py-4">
+            <div class="container">
+                <div class="fullwidth-photo-stack">
+                    <!-- Foto besar -->
+                    <div class="stack-photo big-stack" style="background-image: url('{{ asset('images/sampul4.jpg') }}');">
                     </div>
 
+                    <!-- Foto kecil kiri -->
+                    <div class="stack-photo small-stack stack-left"
+                        style="background-image: url('{{ asset('images/sampul5.jpg') }}');">
+                    </div>
+
+                    <!-- Foto kecil kanan -->
+                    <div class="stack-photo small-stack stack-right"
+                        style="background-image: url('{{ asset('images/sampul5.jpg') }}');">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-4">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="fs-1 text-dark my-4">Program Ekstrakurikuler
+                        Seni & Akademik</h1>
+                    <div class="row">
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 1</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 2</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 3</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 4</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 5</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 6</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 7</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 8</div>
+                    </div>
 
                 </div>
             </div>
-        </div>
-        <!-- About End -->
-
-
-        <!-- About Start -->
-
-
-        <div class="container-xxl py-5">
+        </section>
+        <section class="py-4">
             <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="mb-4">Ekstrakulikuler Wajib </p>
-                        </h1>
-                        <p class="mb-4">
-
-                        <p>ᴥ Kepanduan </p>
-                        <p>ᴥ Renang </p>
-                        <p>ᴥ Beladiri </p>
-
-
-
-                        </p>
-
-
-                        <h1 class="mb-4">Ekstrakulikuler Pilihan </p>
-                        </h1>
-                        <p class="mb-4">
-
-                        <p>ᴥ Tilawah </p>
-                        <p>ᴥ Kaligrafi </p>
-                        <p>ᴥ Rebana </p>
-                        <p>ᴥ Math Club </p>
-                        <p>ᴥ Sains Club </p>
-                        <p>ᴥ Performance Club </p>
-                        <p>ᴥ Mewarnai </p>
-                        <p>ᴥ Menari </p>
-                        <p>ᴥ Futsal </p>
-                        <p>ᴥ Basket </p>
-                        <p>ᴥ Volly </p>
-                        <p>ᴥ Panahan </p>
-                        <p>ᴥ Bulu tangkis </p>
-
-                        </p>
-
-
-                        <div class="row g-4 align-items-center">
-                            <div class="col-sm-6">
-                                <a class="btn btn-primary py-3 px-5" href="index.html">Kembali<i
-                                        class="fa fa-arrow-right ms-2"></i></a>
-                            </div>
-
-                        </div>
+                <div class="text-center">
+                    <h1 class="fs-1 text-dark my-4">Program Ekstrakurikuler
+                        Olahraga & Kepemimpinan</h1>
+                    <div class="row">
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 1</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 2</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 3</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 4</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 5</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 6</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 7</div>
+                        <div class="col-6 col-lg-4 mb-3">Drum Band 8</div>
                     </div>
-                    <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <img class="img-fluid w-75 rounded-circle bg-light p-3" src="img/abot1.jpg" alt="">
-                            </div>
-                            <div class="col-6 text-start" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/abot2.jpg" alt="">
-                            </div>
-                            <div class="col-6 text-end" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/abot3.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-
 
                 </div>
             </div>
-        </div>
-        <!-- About End -->
+        </section>
 
-        @include('partials.footer')
+    </main>
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
+    @include('partials.footer')
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
 @endsection
