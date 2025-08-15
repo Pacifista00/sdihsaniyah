@@ -25,9 +25,9 @@
                         </div>
                         <div>
                             <button class="btn btn-success rounded-pill py-2" data-bs-toggle="modal"
-                                data-bs-target="#tambahJumbotron">Tambah</button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="tambahJumbotron" tabindex="-1" aria-hidden="true">
+                                data-bs-target="#tambahTestimoni">Tambah</button>
+                            <!-- Modal tambah testimoni start -->
+                            <div class="modal fade" id="tambahTestimoni" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -35,7 +35,7 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
-                                        <form action="{{ url('/dashboard/jumbotron/insert') }}" method="POST"
+                                        <form action="{{ url('/dashboard/testimoni/insert') }}" method="POST"
                                             enctype="multipart/form-data">
                                             @csrf
                                             <div class="modal-body">
@@ -47,9 +47,17 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col mb-3">
-                                                        <label for="judul" class="form-label">Judul</label>
-                                                        <input type="text" id="judul" class="form-control"
-                                                            placeholder="Masukkan judul" name="judul" />
+                                                        <label for="nama" class="form-label">Nama</label>
+                                                        <input type="text" id="nama" class="form-control"
+                                                            placeholder="Masukkan Nama" name="nama" />
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col mb-3">
+                                                        <label for="sebagai" class="form-label">Sebagai</label>
+                                                        <input type="text" id="sebagai" class="form-control"
+                                                            placeholder="Contoh : Alumni tahun 2022, Orang tua Murid"
+                                                            name="sebagai" />
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -72,6 +80,7 @@
                                     </div>
                                 </div>
                             </div>
+                            {{-- Modal tambah testimoni end --}}
                         </div>
                     </div>
                     <!-- Basic Bootstrap Table -->
@@ -82,38 +91,40 @@
                                 <thead>
                                     <tr>
                                         <th>Foto</th>
-                                        <th>Judul</th>
+                                        <th>Nama</th>
+                                        <th>Sebagai</th>
                                         <th>Deskripsi</th>
                                         {{-- <th>Status</th> --}}
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody class="table-border-bottom-0">
-                                    @foreach ($jumbotrons as $jumbotronItem)
+                                    @foreach ($testimonis as $testimoniItem)
                                     <tr>
                                         <td>
-                                            <img src="{{ asset('storage/' . $jumbotronItem->foto) }}"
+                                            <img src="{{ asset('storage/' . $testimoniItem->foto) }}"
                                                 class="img-table shadow-md" alt="">
                                         </td>
-                                        <td>{{ $jumbotronItem->judul }}</td>
-                                        <td>{{ $jumbotronItem->deskripsi }}</td>
+                                        <td>{{ $testimoniItem->nama }}</td>
+                                        <td>{{ $testimoniItem->sebagai }}</td>
+                                        <td>{{ $testimoniItem->deskripsi }}</td>
 
                                         {{-- <td><span class="badge bg-label-primary me-1">Active</span></td> --}}
                                         <td class="mx-0">
                                             <div class="mb-1">
                                                 <button class="btn btn-success w-100 py-0 py-md-1 px-3 rounded-pill"
                                                     style="font-size: 0.75rem;" data-bs-toggle="modal"
-                                                    data-bs-target="#editJumbotron{{ $jumbotronItem->id }}">Edit</button>
+                                                    data-bs-target="#editTestimoni{{ $testimoniItem->id }}">Edit</button>
                                             </div>
                                             <div class="mb-1">
                                                 <button class="btn btn-danger w-100 py-0 py-md-1 px-3 rounded-pill"
                                                     style="font-size: 0.75rem;" data-bs-toggle="modal"
-                                                    data-bs-target="#hapusJumbotron{{ $jumbotronItem->id }}">Hapus</button>
+                                                    data-bs-target="#hapusTestimoni{{ $testimoniItem->id }}">Hapus</button>
                                             </div>
                                         </td>
                                     </tr>
                                     {{-- modal edit start --}}
-                                    <div class="modal fade" id="editJumbotron{{ $jumbotronItem->id }}" tabindex="-1"
+                                    <div class="modal fade" id="editTestimoni{{ $testimoniItem->id }}" tabindex="-1"
                                         aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
@@ -122,7 +133,7 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
-                                                <form action="/dashboard/jumbotron/update/{{ $jumbotronItem->id }}"
+                                                <form action="/dashboard/testimoni/update/{{ $testimoniItem->id }}"
                                                     method="POST" enctype="multipart/form-data">
                                                     @csrf
                                                     @method('PUT')
@@ -136,10 +147,18 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col mb-3">
-                                                                <label for="judul" class="form-label">Judul</label>
-                                                                <input type="text" id="judul" class="form-control"
-                                                                    placeholder="Masukkan judul" name="judul"
-                                                                    value="{{ $jumbotronItem->judul }}" />
+                                                                <label for="nama" class="form-label">Nama</label>
+                                                                <input type="text" id="nama" class="form-control"
+                                                                    placeholder="Masukkan nama" name="nama"
+                                                                    value="{{ $testimoniItem->nama }}" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col mb-3">
+                                                                <label for="sebagai" class="form-label">Sebagai</label>
+                                                                <input type="text" id="sebagai" class="form-control"
+                                                                    placeholder="Masukkan sebagai" name="sebagai"
+                                                                    value="{{ $testimoniItem->sebagai }}" />
                                                             </div>
                                                         </div>
                                                         <div class="row">
@@ -149,7 +168,7 @@
                                                                 <textarea type="text" id="deskripsi"
                                                                     class="form-control"
                                                                     placeholder="Masukkan Deskripsi"
-                                                                    name="deskripsi">{{ $jumbotronItem->deskripsi }}</textarea>
+                                                                    name="deskripsi">{{ $testimoniItem->deskripsi }}</textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -166,7 +185,7 @@
                                     </div>
                                     {{-- modal edit end --}}
                                     {{-- modal hapus start --}}
-                                    <div class="modal fade" id="hapusJumbotron{{ $jumbotronItem->id }}" tabindex="-1"
+                                    <div class="modal fade" id="hapusTestimoni{{ $testimoniItem->id }}" tabindex="-1"
                                         aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
@@ -175,7 +194,7 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
-                                                <form action="/dashboard/jumbotron/delete/{{ $jumbotronItem->id }}"
+                                                <form action="/dashboard/testimoni/delete/{{ $testimoniItem->id }}"
                                                     method="POST" enctype="multipart/form-data">
                                                     @csrf
                                                     @method('DELETE')

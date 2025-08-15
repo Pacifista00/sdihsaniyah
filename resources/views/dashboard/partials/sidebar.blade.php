@@ -70,37 +70,37 @@
 
             <ul class=" menu-sub">
                 <li class="menu-item">
-                    <a href="layouts-without-menu.html" class="menu-link">
+                    <a href="/dashboard/jumbotron" class="menu-link">
                         <div data-i18n="Without">Jumbotron</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="/dashboard/profil" class="menu-link">
                         <div data-i18n="Without">Profil</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="/dashboard/jumbotron" class="menu-link">
                         <div data-i18n="Without">Info PPDB</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="/dashboard/kurikulum-program" class="menu-link">
                         <div data-i18n="Without">Kurikulum & Program</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="/dashboard/prestasi-section" class="menu-link">
                         <div data-i18n="Without">Prestasi</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="/dashboard/testimoni" class="menu-link">
                         <div data-i18n="Without">Testimoni</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="/dashboard/pertanyaan" class="menu-link">
                         <div data-i18n="Without">Pertanyaan</div>
                     </a>
                 </li>

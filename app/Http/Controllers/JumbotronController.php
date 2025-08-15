@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Jumbotron;
+
 use Illuminate\Http\Request;
+use App\Models\Jumbotron;
 use Illuminate\Support\Facades\Storage;
 
 class JumbotronController extends Controller

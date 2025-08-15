@@ -13,7 +13,7 @@
                 {{-- <i class="bx bx-search fs-4 lh-0"></i>
                 <input type="text" class="form-control border-0 shadow-none" placeholder="Search..."
                     aria-label="Search..." /> --}}
-                <span class="fs-4">{{ $active }}</span>
+                <span class="fs-4 text-capitalize">{{ $active }}</span>
             </div>
         </div>
         <!-- /Search -->
