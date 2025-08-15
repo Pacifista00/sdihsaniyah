@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Deskripsi;
+use App\Models\Fasilitas;
 use App\Models\Jumbotron;
 use App\Models\Kurikulum;
 use App\Models\Misi;
 use App\Models\Pertanyaan;
 use App\Models\PrestasiSection;
 use App\Models\Profil;
+use App\Models\Program;
 use App\Models\Testimoni;
 use App\Models\Tujuan;
 use App\Models\Unggulan;
@@ -86,6 +88,20 @@ class DashboardController extends Controller
         return view('dashboard.tujuan', [
             'tujuans' => Tujuan::all(),
             'active' => 'tujuan'
+        ]);
+    }
+    public function program()
+    {
+        return view('dashboard.program', [
+            'programs' => Program::all(),
+            'active' => 'program'
+        ]);
+    }
+    public function fasilitas()
+    {
+        return view('dashboard.fasilitas', [
+            'fasilitass' => Fasilitas::all(),
+            'active' => 'fasilitas'
         ]);
     }
 }

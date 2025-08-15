@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeskripsiController;
+use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\JumbotronController;
@@ -11,6 +12,7 @@ use App\Http\Controllers\MisiController;
 use App\Http\Controllers\PertanyaanController;
 use App\Http\Controllers\PrestasiSectionController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\ProgramUnggulanController;
 use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\TujuanController;
@@ -54,6 +56,8 @@ Route::get('/dashboard/deskripsi', [DashboardController::class, 'deskripsi']);
 Route::get('/dashboard/visi', [DashboardController::class, 'visi']);
 Route::get('/dashboard/misi-sekolah', [DashboardController::class, 'misi']);
 Route::get('/dashboard/tujuan', [DashboardController::class, 'tujuan']);
+Route::get('/dashboard/program', [DashboardController::class, 'program']);
+Route::get('/dashboard/fasilitas', [DashboardController::class, 'fasilitas']);
 
 
 Route::post('/dashboard/jumbotron/insert', [JumbotronController::class, 'store']);
@@ -89,4 +93,12 @@ Route::delete('/dashboard/misi-sekolah/delete/{id}', [MisiController::class, 'de
 Route::post('/dashboard/tujuan/insert', [TujuanController::class, 'store']);
 Route::put('/dashboard/tujuan/update/{id}', [TujuanController::class, 'update']);
 Route::delete('/dashboard/tujuan/delete/{id}', [TujuanController::class, 'destroy']);
+
+Route::post('/dashboard/program/insert', [ProgramController::class, 'store']);
+Route::put('/dashboard/program/update/{id}', [ProgramController::class, 'update']);
+Route::delete('/dashboard/program/delete/{id}', [ProgramController::class, 'destroy']);
+
+Route::post('/dashboard/fasilitas/insert', [FasilitasController::class, 'store']);
+Route::put('/dashboard/fasilitas/update/{id}', [FasilitasController::class, 'update']);
+Route::delete('/dashboard/fasilitas/delete/{id}', [FasilitasController::class, 'destroy']);
 

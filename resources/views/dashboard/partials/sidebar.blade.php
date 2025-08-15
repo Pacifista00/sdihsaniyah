@@ -137,13 +137,13 @@
         </li>
 
         <li class="menu-item">
-            <a href="index.html" class="menu-link">
+            <a href="/dashboard/program" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Program Sekolah</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="index.html" class="menu-link">
+            <a href="/dashboard/fasilitas" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-building-house"></i>
                 <div data-i18n="Analytics">Fasilitas Sekolah</div>
             </a>
@@ -156,12 +156,12 @@
 
             <ul class=" menu-sub">
                 <li class="menu-item">
-                    <a href="layouts-without-menu.html" class="menu-link">
+                    <a href="/dashboard/foto-ekstrakulikuler" class="menu-link">
                         <div data-i18n="Without">Foto</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="/dashboard/ekstrakulikuler" class="menu-link">
                         <div data-i18n="Without">Ekstrakulikuler</div>
                     </a>
                 </li>
@@ -175,25 +175,25 @@
 
             <ul class=" menu-sub">
                 <li class="menu-item">
-                    <a href="layouts-without-menu.html" class="menu-link">
+                    <a href="/dashboard/foto-prestasi" class="menu-link">
                         <div data-i18n="Without">Foto</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="/dashboard/prestasi" class="menu-link">
                         <div data-i18n="Without">Prestasi</div>
                     </a>
                 </li>
             </ul>
         </li>
         <li class="menu-item">
-            <a href="index.html" class="menu-link">
+            <a href="/dashboard/kegiatan" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar-event"></i>
                 <div data-i18n="Analytics">Kegiatan</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="index.html" class="menu-link">
+            <a href="/dashboard/kontak" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-phone"></i>
                 <div data-i18n="Analytics">Kontak</div>
             </a>
