@@ -114,22 +114,22 @@
 
             <ul class=" menu-sub">
                 <li class="menu-item">
-                    <a href="layouts-without-menu.html" class="menu-link">
+                    <a href="/dashboard/deskripsi" class="menu-link">
                         <div data-i18n="Without">Deskripsi</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="/dashboard/visi" class="menu-link">
                         <div data-i18n="Without">Visi</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="/dashboard/misi-sekolah" class="menu-link">
                         <div data-i18n="Without">Misi</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="/dashboard/tujuan" class="menu-link">
                         <div data-i18n="Without">Tujuan</div>
                     </a>
                 </li>

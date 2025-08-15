@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Deskripsi;
 use App\Models\Jumbotron;
 use App\Models\Kurikulum;
+use App\Models\Misi;
 use App\Models\Pertanyaan;
 use App\Models\PrestasiSection;
 use App\Models\Profil;
 use App\Models\Testimoni;
+use App\Models\Tujuan;
 use App\Models\Unggulan;
+use App\Models\Visi;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -53,7 +57,35 @@ class DashboardController extends Controller
     {
         return view('dashboard.pertanyaan', [
             'pertanyaan' => Pertanyaan::latest()->get(),
-            'active' => 'testimoni'
+            'active' => 'pertanyaan'
+        ]);
+    }
+    public function deskripsi()
+    {
+        return view('dashboard.deskripsi', [
+            'deskripsi' => Deskripsi::latest()->get(),
+            'active' => 'deskripsi'
+        ]);
+    }
+    public function visi()
+    {
+        return view('dashboard.visi', [
+            'visi' => Visi::latest()->get(),
+            'active' => 'visi'
+        ]);
+    }
+    public function misi()
+    {
+        return view('dashboard.misi', [
+            'misis' => Misi::all(),
+            'active' => 'misi'
+        ]);
+    }
+    public function tujuan()
+    {
+        return view('dashboard.tujuan', [
+            'tujuans' => Tujuan::all(),
+            'active' => 'tujuan'
         ]);
     }
 }
