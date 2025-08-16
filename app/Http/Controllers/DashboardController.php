@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Deskripsi;
+use App\Models\Ekstrakulikuler;
 use App\Models\Fasilitas;
+use App\Models\FotoEkstrakulikuler;
 use App\Models\Jumbotron;
 use App\Models\Kurikulum;
 use App\Models\Misi;
@@ -102,6 +104,20 @@ class DashboardController extends Controller
         return view('dashboard.fasilitas', [
             'fasilitass' => Fasilitas::all(),
             'active' => 'fasilitas'
+        ]);
+    }
+    public function fotoEkstrakulikuler()
+    {
+        return view('dashboard.foto-ekstrakulikuler', [
+            'fotoEkstrakulikulers' => FotoEkstrakulikuler::all(),
+            'active' => 'foto ekstrakulikuler'
+        ]);
+    }
+    public function Ekstrakulikuler()
+    {
+        return view('dashboard.Ekstrakulikuler', [
+            'ekstrakulikulers' => Ekstrakulikuler::all(),
+            'active' => 'ekstrakulikuler'
         ]);
     }
 }
