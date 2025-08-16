@@ -6,10 +6,12 @@ use App\Models\Deskripsi;
 use App\Models\Ekstrakulikuler;
 use App\Models\Fasilitas;
 use App\Models\FotoEkstrakulikuler;
+use App\Models\FotoPrestasi;
 use App\Models\Jumbotron;
 use App\Models\Kurikulum;
 use App\Models\Misi;
 use App\Models\Pertanyaan;
+use App\Models\Prestasi;
 use App\Models\PrestasiSection;
 use App\Models\Profil;
 use App\Models\Program;
@@ -113,11 +115,25 @@ class DashboardController extends Controller
             'active' => 'foto ekstrakulikuler'
         ]);
     }
-    public function Ekstrakulikuler()
+    public function ekstrakulikuler()
     {
         return view('dashboard.Ekstrakulikuler', [
             'ekstrakulikulers' => Ekstrakulikuler::all(),
             'active' => 'ekstrakulikuler'
+        ]);
+    }
+    public function fotoPrestasi()
+    {
+        return view('dashboard.prestasi', [
+            'fotoPrestasis' => FotoPrestasi::all(),
+            'active' => 'foto prestasi'
+        ]);
+    }
+    public function prestasi()
+    {
+        return view('dashboard.prestasi', [
+            'prestasis' => Prestasi::all(),
+            'active' => 'prestasi'
         ]);
     }
 }

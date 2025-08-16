@@ -11,6 +11,7 @@ use App\Http\Controllers\JumbotronController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\MisiController;
 use App\Http\Controllers\PertanyaanController;
+use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\PrestasiSectionController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProgramController;
@@ -61,6 +62,8 @@ Route::get('/dashboard/program', [DashboardController::class, 'program']);
 Route::get('/dashboard/fasilitas', [DashboardController::class, 'fasilitas']);
 Route::get('/dashboard/foto-ekstrakulikuler', [DashboardController::class, 'fotoEkstrakulikuler']);
 Route::get('/dashboard/ekstrakulikuler', [DashboardController::class, 'ekstrakulikuler']);
+Route::get('/dashboard/foto-prestasi', [DashboardController::class, 'fotoPrestasi']);
+Route::get('/dashboard/prestasi', [DashboardController::class, 'prestasi']);
 
 
 Route::post('/dashboard/jumbotron/insert', [JumbotronController::class, 'store']);
@@ -110,4 +113,10 @@ Route::put('/dashboard/ekstrakulikuler/update-foto/{id}', [EkstrakulikulerContro
 Route::post('/dashboard/ekstrakulikuler/insert', [EkstrakulikulerController::class, 'store']);
 Route::put('/dashboard/ekstrakulikuler/update/{id}', [EkstrakulikulerController::class, 'update']);
 Route::delete('/dashboard/ekstrakulikuler/delete/{id}', [EkstrakulikulerController::class, 'destroy']);
+
+Route::put('/dashboard/prestasi/update-foto/{id}', [PrestasiController::class, 'updateFoto']);
+
+Route::post('/dashboard/prestasi/insert', [PrestasiController::class, 'store']);
+Route::put('/dashboard/prestasi/update/{id}', [PrestasiController::class, 'update']);
+Route::delete('/dashboard/prestasi/delete/{id}', [PrestasiController::class, 'destroy']);
 
