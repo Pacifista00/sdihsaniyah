@@ -8,6 +8,7 @@ use App\Models\Fasilitas;
 use App\Models\FotoEkstrakulikuler;
 use App\Models\FotoPrestasi;
 use App\Models\Jumbotron;
+use App\Models\Kegiatan;
 use App\Models\Kurikulum;
 use App\Models\Misi;
 use App\Models\Pertanyaan;
@@ -134,6 +135,13 @@ class DashboardController extends Controller
         return view('dashboard.prestasi', [
             'prestasis' => Prestasi::all(),
             'active' => 'prestasi'
+        ]);
+    }
+    public function kegiatan()
+    {
+        return view('dashboard.kegiatan', [
+            'kegiatans' => Kegiatan::all(),
+            'active' => 'kegiatan'
         ]);
     }
 }
