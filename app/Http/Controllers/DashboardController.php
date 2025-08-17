@@ -9,6 +9,7 @@ use App\Models\FotoEkstrakulikuler;
 use App\Models\FotoPrestasi;
 use App\Models\Jumbotron;
 use App\Models\Kegiatan;
+use App\Models\Kontak;
 use App\Models\Kurikulum;
 use App\Models\Misi;
 use App\Models\Pertanyaan;
@@ -142,6 +143,13 @@ class DashboardController extends Controller
         return view('dashboard.kegiatan', [
             'kegiatans' => Kegiatan::all(),
             'active' => 'kegiatan'
+        ]);
+    }
+    public function kontak()
+    {
+        return view('dashboard.kontak', [
+            'kontak' => Kontak::latest()->get(),
+            'active' => 'kontak'
         ]);
     }
 }
