@@ -65,16 +65,15 @@
     <script src="{{ asset('dashboard-assets/js/config.js') }}"></script>
     <style>
       .swal2-container {
-    z-index: 200000 !important;
-}
-.img-table {
-    width: 40px;         /* lebar */
-    height: 40px;        /* tinggi sama biar kotak */
-    object-fit: cover;    /* biar proporsi gambar terjaga */
-    border-radius: 8px;   /* opsional, sudut membulat */
-    display: block;       /* biar tidak ada jarak bawah aneh */
-}
-
+          z-index: 200000 !important;
+      }
+      .img-table {
+          width: 40px;         /* lebar */
+          height: 40px;        /* tinggi sama biar kotak */
+          object-fit: cover;    /* biar proporsi gambar terjaga */
+          border-radius: 8px;   /* opsional, sudut membulat */
+          display: block;       /* biar tidak ada jarak bawah aneh */
+      }
     </style>
   </head>
 
@@ -83,45 +82,45 @@
     @yield('content-dashboard')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-@if (session('success'))
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    Swal.fire({
-      icon: 'success',
-      title: 'Berhasil',
-      text: '{{ session('success') }}',
-      showConfirmButton: false,
-      timer: 2000
-    });
-    });
-  </script>
-@endif
+    @if (session('success'))
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        Swal.fire({
+          icon: 'success',
+          title: 'Berhasil',
+          text: '{{ session('success') }}',
+          showConfirmButton: false,
+          timer: 2000
+        });
+        });
+      </script>
+    @endif
 
-@if (session('error'))
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    Swal.fire({
-      icon: 'error',
-      title: 'Gagal',
-      text: '{{ session('error') }}',
-      showConfirmButton: true
-    });
-    });
-  </script>
-@endif
+    @if (session('error'))
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        Swal.fire({
+          icon: 'error',
+          title: 'Gagal',
+          text: '{{ session('error') }}',
+          showConfirmButton: true
+        });
+        });
+      </script>
+    @endif
 
-@if ($errors->any())
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    Swal.fire({
-      icon: 'error',
-      title: 'Validasi Gagal',
-      html: `{!! implode('<br>', $errors->all()) !!}`,
-      showConfirmButton: true
-    });
-    });
-  </script>
-@endif
+    @if ($errors->any())
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        Swal.fire({
+          icon: 'error',
+          title: 'Validasi Gagal',
+          html: `{!! implode('<br>', $errors->all()) !!}`,
+          showConfirmButton: true
+        });
+        });
+      </script>
+    @endif
 
         <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

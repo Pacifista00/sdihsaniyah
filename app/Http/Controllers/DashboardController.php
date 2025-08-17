@@ -14,6 +14,7 @@ use App\Models\Kegiatan;
 use App\Models\Kontak;
 use App\Models\Kurikulum;
 use App\Models\Misi;
+use App\Models\Pendaftar;
 use App\Models\Pertanyaan;
 use App\Models\Prestasi;
 use App\Models\PrestasiSection;
@@ -166,6 +167,13 @@ class DashboardController extends Controller
         return view('dashboard.kontak', [
             'kontak' => Kontak::latest()->get(),
             'active' => 'kontak'
+        ]);
+    }
+    public function spmb()
+    {
+        return view('dashboard.spmb', [
+            'pendaftars' => Pendaftar::all(),
+            'active' => 'spmb'
         ]);
     }
 }

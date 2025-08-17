@@ -6,7 +6,6 @@ use App\Http\Controllers\DeskripsiController;
 use App\Http\Controllers\EkstrakulikulerController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\JumbotronController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\KontakController;
@@ -18,6 +17,7 @@ use App\Http\Controllers\PrestasiSectionController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\ProgramUnggulanController;
+use App\Http\Controllers\SPMBController;
 use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\TujuanController;
 use App\Http\Controllers\VisiController;
@@ -47,6 +47,7 @@ Route::get('/prestasi-siswa', [HomeController::class, 'prestasiSiswa']);
 Route::get('/kegiatan', [HomeController::class, 'kegiatan']);
 Route::get('/kontak', [HomeController::class, 'kontak']);
 Route::get('/daftar-spmb', [HomeController::class, 'spmb']);
+Route::post('/daftar', [SPMBController::class, 'store']);
 
 Route::get('/login', [AuthController::class, 'index']);
 
@@ -70,6 +71,7 @@ Route::get('/dashboard/foto-prestasi', [DashboardController::class, 'fotoPrestas
 Route::get('/dashboard/prestasi', [DashboardController::class, 'prestasi']);
 Route::get('/dashboard/kegiatan', [DashboardController::class, 'kegiatan']);
 Route::get('/dashboard/kontak', [DashboardController::class, 'kontak']);
+Route::get('/dashboard/spmb', [DashboardController::class, 'spmb']);
 
 
 Route::post('/dashboard/jumbotron/insert', [JumbotronController::class, 'store']);
@@ -135,3 +137,6 @@ Route::put('/dashboard/kegiatan/update/{id}', [KegiatanController::class, 'updat
 Route::delete('/dashboard/kegiatan/delete/{id}', [KegiatanController::class, 'destroy']);
 
 Route::put('/dashboard/kontak/update/{id}', [KontakController::class, 'update']);
+
+Route::put('/dashboard/pendaftar/update/{id}', [SPMBController::class, 'update']);
+Route::delete('/dashboard/pendaftar/delete/{id}', [SPMBController::class, 'destroy']);

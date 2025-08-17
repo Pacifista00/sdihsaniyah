@@ -38,7 +38,47 @@
 <body class="index-page bg-white">
     @yield('content')
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    @if (session('success'))
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        Swal.fire({
+          icon: 'success',
+          title: 'Berhasil',
+          text: '{{ session('success') }}',
+          showConfirmButton: false,
+          timer: 2000
+        });
+        });
+      </script>
+    @endif
+
+    @if (session('error'))
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        Swal.fire({
+          icon: 'error',
+          title: 'Gagal',
+          text: '{{ session('error') }}',
+          showConfirmButton: true
+        });
+        });
+      </script>
+    @endif
+
+    @if ($errors->any())
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        Swal.fire({
+          icon: 'error',
+          title: 'Validasi Gagal',
+          html: `{!! implode('<br>', $errors->all()) !!}`,
+          showConfirmButton: true
+        });
+        });
+      </script>
+    @endif
 
     <!-- Vendor JS Files -->
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

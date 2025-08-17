@@ -212,13 +212,13 @@
             <span class="menu-header-text">Formulir</span>
         </li>
         <li class="menu-item">
-            <a href="index.html" class="menu-link">
+            <a href="/dashboard/spmb" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-id-card"></i>
                 <div data-i18n="Analytics">SPMB</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="index.html" class="menu-link">
+            <a href="/dashboard/pesan" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-message-rounded"></i>
                 <div data-i18n="Analytics">Pesan</div>
             </a>
@@ -227,7 +227,7 @@
             <span class="menu-header-text">Kelola</span>
         </li>
         <li class="menu-item">
-            <a href="index.html" class="menu-link">
+            <a href="/dashboard/user" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-user"></i>
                 <div data-i18n="Analytics">User</div>
             </a>
