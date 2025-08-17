@@ -85,6 +85,11 @@
                     </a>
                 </li>
                 <li class="menu-item">
+                    <a href="/dashboard/foto-kurikulum-program" class="menu-link">
+                        <div data-i18n="Without">Foto Kurikulum & Program</div>
+                    </a>
+                </li>
+                <li class="menu-item">
                     <a href="/dashboard/kurikulum-program" class="menu-link">
                         <div data-i18n="Without">Kurikulum & Program</div>
                     </a>
@@ -113,6 +118,11 @@
             </a>
 
             <ul class=" menu-sub">
+                <li class="menu-item">
+                    <a href="/dashboard/foto-tentang-kami" class="menu-link">
+                        <div data-i18n="Without">Foto</div>
+                    </a>
+                </li>
                 <li class="menu-item">
                     <a href="/dashboard/deskripsi" class="menu-link">
                         <div data-i18n="Without">Deskripsi</div>

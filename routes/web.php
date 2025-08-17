@@ -52,10 +52,12 @@ Route::get('/login', [AuthController::class, 'index']);
 
 Route::get('/dashboard/jumbotron', [DashboardController::class, 'jumbotron']);
 Route::get('/dashboard/profil', [DashboardController::class, 'profil']);
+Route::get('/dashboard/foto-kurikulum-program', [DashboardController::class, 'fotoKurikulumProgram']);
 Route::get('/dashboard/kurikulum-program', [DashboardController::class, 'kurikulumProgram']);
 Route::get('/dashboard/prestasi-section', [DashboardController::class, 'prestasiSection']);
 Route::get('/dashboard/testimoni', [DashboardController::class, 'testimoni']);
 Route::get('/dashboard/pertanyaan', [DashboardController::class, 'pertanyaan']);
+Route::get('/dashboard/foto-tentang-kami', [DashboardController::class, 'fotoTentangKami']);
 Route::get('/dashboard/deskripsi', [DashboardController::class, 'deskripsi']);
 Route::get('/dashboard/visi', [DashboardController::class, 'visi']);
 Route::get('/dashboard/misi-sekolah', [DashboardController::class, 'misi']);
@@ -76,6 +78,8 @@ Route::delete('/dashboard/jumbotron/delete/{id}', [JumbotronController::class, '
 
 Route::put('/dashboard/profil/update/{id}', [ProfilController::class, 'update']);
 
+Route::put('/dashboard/kurikulum/update-foto/{id}', [KurikulumController::class, 'updateFoto']);
+
 Route::post('/dashboard/kurikulum/insert', [KurikulumController::class, 'store']);
 Route::put('/dashboard/kurikulum/update/{id}', [KurikulumController::class, 'update']);
 Route::delete('/dashboard/kurikulum/delete/{id}', [KurikulumController::class, 'destroy']);
@@ -91,6 +95,8 @@ Route::put('/dashboard/pertanyaan/update/{id}', [PertanyaanController::class, 'u
 Route::post('/dashboard/testimoni/insert', [TestimoniController::class, 'store']);
 Route::put('/dashboard/testimoni/update/{id}', [TestimoniController::class, 'update']);
 Route::delete('/dashboard/testimoni/delete/{id}', [TestimoniController::class, 'destroy']);
+
+Route::put('/dashboard/tentang-kami/update-foto/{id}', [DeskripsiController::class, 'updateFoto']);
 
 Route::put('/dashboard/deskripsi/update/{id}', [DeskripsiController::class, 'update']);
 

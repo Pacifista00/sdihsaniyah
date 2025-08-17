@@ -6,7 +6,9 @@ use App\Models\Deskripsi;
 use App\Models\Ekstrakulikuler;
 use App\Models\Fasilitas;
 use App\Models\FotoEkstrakulikuler;
+use App\Models\FotoKurikulum;
 use App\Models\FotoPrestasi;
+use App\Models\FotoTentang;
 use App\Models\Jumbotron;
 use App\Models\Kegiatan;
 use App\Models\Kontak;
@@ -39,6 +41,13 @@ class DashboardController extends Controller
             'active' => 'profil'
         ]);
     }
+    public function fotoKurikulumProgram()
+    {
+        return view('dashboard.foto-kurikulum', [
+            'fotoKurikulums' => FotoKurikulum::all(),
+            'active' => 'foto kurikulum'
+        ]);
+    }
     public function kurikulumProgram()
     {
         return view('dashboard.kurikulum-program', [
@@ -66,6 +75,13 @@ class DashboardController extends Controller
         return view('dashboard.pertanyaan', [
             'pertanyaan' => Pertanyaan::latest()->get(),
             'active' => 'pertanyaan'
+        ]);
+    }
+    public function fotoTentangKami()
+    {
+        return view('dashboard.foto-tentang', [
+            'fotoTentangs' => FotoTentang::all(),
+            'active' => 'foto tentang kami'
         ]);
     }
     public function deskripsi()
