@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Angkatan;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -57,7 +58,8 @@ class HomeController extends Controller
     public function spmb()
     {
         return view('spmb', [
-            'active' => 'spmb'
+            'active' => 'spmb',
+            'angkatan' => Angkatan::all()
         ]);
     }
 }

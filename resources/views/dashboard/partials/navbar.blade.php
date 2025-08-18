@@ -24,8 +24,8 @@
             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                        <img src="{{ asset('dashboard-assets/img/avatars/1.png') }}" alt
-                            class="w-px-40 h-auto rounded-circle" />
+                        <img src="{{ asset('images/profile.jpg') }}" alt
+                            class="w-px-40 h-auto rounded-circle shadow" />
                     </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -34,8 +34,8 @@
                             <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
                                     <div class="avatar avatar-online">
-                                        <img src="{{ asset('dashboard-assets/img/avatars/1.png') }}" alt
-                                            class="w-px-40 h-auto rounded-circle" />
+                                        <img src="{{ asset('images/profile.jpg') }}" alt
+                                            class="w-px-40 h-auto rounded-circle shadow" />
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
@@ -74,10 +74,15 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="auth-login-basic.html">
+                        <a class="dropdown-item" href=""
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="bx bx-power-off me-2"></i>
                             <span class="align-middle">Log Out</span>
                         </a>
+
+                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
                 </ul>
             </li>

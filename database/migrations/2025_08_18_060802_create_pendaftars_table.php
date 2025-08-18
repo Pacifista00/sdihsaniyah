@@ -32,7 +32,7 @@ return new class extends Migration
             $table->text('alamat');
             $table->foreignId('angkatan_id')->constrained()->onUpdate('cascade');
             $table->enum('jenis_kelas', ['intensif', 'bilingual']);
-            $table->string('asal_pendidikan');
+            $table->enum('asal_pendidikan', ['tk', 'ra', 'kb', 'sps', 'paud', 'tpa']);
             $table->string('nama_sekolah');
             $table->text('alamat_sekolah');
             // ayah

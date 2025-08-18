@@ -142,6 +142,18 @@
                                         <option value="bilingual" {{ old('jenis_kelas') == 'bilingual' ? 'selected' : '' }}>bilingual</option>
                                     </select>
                                 </div>
+                                <div class="mb-3">
+                                    <label for="angkatanId" class="form-label mb-0 pb-1">Daftar Angkatan Berapa</label>
+                                    <select class="form-select rounded-5 border-start-0 custom-select-hover"
+                                            id="angkatanId" name="angkatan_id" required>
+                                        <option disabled {{ old('angkatan_id') ? '' : 'selected' }}>Pilih angkatan...</option>
+                                        @foreach ($angkatan as $angkatanItem)
+                                            <option value="{{ $angkatanItem->id }}" {{ old('angkatan_id') == $angkatanItem->id ? 'selected' : '' }}>
+                                                {{ $angkatanItem->nama }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
 
                                 <h4>Asal Mula Pendidikan</h4>
                                 <div class="mb-3">

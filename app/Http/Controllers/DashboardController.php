@@ -25,14 +25,17 @@ use App\Models\Program;
 use App\Models\Testimoni;
 use App\Models\Tujuan;
 use App\Models\Unggulan;
+use App\Models\User;
 use App\Models\Visi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
     public function jumbotron()
     {
         return view('dashboard.jumbotron', [
+            'loggedUser' => Auth::user(),
             'jumbotrons' => Jumbotron::latest()->get(),
             'active' => 'jumbotron'
         ]);
@@ -40,6 +43,7 @@ class DashboardController extends Controller
     public function profil()
     {
         return view('dashboard.profil', [
+            'loggedUser' => Auth::user(),
             'profil' => Profil::latest()->get(),
             'active' => 'profil'
         ]);
@@ -47,6 +51,7 @@ class DashboardController extends Controller
     public function fotoKurikulumProgram()
     {
         return view('dashboard.foto-kurikulum', [
+            'loggedUser' => Auth::user(),
             'fotoKurikulums' => FotoKurikulum::all(),
             'active' => 'foto kurikulum'
         ]);
@@ -54,6 +59,7 @@ class DashboardController extends Controller
     public function kurikulumProgram()
     {
         return view('dashboard.kurikulum-program', [
+            'loggedUser' => Auth::user(),
             'kurikulums' => Kurikulum::all(),
             'unggulans' => Unggulan::all(),
             'active' => 'kurikulum & program unggulan'
@@ -62,6 +68,7 @@ class DashboardController extends Controller
     public function prestasiSection()
     {
         return view('dashboard.prestasi-section', [
+            'loggedUser' => Auth::user(),
             'prestasi' => PrestasiSection::latest()->get(),
             'active' => 'prestasi'
         ]);
@@ -69,6 +76,7 @@ class DashboardController extends Controller
     public function testimoni()
     {
         return view('dashboard.testimoni', [
+            'loggedUser' => Auth::user(),
             'testimonis' => Testimoni::latest()->get(),
             'active' => 'testimoni'
         ]);
@@ -76,6 +84,7 @@ class DashboardController extends Controller
     public function pertanyaan()
     {
         return view('dashboard.pertanyaan', [
+            'loggedUser' => Auth::user(),
             'pertanyaan' => Pertanyaan::latest()->get(),
             'active' => 'pertanyaan'
         ]);
@@ -83,6 +92,7 @@ class DashboardController extends Controller
     public function fotoTentangKami()
     {
         return view('dashboard.foto-tentang', [
+            'loggedUser' => Auth::user(),
             'fotoTentangs' => FotoTentang::all(),
             'active' => 'foto tentang kami'
         ]);
@@ -90,6 +100,7 @@ class DashboardController extends Controller
     public function deskripsi()
     {
         return view('dashboard.deskripsi', [
+            'loggedUser' => Auth::user(),
             'deskripsi' => Deskripsi::latest()->get(),
             'active' => 'deskripsi'
         ]);
@@ -97,6 +108,7 @@ class DashboardController extends Controller
     public function visi()
     {
         return view('dashboard.visi', [
+            'loggedUser' => Auth::user(),
             'visi' => Visi::latest()->get(),
             'active' => 'visi'
         ]);
@@ -104,6 +116,7 @@ class DashboardController extends Controller
     public function misi()
     {
         return view('dashboard.misi', [
+            'loggedUser' => Auth::user(),
             'misis' => Misi::all(),
             'active' => 'misi'
         ]);
@@ -111,6 +124,7 @@ class DashboardController extends Controller
     public function tujuan()
     {
         return view('dashboard.tujuan', [
+            'loggedUser' => Auth::user(),
             'tujuans' => Tujuan::all(),
             'active' => 'tujuan'
         ]);
@@ -118,6 +132,7 @@ class DashboardController extends Controller
     public function program()
     {
         return view('dashboard.program', [
+            'loggedUser' => Auth::user(),
             'programs' => Program::all(),
             'active' => 'program'
         ]);
@@ -125,6 +140,7 @@ class DashboardController extends Controller
     public function fasilitas()
     {
         return view('dashboard.fasilitas', [
+            'loggedUser' => Auth::user(),
             'fasilitass' => Fasilitas::all(),
             'active' => 'fasilitas'
         ]);
@@ -132,6 +148,7 @@ class DashboardController extends Controller
     public function fotoEkstrakulikuler()
     {
         return view('dashboard.foto-ekstrakulikuler', [
+            'loggedUser' => Auth::user(),
             'fotoEkstrakulikulers' => FotoEkstrakulikuler::all(),
             'active' => 'foto ekstrakulikuler'
         ]);
@@ -139,6 +156,7 @@ class DashboardController extends Controller
     public function ekstrakulikuler()
     {
         return view('dashboard.Ekstrakulikuler', [
+            'loggedUser' => Auth::user(),
             'ekstrakulikulers' => Ekstrakulikuler::all(),
             'active' => 'ekstrakulikuler'
         ]);
@@ -146,6 +164,7 @@ class DashboardController extends Controller
     public function fotoPrestasi()
     {
         return view('dashboard.prestasi', [
+            'loggedUser' => Auth::user(),
             'fotoPrestasis' => FotoPrestasi::all(),
             'active' => 'foto prestasi'
         ]);
@@ -153,6 +172,7 @@ class DashboardController extends Controller
     public function prestasi()
     {
         return view('dashboard.prestasi', [
+            'loggedUser' => Auth::user(),
             'prestasis' => Prestasi::all(),
             'active' => 'prestasi'
         ]);
@@ -160,6 +180,7 @@ class DashboardController extends Controller
     public function kegiatan()
     {
         return view('dashboard.kegiatan', [
+            'loggedUser' => Auth::user(),
             'kegiatans' => Kegiatan::all(),
             'active' => 'kegiatan'
         ]);
@@ -167,6 +188,7 @@ class DashboardController extends Controller
     public function kontak()
     {
         return view('dashboard.kontak', [
+            'loggedUser' => Auth::user(),
             'kontak' => Kontak::latest()->get(),
             'active' => 'kontak'
         ]);
@@ -174,6 +196,7 @@ class DashboardController extends Controller
     public function spmb()
     {
         return view('dashboard.spmb', [
+            'loggedUser' => Auth::user(),
             'pendaftars' => Pendaftar::all(),
             'active' => 'spmb'
         ]);
@@ -181,6 +204,7 @@ class DashboardController extends Controller
     public function pesan()
     {
         return view('dashboard.pesan', [
+            'loggedUser' => Auth::user(),
             'pesans' => Pesan::all(),
             'active' => 'pesan'
         ]);
@@ -188,8 +212,17 @@ class DashboardController extends Controller
     public function ppdb()
     {
         return view('dashboard.ppdb', [
+            'loggedUser' => Auth::user(),
             'ppdbs' => Angkatan::all(),
             'active' => 'ppdb'
+        ]);
+    }
+    public function user()
+    {
+        return view('dashboard.user', [
+            'loggedUser' => Auth::user(),
+            'users' => User::all(),
+            'active' => 'user'
         ]);
     }
 }

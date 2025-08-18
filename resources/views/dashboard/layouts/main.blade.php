@@ -108,6 +108,19 @@
         });
       </script>
     @endif
+    
+    @if (session('warning'))
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: '{{ session('warning') }}',
+            confirmButtonText: 'OK'
+        });
+        });
+      </script>
+    @endif
 
     @if ($errors->any())
       <script>

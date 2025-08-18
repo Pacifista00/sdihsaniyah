@@ -27,6 +27,7 @@ class Pendaftar extends Model
         'hobi',
         'bakat',
         'alamat',
+        'angkatan_id',
         'jenis_kelas',
         'asal_pendidikan',
         'nama_sekolah',
