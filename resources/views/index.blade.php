@@ -581,13 +581,13 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                            data-aos-delay="200">
+                        <form action="/pesan" method="POST">
+                            @csrf
                             <div class="row gy-4">
 
                                 <div class="col-md-12 mb-0 mb-lg-3">
                                     <label for="name" class="form-label">Nama Lengkap</label>
-                                    <input type="text" id="name" name="name" class="form-control rounded-5"
+                                    <input type="text" id="name" name="nama" class="form-control rounded-5"
                                         placeholder="Contoh: Budi Santoso" required>
                                 </div>
 
@@ -599,21 +599,21 @@
 
                                 <div class="col-md-12 mb-0 mb-lg-3">
                                     <label for="subject" class="form-label">Subjek</label>
-                                    <input type="text" id="subject" name="subject" class="form-control rounded-5"
+                                    <input type="text" id="subject" name="subjek" class="form-control rounded-5"
                                         placeholder="Contoh: Permintaan Informasi" required>
                                 </div>
 
                                 <div class="col-md-12 mb-0 mb-lg-3">
                                     <label for="message" class="form-label">Pesan</label>
-                                    <textarea id="message" name="message" class="form-control rounded-5" rows="6"
-                                        placeholder="Contoh: Saya ingin mengetahui lebih lanjut tentang program yang ditawarkan." required></textarea>
+                                    <textarea id="message" class="form-control rounded-5" rows="6"
+                                        placeholder="Contoh: Saya ingin mengetahui lebih lanjut tentang program yang ditawarkan." required name="pesan"></textarea>
                                 </div>
 
 
                                 <div class="col-md-12 text-center">
-                                    <div class="loading">Loading</div>
+                                    {{-- <div class="loading">Loading</div>
                                     <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                                    <div class="sent-message">Pesanmu telah terkirim. Terima kasih!</div> --}}
 
                                     <button type="submit" class="btn-green">Kirim</button>
                                 </div>

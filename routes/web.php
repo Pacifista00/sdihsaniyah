@@ -12,6 +12,7 @@ use App\Http\Controllers\KontakController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\MisiController;
 use App\Http\Controllers\PertanyaanController;
+use App\Http\Controllers\PesanController;
 use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\PrestasiSectionController;
 use App\Http\Controllers\ProfilController;
@@ -48,6 +49,7 @@ Route::get('/kegiatan', [HomeController::class, 'kegiatan']);
 Route::get('/kontak', [HomeController::class, 'kontak']);
 Route::get('/daftar-spmb', [HomeController::class, 'spmb']);
 Route::post('/daftar', [SPMBController::class, 'store']);
+Route::post('/pesan', [PesanController::class, 'store']);
 
 Route::get('/login', [AuthController::class, 'index']);
 
@@ -72,6 +74,7 @@ Route::get('/dashboard/prestasi', [DashboardController::class, 'prestasi']);
 Route::get('/dashboard/kegiatan', [DashboardController::class, 'kegiatan']);
 Route::get('/dashboard/kontak', [DashboardController::class, 'kontak']);
 Route::get('/dashboard/spmb', [DashboardController::class, 'spmb']);
+Route::get('/dashboard/pesan', [DashboardController::class, 'pesan']);
 
 
 Route::post('/dashboard/jumbotron/insert', [JumbotronController::class, 'store']);
@@ -140,3 +143,6 @@ Route::put('/dashboard/kontak/update/{id}', [KontakController::class, 'update'])
 
 Route::put('/dashboard/pendaftar/update/{id}', [SPMBController::class, 'update']);
 Route::delete('/dashboard/pendaftar/delete/{id}', [SPMBController::class, 'destroy']);
+
+Route::put('/dashboard/pesan/update/{id}', [PesanController::class, 'update']);
+Route::delete('/dashboard/pesan/delete/{id}', [PesanController::class, 'destroy']);

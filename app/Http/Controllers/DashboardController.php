@@ -16,6 +16,7 @@ use App\Models\Kurikulum;
 use App\Models\Misi;
 use App\Models\Pendaftar;
 use App\Models\Pertanyaan;
+use App\Models\Pesan;
 use App\Models\Prestasi;
 use App\Models\PrestasiSection;
 use App\Models\Profil;
@@ -174,6 +175,13 @@ class DashboardController extends Controller
         return view('dashboard.spmb', [
             'pendaftars' => Pendaftar::all(),
             'active' => 'spmb'
+        ]);
+    }
+    public function pesan()
+    {
+        return view('dashboard.pesan', [
+            'pesans' => Pesan::all(),
+            'active' => 'pesan'
         ]);
     }
 }
