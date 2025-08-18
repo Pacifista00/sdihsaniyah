@@ -9,10 +9,9 @@
 
             <div id="hero-carousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
 
-
                 <!-- Slide 2 -->
                 <div class="carousel-item active">
-                    <div class="carousel-container ">
+                    <div class="carousel-container my-auto">
                         <h2 class="animate__animated animate__fadeInDown fs-1 jumbotron-head">Welcome to SD Ihsaniyah 1
                             Kota Tegal
                         </h2>
@@ -76,7 +75,7 @@
             <!-- Section Title -->
             <div class="container section-title my-5" data-aos="fade-up">
                 <!-- <h2>About</h2> -->
-                <div class="row mb-5 mb-lg-0">
+                <div class="row">
                     <div class="col-md-6">
                         <small class="fs-6 text-label ">PROFIL KAMI</small>
                         <h1 class="head-about p-0 m-0 fs-1">Profil SD Ihsaniyah 1 Kota Tegal</h1>
@@ -124,7 +123,7 @@
 
 
         <section class="my-bg-primary ppdb-section">
-            <div class="container text-center mb-2">
+            <div class="container text-center">
                 <div class="mb-5">
                     <h1 class="fs-1 text-white">Informasi PPDB</h1>
                     <p class="text-white fs-6">Penerimaan Peserta Didik Baru Tahun Ajaran Mendatang</p>
@@ -185,7 +184,7 @@
         <section>
 
             <!-- Section Title -->
-            <div class="container section-title my-2" data-aos="fade-up">
+            <div class="container section-title" data-aos="fade-up">
                 <!-- <h2>About</h2> -->
                 <div class="row">
                     <div class="col-lg-6">

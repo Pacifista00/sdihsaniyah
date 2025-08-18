@@ -154,6 +154,7 @@
                                                             <h6>Bakat</h6>
                                                             <h6>Alamat</h6>
                                                             <h6>Jenis Kelas</h6>
+                                                            <h6>Angkatan</h6>
                                                             <h6>Asal Pendidikan</h6>
                                                             <h6>Nama Sekolah</h6>
                                                             <h6>Alamat Sekolah</h6>
@@ -197,6 +198,7 @@
                                                             <h6>: {{ $pendaftarItem->bakat }}</h6>
                                                             <h6>: {{ $pendaftarItem->alamat }}</h6>
                                                             <h6>: {{ $pendaftarItem->jenis_kelas }}</h6>
+                                                            <h6>: {{ $pendaftarItem->angkatan->angkatan }}</h6>
                                                             <h6>: {{ $pendaftarItem->asal_pendidikan }}</h6>
                                                             <h6>: {{ $pendaftarItem->nama_sekolah }}</h6>
                                                             <h6>: {{ $pendaftarItem->alamat_sekolah }}</h6>

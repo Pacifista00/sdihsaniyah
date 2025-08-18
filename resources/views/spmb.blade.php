@@ -3,8 +3,6 @@
     @include('partials.navbar')
 
     <main class="main">
-
-
         <section id="call-to-action" class="call-to-action section my-bg-orange parallax-bg">
 
             <div class="container">
@@ -149,7 +147,7 @@
                                         <option disabled {{ old('angkatan_id') ? '' : 'selected' }}>Pilih angkatan...</option>
                                         @foreach ($angkatan as $angkatanItem)
                                             <option value="{{ $angkatanItem->id }}" {{ old('angkatan_id') == $angkatanItem->id ? 'selected' : '' }}>
-                                                {{ $angkatanItem->nama }}
+                                                {{ $angkatanItem->angkatan }}
                                             </option>
                                         @endforeach
                                     </select>

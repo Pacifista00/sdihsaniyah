@@ -6,6 +6,7 @@ use App\Models\Angkatan;
 use App\Models\Deskripsi;
 use App\Models\Ekstrakulikuler;
 use App\Models\Fasilitas;
+use App\Models\Footer;
 use App\Models\FotoEkstrakulikuler;
 use App\Models\FotoKurikulum;
 use App\Models\FotoPrestasi;
@@ -223,6 +224,14 @@ class DashboardController extends Controller
             'loggedUser' => Auth::user(),
             'users' => User::all(),
             'active' => 'user'
+        ]);
+    }
+    public function footer()
+    {
+        return view('dashboard.footer', [
+            'loggedUser' => Auth::user(),
+            'footer' => Footer::latest()->get(),
+            'active' => 'footer'
         ]);
     }
 }

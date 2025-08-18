@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeskripsiController;
 use App\Http\Controllers\EkstrakulikulerController;
 use App\Http\Controllers\FasilitasController;
+use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JumbotronController;
 use App\Http\Controllers\KegiatanController;
@@ -86,6 +87,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/pesan', [DashboardController::class, 'pesan']);
     Route::get('/dashboard/ppdb', [DashboardController::class, 'ppdb']);
     Route::get('/dashboard/user', [DashboardController::class, 'user']);
+    Route::get('/dashboard/footer', [DashboardController::class, 'footer']);
 
 
     Route::post('/dashboard/jumbotron/insert', [JumbotronController::class, 'store']);
@@ -165,4 +167,6 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/dashboard/user/update/{id}', [UserController::class, 'update']);
     Route::put('/dashboard/user/ubah-password/{id}', [UserController::class, 'changePassword']);
     Route::delete('/dashboard/user/delete/{id}', [UserController::class, 'destroy']);
+
+    Route::put('/dashboard/footer/update/{id}', [FooterController::class, 'update']);
 });

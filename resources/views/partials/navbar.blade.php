@@ -2,7 +2,7 @@
     <div
         class="container-fluid container-lg position-relative d-flex align-items-center justify-content-between bg-white pill-navbar shadow">
 
-        <a href="index.html" class="logo d-flex align-items-center">
+        <a href="/" class="logo d-flex align-items-center">
             <img src="{{ asset('images/logosd.png') }}" alt="" class="ms-2 me-3">
             <h1 class="sitename my-text-primary fs-5">SD Ihsaniyah 1 Kota Tegal</h1>
         </a>

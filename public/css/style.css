@@ -557,28 +557,38 @@
     object-position: center; /* fokus di tengah */
 }
 .circle-img {
-    width: 400px; /* ukuran default */
-    height: 400px; /* sama dengan width biar bulat */
-    border-radius: 50%;
-    object-fit: cover; /* potong gambar supaya proporsional */
-    object-position: center;
-}
-
-.circle-img-small {
-    width: 180px;
-    height: 180px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center;
-}
-.circle-img,
-.circle-img-small {
-    border-radius: 50%;
-    object-fit: cover;
+    border: 10px solid #f0f0f0;
     display: block;
-    border: 10px solid #f0f0f0; /* putih agak abu-abu */
     transition: border-color 0.3s ease, transform 0.3s ease;
 }
+
+/* Gambar kecil posisi absolut */
+.circle-img-small {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #f0f0f0;
+    position: absolute;
+}
+
+/* Posisinya di pojok */
+.small-img-1 {
+    bottom: 10px;
+    right: 10px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.small-img-2 {
+    bottom: 10px;
+    left: 10px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
 
 /* Hover effect */
 .circle-img:hover,

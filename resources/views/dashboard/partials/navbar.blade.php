@@ -39,8 +39,8 @@
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <span class="fw-semibold d-block">John Doe</span>
-                                    <small class="text-muted">Admin</small>
+                                    <span class="fw-semibold d-block">{{ $loggedUser->nama }}</span>
+                                    <small class="text-muted">{{ $loggedUser->role }}</small>
                                 </div>
                             </div>
                         </a>
