@@ -30,6 +30,7 @@ return new class extends Migration
             $table->string('hobi');
             $table->string('bakat');
             $table->text('alamat');
+            $table->foreignId('angkatan_id')->constrained()->onUpdate('cascade');
             $table->enum('jenis_kelas', ['intensif', 'bilingual']);
             $table->string('asal_pendidikan');
             $table->string('nama_sekolah');

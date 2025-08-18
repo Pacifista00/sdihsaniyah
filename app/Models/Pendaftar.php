@@ -55,4 +55,9 @@ class Pendaftar extends Model
         'berkas_akta',
         'foto',
     ];
+
+    public function angkatan()
+    {
+        return $this->belongsTo(Angkatan::class);
+    }
 }

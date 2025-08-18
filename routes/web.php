@@ -13,6 +13,7 @@ use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\MisiController;
 use App\Http\Controllers\PertanyaanController;
 use App\Http\Controllers\PesanController;
+use App\Http\Controllers\PPDBController;
 use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\PrestasiSectionController;
 use App\Http\Controllers\ProfilController;
@@ -75,6 +76,7 @@ Route::get('/dashboard/kegiatan', [DashboardController::class, 'kegiatan']);
 Route::get('/dashboard/kontak', [DashboardController::class, 'kontak']);
 Route::get('/dashboard/spmb', [DashboardController::class, 'spmb']);
 Route::get('/dashboard/pesan', [DashboardController::class, 'pesan']);
+Route::get('/dashboard/ppdb', [DashboardController::class, 'ppdb']);
 
 
 Route::post('/dashboard/jumbotron/insert', [JumbotronController::class, 'store']);
@@ -146,3 +148,7 @@ Route::delete('/dashboard/pendaftar/delete/{id}', [SPMBController::class, 'destr
 
 Route::put('/dashboard/pesan/update/{id}', [PesanController::class, 'update']);
 Route::delete('/dashboard/pesan/delete/{id}', [PesanController::class, 'destroy']);
+
+Route::post('/dashboard/ppdb/insert', [PPDBController::class, 'store']);
+Route::put('/dashboard/ppdb/update/{id}', [PPDBController::class, 'update']);
+Route::delete('/dashboard/ppdb/delete/{id}', [PPDBController::class, 'destroy']);

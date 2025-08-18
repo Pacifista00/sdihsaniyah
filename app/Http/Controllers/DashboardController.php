@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Angkatan;
 use App\Models\Deskripsi;
 use App\Models\Ekstrakulikuler;
 use App\Models\Fasilitas;
@@ -182,6 +183,13 @@ class DashboardController extends Controller
         return view('dashboard.pesan', [
             'pesans' => Pesan::all(),
             'active' => 'pesan'
+        ]);
+    }
+    public function ppdb()
+    {
+        return view('dashboard.ppdb', [
+            'ppdbs' => Angkatan::all(),
+            'active' => 'ppdb'
         ]);
     }
 }

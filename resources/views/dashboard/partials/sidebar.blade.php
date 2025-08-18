@@ -218,6 +218,12 @@
             </a>
         </li>
         <li class="menu-item">
+            <a href="/dashboard/ppdb" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-flag"></i>
+                <div data-i18n="Analytics">PPDB</div>
+            </a>
+        </li>
+        <li class="menu-item">
             <a href="/dashboard/pesan" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-message-rounded"></i>
                 <div data-i18n="Analytics">Pesan</div>
