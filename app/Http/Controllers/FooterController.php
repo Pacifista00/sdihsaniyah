@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Profil;
+use App\Models\Footer;
 use Illuminate\Http\Request;
 
 class FooterController extends Controller
@@ -14,7 +14,7 @@ class FooterController extends Controller
             'kalimat_ajakan' => 'required|string',
         ]);
 
-        $footer = Profil::findOrFail($id);
+        $footer = Footer::findOrFail($id);
 
         $data = [
             'deskripsi_sekolah' => $request->deskripsi_sekolah,

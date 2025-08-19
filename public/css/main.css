@@ -11,20 +11,23 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Paytone+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&display=swap');
 :root {
-    --default-font: "Inter", sans-serif, -apple-system, "Segoe UI", Roboto,
+    --default-font: "Fredoka", sans-serif, -apple-system, "Segoe UI", Roboto,
         "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
-    --heading-font: "Paytone One", sans-serif;
-    --nav-font: "Poppins", sans-serif;
+    --heading-font: "Fredoka", sans-serif;
+    --nav-font: "Fredoka", sans-serif;
 }
 .text-base {
-    font-family: "Inter", sans-serif !important;
+    font-family: "Fredoka", sans-serif !important;
 }
 .text-head {
-    font-family: "Paytone One", sans-serif !important;
+    font-family: "Fredoka", sans-serif !important;
+}
+.my-text-dark{
+    color: #444444;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -98,6 +101,7 @@ h5,
 h6 {
     /* color: var(--heading-color); */
     font-family: var(--heading-font);
+    font-weight: 900;
 }
 
 /* PHP Email Form Messages
@@ -645,7 +649,7 @@ section,
 .section {
     color: var(--default-color);
     background-color: var(--background-color);
-    /* padding: 60px 0; */
+    padding: 60px 0;
     scroll-margin-top: 77px;
     overflow: clip;
 }
@@ -682,9 +686,9 @@ section,
 .section-title p {
     color: var(--heading-color);
     margin: 0;
-    font-size: 28px;
-    font-weight: 700;
-    text-transform: uppercase;
+    /* font-size: 28px; */
+    /* font-weight: 700; */
+    /* text-transform: uppercase; */
     font-family: var(--heading-font);
 }
 

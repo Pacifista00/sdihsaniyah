@@ -1,50 +1,55 @@
 .my-text-primary {
     color: #44a357 !important;
 }
+
 .my-bg-primary {
     background-color: #44a357 !important;
 }
+
 .my-bg-orange {
     background-color: #f8981d !important;
     color: #ffffff;
 }
+
 .my-bg-gray {
     background-color: #f9f6f3 !important;
     color: #333446;
 }
-.btn-green i {
-    display: inline-block;
-    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
 
-.btn-green:hover i {
-    transform: rotate(45deg);
-}
+@media (min-width: 1200px) {
 
-@media (min-width: 1024px) {
-    .pill-navbar {
-        border-radius: 50px; /* atau 9999px untuk full pill */
-    }
     .hover-underline::after {
         content: "";
         position: absolute;
         left: 0;
-        bottom: -2px; /* Jarak dari teks */
+        bottom: -2px;
+        /* Jarak dari teks */
         width: 0;
         height: 2px;
-        background-color: #44a357; /* Warna garis */
+        background-color: #44a357;
+        /* Warna garis */
         transition: width 0.5s ease;
     }
+}
+
+@media (min-width: 1024px) {
+
     /* .head-about{
     width: 35% !important;
   } */
+    .pill-navbar {
+        border-radius: 50px;
+        /* atau 9999px untuk full pill */
+    }
 
     .my-text-heading {
         font-size: 4.7rem !important;
     }
+
     .ppdb-section {
         margin-top: -400px !important;
     }
+
     .ppdb-section .container {
         margin-top: 400px !important;
     }
@@ -54,14 +59,18 @@
 .hover-underline:hover::after {
     width: 100%;
 }
+
 .hover-underline {
     position: relative;
-    text-decoration: none; /* Hilangkan underline default */
+    text-decoration: none;
+    /* Hilangkan underline default */
 }
 
 .btn-white {
-    background-color: #ffffff; /* putih */
-    color: #f8981d; /* hijau dari tombol sebelumnya */
+    background-color: #ffffff;
+    /* putih */
+    color: #44a357;
+    /* hijau dari tombol sebelumnya */
     border: none;
     padding: 0.7rem 1.8rem;
     font-size: 16px;
@@ -74,53 +83,81 @@
 
 /* Hover */
 .btn-white:hover {
-    background-color: #f4f4f4; /* abu-abu muda */
-    color: #f8981d; /* hijau lebih gelap */
+    background-color: #44a357;
+    /* abu-abu muda */
+    color: #ffffff;
+    /* hijau lebih gelap */
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Active */
 .btn-white:active {
-    background-color: #eaeaea; /* abu-abu lebih gelap */
-    color: #f8981d; /* hijau lebih gelap lagi */
+    background-color: #eaeaea;
+    /* abu-abu lebih gelap */
+    color: #f8981d;
+    /* hijau lebih gelap lagi */
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn-green {
     /* Tampilan dasar tombol */
-    background-color: #44a357; /* Warna hijau yang Anda berikan */
-    color: white; /* Warna teks putih */
+    background-color: #44a357;
+    /* Warna hijau yang Anda berikan */
+    color: white;
+    /* Warna teks putih */
     border: none;
     padding: 0.7rem 1.8rem;
     font-size: 16px;
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-white-transparent {
+    /* Tampilan dasar tombol */
+    background-color: transparent;
+    /* Warna hijau yang Anda berikan */
+    color: white;
+    /* Warna teks putih */
+    border: 3px solid #ffffff;
+    padding: 0.7rem 1.8rem;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Efek saat kursor diarahkan (hover) */
-.btn-green:hover {
-    background-color: #3b8e4e; /* Warna hijau yang sedikit lebih gelap */
-    color: #ffffff;
+.btn-green:hover,
+.btn-white-transparent:hover {
+    background-color: #ffffff;
+    /* Warna hijau yang sedikit lebih gelap */
+    color: #44a357;
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Efek saat tombol diklik (active) */
-.btn-green:active {
-    background-color: #327541 !important; /* Warna hijau yang lebih gelap lagi */
+.btn-green:active,
+.btn-white-transparent:active {
+    background-color: #327541 !important;
+    /* Warna hijau yang lebih gelap lagi */
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn-orange {
     /* Tampilan dasar tombol */
-    background-color: #f8981d; /* Warna oranye dasar */
-    color: white; /* Warna teks putih */
+    background-color: #f8981d;
+    /* Warna oranye dasar */
+    color: white;
+    /* Warna teks putih */
     border: none;
     padding: 0.7rem 1.8rem;
     font-size: 16px;
@@ -133,23 +170,25 @@
 
 /* Hover */
 .btn-orange:hover {
-    background-color: #da7d12; /* Warna oranye sedikit lebih gelap */
+    background-color: #ffffff;
+    /* Warna oranye sedikit lebih gelap */
     transform: translateY(-2px);
-    color: #ffffff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    color: #da7d12;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Active */
 .btn-orange:active {
-    background-color: #b9660f !important; /* Warna oranye lebih gelap lagi */
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn-kids {
     /* Tampilan dasar tombol */
-    background-color: #44a357; /* Warna hijau yang Anda berikan */
-    color: white; /* Warna teks putih */
+    background-color: #44a357;
+    /* Warna hijau yang Anda berikan */
+    color: white;
+    /* Warna teks putih */
     border: none;
     padding: 12px 24px;
     font-size: 16px;
@@ -162,14 +201,16 @@
 
 /* Efek saat kursor diarahkan (hover) */
 .btn-kids:hover {
-    background-color: #3b8e4e; /* Warna hijau yang sedikit lebih gelap */
+    background-color: #3b8e4e;
+    /* Warna hijau yang sedikit lebih gelap */
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Efek saat tombol diklik (active) */
 .btn-kids:active {
-    background-color: #327541; /* Warna hijau yang lebih gelap lagi */
+    background-color: #327541;
+    /* Warna hijau yang lebih gelap lagi */
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -179,7 +220,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: #44a357;
+    /* background-color: #44a357; */
     color: white;
     border: none;
     border-radius: 50px;
@@ -192,16 +233,17 @@
     vertical-align: middle;
     display: inline-block;
 }
+
 .btn-jumbotron {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: #44a357;
-    color: white;
-    border: none;
+    /* background-color: #44a357; */
     border-radius: 50px;
     cursor: pointer;
+    transition: all 0.4s ease;
 }
+
 .btn-jumbotron i {
     vertical-align: middle;
     display: inline-block;
@@ -253,8 +295,10 @@
 .btn-anim i {
     position: absolute;
     right: 21px;
-    opacity: 0; /* icon awal transparan */
-    transform: translateX(-5px); /* agak geser kiri */
+    opacity: 0;
+    /* icon awal transparan */
+    transform: translateX(-5px);
+    /* agak geser kiri */
     transition: all 0.3s ease;
 }
 
@@ -263,12 +307,15 @@
 }
 
 .btn-anim:hover span {
-    transform: translateX(-9px); /* teks geser kiri */
+    transform: translateX(-9px);
+    /* teks geser kiri */
 }
 
 .btn-anim:hover i {
-    opacity: 1; /* icon muncul */
-    transform: translateX(5px); /* icon geser kanan */
+    opacity: 1;
+    /* icon muncul */
+    transform: translateX(5px);
+    /* icon geser kanan */
 }
 
 .my-text-heading {
@@ -290,21 +337,25 @@
     width: 100%;
     height: 100%;
 }
+
 .ppdb-section {
     margin-top: -200px;
 }
+
 .ppdb-section .container {
     margin-top: 180px;
 }
 
 .rotating {
-    animation: spin 12s linear infinite; /* 8 detik per putaran */
+    animation: spin 12s linear infinite;
+    /* 8 detik per putaran */
 }
 
 @keyframes spin {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -399,7 +450,7 @@
 }
 
 .card-ppdb {
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     margin-bottom: 1rem;
 }
 
@@ -412,7 +463,8 @@
     position: relative;
     display: inline-block;
     width: 100%;
-    max-width: 350px; /* opsional */
+    max-width: 350px;
+    /* opsional */
     overflow: hidden;
     border-radius: 10px;
 }
@@ -428,7 +480,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.3); /* transparan hitam */
+    background: rgba(0, 0, 0, 0.3);
+    /* transparan hitam */
     color: white;
 }
 
@@ -441,12 +494,29 @@
 .ppdb-section {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1472%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1473%26quot%3b)'%3e%3c/rect%3e%3cpath d='M1440 0L1243.47 0L1440 264.16z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1243.47 0L1440 264.16L1440 387.69000000000005L620.83 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M620.83 0L1440 387.69000000000005L1440 420.31000000000006L508.70000000000005 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M508.70000000000005 0L1440 420.31000000000006L1440 477.13000000000005L503.61000000000007 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 560L652.22 560L0 384.9z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 384.9L652.22 560L1001.1600000000001 560L0 259.64z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 259.64L1001.1600000000001 560L1202.41 560L0 129.5z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 129.5L1202.41 560L1221.93 560L0 66.24000000000001z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1472'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1473'%3e%3cstop stop-color='rgba(68%2c 163%2c 87%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(68%2c 163%2c 87%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
     background-repeat: no-repeat;
-    background-size: cover; /* atau '100% 100%' kalau mau benar-benar stretch */
+    background-size: cover;
+    /* atau '100% 100%' kalau mau benar-benar stretch */
     background-position: center;
 }
+
 .parallax-bg {
-    background-image: url("../images/sampul5.jpg"); /* ganti dengan path gambar kamu */
-    background-attachment: fixed; /* inti parallax */
+    background-image: url("../images/sampul5.jpg");
+    /* ganti dengan path gambar kamu */
+    background-attachment: fixed;
+    /* inti parallax */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    padding-top: 60px;
+}
+
+.parallax-bg-section {
+    background-image: url("../images/sampul5.jpg");
+    /* ganti dengan path gambar kamu */
+    background-attachment: fixed;
+    /* inti parallax */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -465,6 +535,7 @@
     background: rgba(0, 0, 0, 0.4);
     z-index: -1;
 }
+
 .photo-stack {
     position: relative;
     display: flex;
@@ -546,16 +617,25 @@
 .img-kegiatan {
     height: 250px !important;
     width: 100%;
-    object-fit: cover; /* potong gambar agar proporsional */
-    object-position: center; /* fokus di tengah gambar */
+    object-fit: cover;
+    /* potong gambar agar proporsional */
+    object-position: center;
+    /* fokus di tengah gambar */
 }
+
 .my-testi-img {
-    width: 150px; /* ukuran lebar */
-    height: 150px; /* tinggi sama dengan lebar */
-    border-radius: 50%; /* membuat bulat */
-    object-fit: cover; /* menjaga rasio gambar */
-    object-position: center; /* fokus di tengah */
+    width: 150px;
+    /* ukuran lebar */
+    height: 150px;
+    /* tinggi sama dengan lebar */
+    border-radius: 50%;
+    /* membuat bulat */
+    object-fit: cover;
+    /* menjaga rasio gambar */
+    object-position: center;
+    /* fokus di tengah */
 }
+
 .circle-img {
     width: 400px;
     height: 400px;
@@ -593,9 +673,11 @@
 /* Hover effect */
 .circle-img:hover,
 .circle-img-small:hover {
-    border-color: #44a357; /* hijau Bootstrap */
+    border-color: #44a357;
+    /* hijau Bootstrap */
     transform: scale(1.05);
 }
+
 .circle-img:hover,
 .circle-img-small:hover {
     border-color: #44a357;
@@ -605,7 +687,7 @@
 
 .square-img {
     position: relative;
-    width: 300px;
+    width: 190px;
     aspect-ratio: 1 / 1;
     overflow: hidden;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -613,8 +695,8 @@
 }
 
 .square-img img {
-    width: 330px;
-    height: 330px;
+    width: 190px;
+    height: 190px;
     object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
@@ -629,9 +711,10 @@
     background: rgba(255, 255, 255, 0.7);
     color: #333446;
     text-align: center;
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
     font-weight: bold;
-    transform: translateY(100%); /* default sembunyi */
+    transform: translateY(100%);
+    /* default sembunyi */
     transition: transform 0.4s ease;
 }
 
@@ -648,10 +731,12 @@
 .square-img:hover figcaption {
     transform: translateY(2%);
 }
+
 .profile-image-large {
     width: 400px;
     height: 400px;
-    border: 10px solid #f0f0f0; /* putih agak abu-abu */
+    border: 10px solid #f0f0f0;
+    /* putih agak abu-abu */
     transition: border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -669,13 +754,15 @@
 
 /* Hover effect - tambah border + warna + shadow */
 .profile-image-large:hover {
-    border: 10px solid #44a357; /* tambah tebal */
+    border: 10px solid #44a357;
+    /* tambah tebal */
     box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
     transform: scale(1.05);
 }
 
 .profile-image-small:hover {
-    border: 10px solid #44a357 !important; /* tambah tebal */
+    border: 10px solid #44a357 !important;
+    /* tambah tebal */
     box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
     transform: translate(20%, 0) scale(1.05);
 }
@@ -685,8 +772,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%; /* Full layar */
-    height: 730px; /* Tinggi area */
+    width: 100%;
+    /* Full layar */
+    height: 730px;
+    /* Tinggi area */
     overflow: hidden;
 }
 
@@ -759,16 +848,22 @@
 }
 
 .img-list-berita {
-    width: 100%; /* lebar sesuai parent */
-    height: 250px; /* tinggi tetap */
-    object-fit: cover; /* crop agar proporsional */
+    width: 100%;
+    /* lebar sesuai parent */
+    height: 250px;
+    /* tinggi tetap */
+    object-fit: cover;
+    /* crop agar proporsional */
 }
 
 .badge-tanggal {
     position: absolute;
-    bottom: 10px; /* jarak dari bawah gambar */
-    left: 10px; /* jarak dari kiri gambar */
-    background-color: rgba(0, 0, 0, 0.7); /* hijau semi transparan */
+    bottom: 10px;
+    /* jarak dari bawah gambar */
+    left: 10px;
+    /* jarak dari kiri gambar */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* hijau semi transparan */
     color: #fff;
     padding: 0.4rem 0.7rem;
     font-size: 0.85rem;
@@ -776,11 +871,18 @@
     z-index: 10;
 }
 
+.form-control {
+    color: #444444;
+}
+
 .form-control:focus,
 .form-select:focus {
     box-shadow: none;
     border: 1px solid #44a357;
+    box-shadow: 0 0 10px rgba(68, 163, 87, 0.5);
+    color: #444444;
 }
+
 .contact-card {
     border: 1px solid #ccc;
     border-radius: 12px;
@@ -791,22 +893,64 @@
     margin-bottom: 15px;
     background-color: #fff;
 }
+
 .contact-card i {
     font-size: 1.5rem;
-    color: #198754; /* hijau */
+    color: #198754;
+    /* hijau */
     min-width: 30px;
     text-align: center;
 }
+
 .contact-card .text {
     flex: 1;
 }
+
 .contact-card .text small {
     display: block;
     color: #555;
 }
+
 .contact-card:hover {
     background-color: #e6f4ea;
 }
+
+.profile-wrapper {
+    width: 280px;
+    height: 280px;
+}
+
+.profile-img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.corner-icon {
+    width: 80px;
+    height: 80px;
+    bottom: 0;
+    right: 0;
+}
+
+.heading-cursor::after {
+    content: "_";
+    /* bentuk cursor underscore */
+    animation: blink 1s steps(2, start) infinite;
+    margin-left: 3px;
+    /* jarak dari teks */
+    font-weight: normal;
+}
+
+
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+
 
 /* Responsif di layar kecil (mobile < lg) */
 @media (max-width: 991px) {
@@ -828,6 +972,7 @@
     .fullwidth-photo-stack {
         height: 300px;
     }
+
     .big-stack {
         width: 320px;
         height: 220px;
@@ -839,5 +984,16 @@
         width: 150px;
         height: 120px;
         z-index: 3;
+    }
+
+    .profile-wrapper {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
     }
 }

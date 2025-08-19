@@ -11,7 +11,7 @@
                 <div data-aos="zoom-in" data-aos-delay="100">
                     <div class="mt-5 pt-lg-5">
 
-                        <h1 class="my-text-heading">Kegiatan Kami</h1>
+                        <h1 class="my-text-heading heading-cursor">Kegiatan Kami</h1>
                         <h6 class="text-base"><a href="{{ url('/') }}" class="text-white fw-semibold">SD Ihsaniyah 1 Kota
                                 Tegal</a><i class="bi bi-chevron-right fs-6 mx-1"></i>Kegiatan</h6>
                     </div>
@@ -35,9 +35,9 @@
                                 </div>
 
                                 <div class="card-body text-start">
-                                    <h4 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <h4 class="card-title my-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Exercitationem?</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias totam
+                                    <p class="my-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias totam
                                         quaerat?</p>
                                     <a href="#about"
                                         class="btn btn-green animate__animated animate__fadeInUp scrollto rounded-pill btn-anim mt-2">
@@ -58,9 +58,9 @@
                                 </div>
 
                                 <div class="card-body text-start">
-                                    <h4 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <h4 class="card-title my-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Exercitationem?</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias totam
+                                    <p class="my-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias totam
                                         quaerat?</p>
                                     <a href="#about"
                                         class="btn btn-green animate__animated animate__fadeInUp scrollto rounded-pill btn-anim mt-2">
@@ -81,9 +81,9 @@
                                 </div>
 
                                 <div class="card-body text-start">
-                                    <h4 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <h4 class="card-title my-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Exercitationem?</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias totam
+                                    <p class="my-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias totam
                                         quaerat?</p>
                                     <a href="#about"
                                         class="btn btn-green animate__animated animate__fadeInUp scrollto rounded-pill btn-anim mt-2">
@@ -104,9 +104,9 @@
                                 </div>
 
                                 <div class="card-body text-start">
-                                    <h4 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <h4 class="card-title my-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Exercitationem?</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias totam
+                                    <p class="my-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias totam
                                         quaerat?</p>
                                     <a href="#about"
                                         class="btn btn-green animate__animated animate__fadeInUp scrollto rounded-pill btn-anim mt-2">
@@ -127,9 +127,9 @@
                                 </div>
 
                                 <div class="card-body text-start">
-                                    <h4 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <h4 class="card-title my-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Exercitationem?</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias totam
+                                    <p class="my-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias totam
                                         quaerat?</p>
                                     <a href="#about"
                                         class="btn btn-green animate__animated animate__fadeInUp scrollto rounded-pill btn-anim mt-2">

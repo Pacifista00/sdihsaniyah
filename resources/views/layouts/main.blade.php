@@ -35,7 +35,7 @@
   ======================================================== -->
 </head>
 
-<body class="index-page bg-white">
+<body class="index-page bg-white my-text-dark">
     @yield('content')
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

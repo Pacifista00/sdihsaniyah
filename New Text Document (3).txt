@@ -1,0 +1,23 @@
+dari yg awalnya cuma buka jasa joki webdev buat skripsi/TA. sampe dipercaya kepala sekolah SD elit buat bikin web sekolah. lets goooooo
+
+
+
+gambar pojok berputar
+buat background
+
+-hover img plaster muter
+-ganti font
+-konsultasi wa di jumbotron
+-section rusak padding di css dihapus
+garis disebelah heading
+-sub nav active
+-buat card setiap apa. bg agak abu
+-PPDB dashboard terskip
+header card dashboard
+-url misi merah
+-card program sekolah tabrakan
+card program sekolah png grafis
+-foto kurikulum main page belum bisa dimanage
+-foto tentang belum bisa dimanage
+option ke 2 ekskul rusak
+aos belum

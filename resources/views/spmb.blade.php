@@ -9,7 +9,7 @@
                 <div data-aos="zoom-in" data-aos-delay="100">
                     <div class="mt-5 pt-lg-5">
 
-                        <h1 class="my-text-heading">SPMB</h1>
+                        <h1 class="my-text-heading heading-cursor">SPMB</h1>
                         <h6 class="text-base"><a href="{{ url('/') }}" class="text-white fw-semibold">SD Ihsaniyah 1 Kota
                                 Tegal</a><i class="bi bi-chevron-right fs-6 mx-1"></i>SPMB</h6>
                     </div>
@@ -20,7 +20,7 @@
         <section>
             <div class="container">
                 <div class="my-5 text-center">
-                    <h1 class="fs-1 text-dark mb-3">Data Peserta SPMB</h1>
+                    <h1 class="fs-1 my-text-dark mb-3">Data Peserta SPMB</h1>
                 </div>
                 <div>
                     <form action="/daftar" method="POST" class="mb-4" enctype="multipart/form-data">

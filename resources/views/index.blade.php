@@ -12,21 +12,34 @@
                 <!-- Slide 2 -->
                 <div class="carousel-item active">
                     <div class="carousel-container my-auto">
-                        <h2 class="animate__animated animate__fadeInDown fs-1 jumbotron-head">Welcome to SD Ihsaniyah 1
-                            Kota Tegal
-                        </h2>
+                        <h1 class="animate__animated animate__fadeInDown fs-1 jumbotron-head w-75 w-lg-100 heading-cursor">Welcome to SD Ihsaniyah 1
+                            Kota Tegal</h1>
                         <p class="animate__animated animate__fadeInUp fs-6 fs-lg-5">Ut velit est quam dolor ad a aliquid
                             qui
                             aliquid. Sequi ea ut
                             et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea
                             voluptatem. Esse
                             doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                        <div class="d-flex flex-column flex-lg-row align-items-center gap-3 animate__animated animate__fadeInUp scrollto ">
+                            <button class="btn-green btn-jumbotron rounded-pill d-flex justify-content-center align-items-center">
+                                Konsultasi Whatsapp
+                                <i class="bi bi-whatsapp fs-4 ms-1"></i>
+                            </button>
 
-                        <button
-                            class="btn-green btn-pulse btn-jumbotron rounded-pill animate__animated animate__fadeInUp scrollto ">
-                            Daftar Sekarang
-                            <i class="bi bi-arrow-up-right-circle fs-4"></i>
-                        </button>
+                            <button class="btn-white-transparent btn-jumbotron rounded-pill d-flex justify-content-center align-items-center">
+                                Daftar Sekarang
+                                <i class="bi bi-arrow-up-right-circle fs-4 ms-1"></i>
+                            </button>
+
+                            <style>
+                                @media (max-width: 991.98px) {
+                                .btn-jumbotron {
+                                    width: 100%;
+                                }
+                                }
+                            </style>
+                        </div>
+                        
 
                     </div>
                 </div>
@@ -78,7 +91,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <small class="fs-6 text-label ">PROFIL KAMI</small>
-                        <h1 class="head-about p-0 m-0 fs-1">Profil SD Ihsaniyah 1 Kota Tegal</h1>
+                        <h1 class="head-about p-0 m-0 fs-1 heading-line">Profil SD Ihsaniyah 1 Kota Tegal</h1>
                         <div class="d-flex gap-3 mt-3 mt-lg-4 mb-3 mb-lg-0">
                             <a href="#about"
                                 class="btn btn-green animate__animated animate__fadeInUp scrollto rounded-pill btn-anim">
@@ -130,13 +143,13 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="card rounded-5 card-ppdb position-relative">
+                        <div class="card rounded-5 card-ppdb position-relative my-text-dark">
                             <!-- Gambar melayang -->
                             <div class="position-absolute" style="top:-30px; right:-5px; width:90px; height:90px;">
                                 <img src="{{ asset('images/shape.png') }}" alt="icon" class="rotating"
                                     style="width:130%; height:130%; object-fit:contain; position:absolute; top:0; left:-10%;">
 
-                                <span class="text-dark fw-bold text-white"
+                                <span class="my-text-dark fw-bold text-white"
                                     style="position:absolute; top:65%; left:55%; transform:translate(-50%, -50%); font-size:14px; z-index:1;">
                                     Sisa
                                     <span class="fs-2 m-0 p-0">15</span>
@@ -157,7 +170,7 @@
 
                     <div class="col-lg-4">
                         <div class="card rounded-5 card-ppdb">
-                            <div class="card-body p-4 mt-2">
+                            <div class="card-body p-4 mt-2 my-text-dark">
                                 <h2 class="card-title w-75 mx-auto">Tahun Ajaran 2026/2027</h2>
                                 <p class="card-text my-4">Alhamdulillah! Sudah terisi
                                     3 kelas dan kuota tersisa
@@ -167,7 +180,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="card rounded-5 card-ppdb">
+                        <div class="card rounded-5 card-ppdb my-text-dark">
                             <div class="card-body p-4 mt-2">
                                 <h2 class="card-title w-75 mx-auto">Tahun Ajaran 2026/2027</h2>
                                 <p class="card-text my-4">Alhamdulillah! Sudah terisi
@@ -192,9 +205,9 @@
                         <h1 class="head-about p-0 m-0 fs-1">Kurikulum dan Program Unggulan SD Ihsaniyah 1 Kota Tegal
                         </h1>
                         <div>
-                            <div class="kurikulum">
-                                <h5 class="mt-4 mb-3 text-base">Kurikulum :</h5>
-                                <ul class="row list-unstyled text-start fw-semibold">
+                            <div class="kurikulum fw-medium">
+                                <p class="mt-4 mb-3 text-base fs-5">Kurikulum :</p>
+                                <ul class="row list-unstyled text-start ">
                                     <li class="col-md-4 mb-3"><i
                                             class="bi bi-check-circle my-text-primary me-1"></i>Pramuka</li>
                                     <li class="col-md-4 mb-3"><i
@@ -203,9 +216,9 @@
                                             class="bi bi-check-circle my-text-primary me-1"></i>Karate</li>
                                 </ul>
                             </div>
-                            <div class="program-unggulan">
-                                <h5 class="my-3 text-base">Program Unggulan :</h5>
-                                <ul class="row list-unstyled text-start fw-semibold">
+                            <div class="program-unggulan fw-medium">
+                                <p class="my-3 text-base fs-5">Program Unggulan :</p>
+                                <ul class="row list-unstyled text-start fw-medium">
                                     <li class="col-md-4 mb-3"><i
                                             class="bi bi-check-circle my-text-primary me-1"></i>Pramuka</li>
                                     <li class="col-md-4 mb-3"><i
@@ -260,8 +273,8 @@
         <section id="testimonials" class="testimonials section my-bg-gray">
 
             <div class="container mb-5 text-center">
-                <h1 class="fs-1 text-dark">Kegiatan</h1>
-                <p class="text-dark fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <h1 class="fs-1 my-text-dark">Kegiatan</h1>
+                <p class="my-text-dark fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -391,7 +404,7 @@
 
 
         <!-- Call To Action Section -->
-        <section id="call-to-action" class="call-to-action section my-bg-orange parallax-bg">
+        <section id="call-to-action" class="call-to-action section my-bg-orange parallax-bg-section">
 
             <div class="container">
                 <div class="row" data-aos="zoom-in" data-aos-delay="100">
@@ -426,8 +439,8 @@
         <section id="testimonials" class="testimonials section my-bg-gray">
 
             <div class="container mb-5 text-center">
-                <h1 class="fs-1 text-dark">Testimoni</h1>
-                {{-- <p class="text-dark fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p> --}}
+                <h1 class="fs-1 my-text-dark">Testimoni</h1>
+                {{-- <p class="my-text-dark fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p> --}}
             </div>
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -463,12 +476,12 @@
                         <div class="swiper-slide">
                             <div class="testimonial-item bg-transparent">
                                 <img src="{{ asset('images/sampul5.jpg') }}" class="my-testi-img m-0" alt="">
-                                <h3>Saul Goodman</h3>
+                                <h3 class="my-text-dark">Saul Goodman</h3>
                                 <h4>Ceo &amp; Founder</h4>
 
                                 <p>
                                     <i class="bi bi-quote quote-icon-left"></i>
-                                    <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
+                                    <span class="my-text-dark">Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
                                         suscipit rhoncus.
                                         Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus
                                         at semper.</span>
@@ -481,12 +494,12 @@
                             <div class="testimonial-item">
                                 <img src="assets/img/testimonials/testimonials-2.jpg" class="my-testi-img m-0"
                                     alt="">
-                                <h3>Sara Wilsson</h3>
+                                <h3 class="my-text-dark">Sara Wilsson</h3>
                                 <h4>Designer</h4>
 
                                 <p>
                                     <i class="bi bi-quote quote-icon-left"></i>
-                                    <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum
+                                    <span class="my-text-dark">Export tempor illum tamen malis malis eram quae irure esse labore quem cillum
                                         quid cillum eram
                                         malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam
                                         anim culpa.</span>
@@ -499,12 +512,12 @@
                             <div class="testimonial-item">
                                 <img src="assets/img/testimonials/testimonials-3.jpg" class="my-testi-img m-0"
                                     alt="">
-                                <h3>Jena Karlis</h3>
+                                <h3 class="my-text-dark">Jena Karlis</h3>
                                 <h4>Store Owner</h4>
 
                                 <p>
                                     <i class="bi bi-quote quote-icon-left"></i>
-                                    <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla
+                                    <span class="my-text-dark">Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla
                                         quem veniam duis
                                         minim tempor labore quem eram duis noster aute amet eram fore quis sint
                                         minim.</span>
@@ -517,12 +530,12 @@
                             <div class="testimonial-item">
                                 <img src="assets/img/testimonials/testimonials-4.jpg" class="my-testi-img m-0"
                                     alt="">
-                                <h3>Matt Brandon</h3>
+                                <h3 class="my-text-dark">Matt Brandon</h3>
                                 <h4>Freelancer</h4>
 
                                 <p>
                                     <i class="bi bi-quote quote-icon-left"></i>
-                                    <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
+                                    <span class="my-text-dark">Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
                                         fugiat minim
                                         velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore
                                         labore illum
@@ -536,7 +549,7 @@
                             <div class="testimonial-item">
                                 <img src="assets/img/testimonials/testimonials-5.jpg" class="my-testi-img m-0"
                                     alt="">
-                                <h3>John Larson</h3>
+                                <h3 class="my-text-dark">John Larson</h3>
                                 <h4>Entrepreneur</h4>
 
                                 <p>
@@ -569,8 +582,8 @@
                     <div class="col-lg-6">
                         <div class="info-item d-flex flex-column" data-aos="fade-up" data-aos-delay="200">
                             <div class="container mb-5">
-                                <h1 class="fs-1 text-dark">Kami ingin mendengar sesuatu darimu</h1>
-                                <p class="text-dark fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <h1 class="fs-1 my-text-dark">Kami ingin mendengar sesuatu darimu</h1>
+                                <p class="my-text-dark fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                             </div>
                             <div class="text-center">
                                 <img src="{{ asset('images/illust.png') }}" alt="" class="w-75">
@@ -584,25 +597,25 @@
                             @csrf
                             <div class="row gy-4">
 
-                                <div class="col-md-12 mb-0 mb-lg-3">
+                                <div class="col-md-12 mb-0 mb-lg-1">
                                     <label for="name" class="form-label">Nama Lengkap</label>
                                     <input type="text" id="name" name="nama" class="form-control rounded-5"
                                         placeholder="Contoh: Budi Santoso" required>
                                 </div>
 
-                                <div class="col-md-12 mb-0 mb-lg-3">
+                                <div class="col-md-12 mb-0 mb-lg-1">
                                     <label for="email" class="form-label">Alamat Email</label>
                                     <input type="email" id="email" name="email" class="form-control rounded-5"
                                         placeholder="Contoh: budi@example.com" required>
                                 </div>
 
-                                <div class="col-md-12 mb-0 mb-lg-3">
+                                <div class="col-md-12 mb-0 mb-lg-1">
                                     <label for="subject" class="form-label">Subjek</label>
                                     <input type="text" id="subject" name="subjek" class="form-control rounded-5"
                                         placeholder="Contoh: Permintaan Informasi" required>
                                 </div>
 
-                                <div class="col-md-12 mb-0 mb-lg-3">
+                                <div class="col-md-12 mb-0 mb-lg-1">
                                     <label for="message" class="form-label">Pesan</label>
                                     <textarea id="message" class="form-control rounded-5" rows="6"
                                         placeholder="Contoh: Saya ingin mengetahui lebih lanjut tentang program yang ditawarkan." required name="pesan"></textarea>
@@ -614,7 +627,7 @@
                                     <div class="error-message"></div>
                                     <div class="sent-message">Pesanmu telah terkirim. Terima kasih!</div> --}}
 
-                                    <button type="submit" class="btn-green">Kirim</button>
+                                    <button type="submit" class="btn-green rounded-pill">Kirim</button>
                                 </div>
 
                             </div>

@@ -11,7 +11,7 @@
                 <div data-aos="zoom-in" data-aos-delay="100">
                     <div class="mt-5 pt-lg-5">
 
-                        <h1 class="my-text-heading">Kontak Kami</h1>
+                        <h1 class="my-text-heading heading-cursor">Kontak Kami</h1>
                         <h6 class="text-base"><a href="{{ url('/') }}" class="text-white fw-semibold">SD Ihsaniyah 1 Kota
                                 Tegal</a><i class="bi bi-chevron-right fs-6 mx-1"></i>Kontak</h6>
                     </div>
@@ -24,8 +24,8 @@
                 <div class="row">
                     <!-- Kontak - Kiri -->
                     <div class="col-lg-6 mb-4">
-                        <h1 class="fs-1 text-dark">Hubungi Kami</h1>
-                        <p class="text-dark fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <h1 class="fs-1 ">Hubungi Kami</h1>
+                        <p class=" fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
 
                         <div class="my-4">
                             <div class="contact-card"> <i class="bi bi-whatsapp"></i>
@@ -47,7 +47,7 @@
 
                     <!-- Lokasi / Google Maps - Kanan -->
                     <div class="col-lg-6">
-                        <h1 class="text-dark text-center mb-4">Lokasi</h1>
+                        <h1 class=" text-center mb-4">Lokasi</h1>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0726521495976!2d109.13880147590629!3d-6.881900167341194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb9eac19f0389%3A0xaf5bf0346e498ec1!2sSD%20Ihsaniyah%201%20Kota%20Tegal!5e0!3m2!1sid!2sid!4v1755136316855!5m2!1sid!2sid"
                             width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
@@ -56,8 +56,8 @@
                     <div class="col-lg-12">
                         <div class="info-item d-flex flex-column" data-aos="fade-up" data-aos-delay="200">
                             <div class="mb-5">
-                                <h1 class="fs-1 text-dark">Sosial Media Kami</h1>
-                                <p class="text-dark fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <h1 class="fs-1 ">Sosial Media Kami</h1>
+                                <p class=" fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                                 <div class="my-5 row">
                                     <div class="col-lg-4">
                                         <div class="contact-card">

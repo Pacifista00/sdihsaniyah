@@ -11,7 +11,7 @@
                 <div data-aos="zoom-in" data-aos-delay="100">
                     <div class="mt-5 pt-lg-5">
 
-                        <h1 class="my-text-heading">Fasilitas Sekolah</h1>
+                        <h1 class="my-text-heading heading-cursor">Fasilitas Sekolah</h1>
                         <h6 class="text-base"><a href="{{ url('/') }}" class="text-white fw-semibold">SD Ihsaniyah 1 Kota
                                 Tegal</a><i class="bi bi-chevron-right fs-6 mx-1"></i>Fasilitas Sekolah</h6>
                     </div>
@@ -22,46 +22,42 @@
         <section>
             <div class="container">
                 <div class="my-5 text-center">
-                    <h1 class="fs-1 text-dark mb-3">FASILITAS SEKOLAH</h1>
-                    <p class="text-dark fs-6">Untuk menunjang segala proses belajar mengajar, kami memiliki fasilitas yang
+                    <h1 class="fs-1 mb-3">FASILITAS SEKOLAH</h1>
+                    <p class="fs-6">Untuk menunjang segala proses belajar mengajar, kami memiliki fasilitas yang
                         sangat lengkap diantaranya.</p>
                 </div>
                 <div class="row">
-                    <div class="col-6 col-lg-4 text-center">
-                        <figure class="square-img mb-5 rounded-5 mx-auto">
-                            <img src="{{ asset(path: 'images/sampul2.jpeg') }}" alt="Mountains">
-                            <figcaption>The Day</figcaption>
-                        </figure>
+                    <div class="col-6 col-lg-4 text-center mb-3">
+                        <div class="text-center my-4">
+                            <div class="profile-wrapper position-relative d-inline-block">
+                            <!-- Foto bulat -->
+                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Foto Profil" 
+                                class="profile-img rounded-circle border border-3 border-light">
+
+                            <!-- Ikon PNG di pojok kanan bawah -->
+                            <img src="{{ asset('images/shape.png') }}" alt="Ikon" 
+                                class="corner-icon position-absolute">
+                            </div>
+
+                            <!-- Judul -->
+                            <h5 class="mt-3 fw-bold">Judul di Sini</h5>
+                        </div>
                     </div>
-                    <div class="col-6 col-lg-4 text-center">
-                        <figure class="square-img mb-5 rounded-5 mx-auto">
-                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Mountains">
-                            <figcaption>The Day</figcaption>
-                        </figure>
-                    </div>
-                    <div class="col-6 col-lg-4 text-center">
-                        <figure class="square-img mb-5 rounded-5 mx-auto">
-                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Mountains">
-                            <figcaption>The Day</figcaption>
-                        </figure>
-                    </div>
-                    <div class="col-6 col-lg-4 text-center">
-                        <figure class="square-img mb-5 rounded-5 mx-auto">
-                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Mountains">
-                            <figcaption>The Day</figcaption>
-                        </figure>
-                    </div>
-                    <div class="col-6 col-lg-4 text-center">
-                        <figure class="square-img mb-5 rounded-5 mx-auto">
-                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Mountains">
-                            <figcaption>The Day</figcaption>
-                        </figure>
-                    </div>
-                    <div class="col-6 col-lg-4 text-center">
-                        <figure class="square-img mb-5 rounded-5 mx-auto">
-                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Mountains">
-                            <figcaption>The Day</figcaption>
-                        </figure>
+                    <div class="col-6 col-lg-4 text-center mb-3">
+                        <div class="text-center my-4">
+                            <div class="profile-wrapper position-relative d-inline-block">
+                            <!-- Foto bulat -->
+                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Foto Profil" 
+                                class="profile-img rounded-circle border border-3 border-light">
+
+                            <!-- Ikon PNG di pojok kanan bawah -->
+                            <img src="{{ asset('images/shape.png') }}" alt="Ikon" 
+                                class="corner-icon position-absolute">
+                            </div>
+
+                            <!-- Judul -->
+                            <h5 class="mt-3 fw-bold">Judul di Sini</h5>
+                        </div>
                     </div>
                 </div>
             </div>
