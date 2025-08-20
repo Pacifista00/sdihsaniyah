@@ -8,7 +8,7 @@
     <section id="call-to-action" class="call-to-action section my-bg-orange parallax-bg">
 
         <div class="container">
-            <div data-aos="zoom-in" data-aos-delay="100">
+            <div data-aos="zoom-in" data-aos-once="false">
                 <div class="mt-5 pt-lg-5">
 
                     <h1 class="my-text-heading heading-cursor">Prestasi Siswa</h1>
@@ -20,7 +20,7 @@
 
     </section>
     <section class="py-4">
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-once="false">
             <div class="fullwidth-photo-stack position-relative">
                 <img class="graphic-9" src="{{ asset('images/graphic/Asset 9.png') }}" alt="">
                 <!-- Foto besar -->
@@ -42,7 +42,7 @@
     <section class="py-4">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-once="false">
                     <div class="text-center text-lg-start">
                         <h1 class="fs-1 my-4">Internasional</h1>
                         <div class="row">
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-once="false">
                     <div class="text-center text-lg-start">
                         <h1 class="fs-1 my-4">Nasional</h1>
                         <div class="row">
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-once="false">
                     <div class="text-center text-lg-start">
                         <h1 class="fs-1 my-4">Provinsi</h1>
                         <div class="row">
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-once="false">
                     <div class="text-center text-lg-start">
                         <h1 class="fs-1 my-4">Kota</h1>
                         <div class="row">

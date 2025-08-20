@@ -8,7 +8,7 @@
     <section id="call-to-action" class="call-to-action section my-bg-orange parallax-bg">
 
         <div class="container">
-            <div data-aos="zoom-in" data-aos-delay="100">
+            <div data-aos="zoom-in" data-aos-once="false">
                 <div class="mt-5 pt-lg-5">
 
                     <h1 class="my-text-heading heading-cursor">Ekstrakurikuler</h1>
@@ -21,7 +21,7 @@
     </section>
     <section class="py-4">
         <div class="container">
-            <div class="fullwidth-photo-stack position-relative">
+            <div class="fullwidth-photo-stack position-relative" data-aos="fade-up" data-aos-once="false">
                 <img class="graphic-9" src="{{ asset('images/graphic/Asset 9.png') }}" alt="">
                 <!-- Foto besar -->
                 <div class="stack-photo big-stack" style="background-image: url('{{ asset('images/sampul4.jpg') }}');">
@@ -40,7 +40,7 @@
         </div>
     </section>
     <section class="py-4">
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-once="false">
             <div class="text-center">
                 <h1 class="fs-1 text-dark my-4">Program Ekstrakurikuler
                     Seni & Akademik</h1>

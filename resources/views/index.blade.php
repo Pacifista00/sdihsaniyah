@@ -12,18 +12,17 @@
 
             <!-- Slide 2 -->
             <div class="carousel-item active">
-                <div class="carousel-container my-auto">
-                    <h1 class="animate__animated animate__fadeInDown fs-1 jumbotron-head w-75 w-lg-100 heading-cursor">
+                <div class="carousel-container my-auto" data-aos="fade-up" data-aos-once="false">
+                    <h1 class=" fs-1 jumbotron-head heading-cursor">
                         Welcome to SD Ihsaniyah 1
                         Kota Tegal</h1>
-                    <p class="animate__animated animate__fadeInUp fs-6 fs-lg-5">Ut velit est quam dolor ad a aliquid
+                    <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid
                         qui
                         aliquid. Sequi ea ut
                         et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea
                         voluptatem. Esse
                         doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                    <div
-                        class="d-flex flex-column flex-lg-row align-items-center gap-3 animate__animated animate__fadeInUp scrollto ">
+                    <div class="d-flex flex-column flex-lg-row align-items-center gap-3 scrollto ">
                         <button
                             class="btn-green btn-jumbotron rounded-pill d-flex justify-content-center align-items-center">
                             Konsultasi Whatsapp
@@ -52,15 +51,14 @@
             <!-- Slide 2 -->
             <div class="carousel-item">
                 <div class="carousel-container ">
-                    <h2 class="animate__animated animate__fadeInDown fs-1 jumbotron-head">Lorem Ipsum Dolor</h2>
-                    <p class="animate__animated animate__fadeInUp fs-6 fs-lg-5">Ut velit est quam dolor ad a aliquid
+                    <h2 class=" fs-1 jumbotron-head">Lorem Ipsum Dolor</h2>
+                    <p class="fs-6 fs-lg-5">Ut velit est quam dolor ad a aliquid
                         qui
                         aliquid. Sequi ea ut
                         et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea
                         voluptatem. Esse
                         doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                    <button
-                        class="btn-green btn-pulse btn-jumbotron rounded-pill animate__animated animate__fadeInUp scrollto ">
+                    <button class="btn-green btn-pulse btn-jumbotron rounded-pill scrollto ">
                         Daftar Sekarang
                         <i class="bi bi-arrow-up-right-circle fs-4"></i>
                     </button>
@@ -91,30 +89,28 @@
     <section id="about" class="about section">
 
         <!-- Section Title -->
-        <div class="container section-title my-5" data-aos="fade-up">
+        <div class="container section-title my-5" data-aos="fade-up" data-aos-once="false">
             <!-- <h2>About</h2> -->
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="zoom-out-up">
                     <small class="fs-6 text-label position-relative">
                         <img class="graphic-1" src="{{ asset('images/graphic/Asset 1.png') }}" alt="">
                         PROFIL KAMI
                     </small>
                     <h1 class="head-about p-0 m-0 fs-1 heading-line">Profil SD Ihsaniyah 1 Kota Tegal</h1>
                     <div class="d-flex gap-3 mt-3 mt-lg-4 mb-3 mb-lg-0">
-                        <a href="#about"
-                            class="btn btn-green animate__animated animate__fadeInUp scrollto rounded-pill btn-anim">
+                        <a href="#about" class="btn btn-green scrollto rounded-pill btn-anim">
                             <span>Tentang Kami</span>
                             <i class="bi bi-arrow-right ms-2"></i>
                         </a>
-                        <a href="#about"
-                            class="btn btn-orange animate__animated animate__fadeInUp scrollto rounded-pill btn-anim">
+                        <a href="#about" class="btn btn-orange scrollto rounded-pill btn-anim">
                             <span>Fasilitas</span>
                             <i class="bi bi-arrow-right ms-2"></i>
                         </a>
                     </div>
                     <!-- <p>Who we are</p> -->
                 </div>
-                <div class="col-md-6 d-flex align-items-center">
+                <div class="col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-once="false">
                     <small class="fs-6 text-base m-0 text-lg-end">
                         SD Ihsaniyah 1 Kota Tegal merupakan solusi alternatif bagi orang tua
                         yang mencari sekolah dengan penanaman karakter kuat. SD Ihsaniyah 1 Kota Tegal mengajarkan
@@ -129,7 +125,7 @@
 
         </div><!-- End Section Title -->
         <div class="container">
-            <div class="video-wrapper">
+            <div class="video-wrapper" data-aos="fade-up" data-aos-once="false" style="z-index: 999999 !important;">
                 <iframe src="https://www.youtube.com/embed/qDaaq-9Rypc?si=ibviU1YAGMyKTnxA"
                     class=" position-absolute z-3" title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -143,7 +139,7 @@
 
     <section class="my-bg-primary ppdb-section section-wave">
         <div class="container text-center">
-            <div class="mb-5">
+            <div class="mb-5" data-aos="fade-up" data-aos-once="false">
                 <h1 class="fs-1 text-white position-relative">
                     <img class="graphic-2" src="{{ asset('images/graphic/Asset 2.png') }}" alt="">
                     Informasi PPDB
@@ -152,7 +148,7 @@
                     <img class="graphic-3" src="{{ asset('images/graphic/Asset 3.png') }}" alt="">
                 </p>
             </div>
-            <div class="row pb-5 mb-5">
+            <div class="row pb-lg-5 mb-lg-5" data-aos="fade-up" data-aos-once="false">
                 <div class="col-lg-4">
                     <div class="card rounded-5 card-ppdb position-relative my-text-dark">
                         <!-- Gambar melayang -->
@@ -210,16 +206,14 @@
                 </path>
             </svg>
         </div>
-
     </section>
 
-    <section class="pt-3">
-
+    <section class="pt-4">
         <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
+        <div class="container section-title" data-aos="fade-up" data-aos-once="false">
             <!-- <h2>About</h2> -->
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-once="false">
                     <!-- <small class="fs-6 text-label">PROFIL KAMI</small> -->
                     <h1 class="head-about p-0 m-0 fs-1">Kurikulum dan Program Unggulan SD Ihsaniyah 1 Kota Tegal
                     </h1>
@@ -252,7 +246,8 @@
                     <!-- <p>Who we are</p> -->
                 </div>
 
-                <div class="col-lg-6 d-flex align-items-center justify-content-center mt-5 mt-lg-0">
+                <div class="col-lg-6 d-flex align-items-center justify-content-center mt-lg-0" data-aos="fade-up"
+                    data-aos-once="false">
                     <div class="photo-stack position-relative">
                         <!-- Foto besar di tengah -->
                         <img class="graphic-4" src="{{ asset('images/graphic/Asset 4.png') }}" alt="">
@@ -279,7 +274,7 @@
     <section id="call-to-action" class="call-to-action section my-bg-orange parallax-bg-section">
 
         <div class="container">
-            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row" data-aos="fade-up" data-aos-once="false">
                 <div class="col-xl-9 text-center text-xl-start">
                     <h3 class="text-white fs-1">Prestasi SD Ihsaniyah 1 Kota Tegal</h3>
                     <p class="text-white">
@@ -294,8 +289,7 @@
                 </div>
 
                 <div class="col-xl-3 cta-btn-container text-center d-flex align-items-center justify-content-center">
-                    <a href="#about"
-                        class="btn btn-green animate__animated animate__fadeInUp scrollto rounded-pill btn-anim">
+                    <a href="#about" class="btn btn-green scrollto rounded-pill btn-anim">
                         <span>Fasilitas</span>
                         <i class="bi bi-arrow-right ms-2"></i>
                     </a>
@@ -308,12 +302,12 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section pb-0">
 
-        <div class="container text-center">
+        <div class="container text-center" data-aos="fade-up" data-aos-once="false">
             <h1 class="fs-1 my-text-dark">Testimoni</h1>
             {{-- <p class="my-text-dark fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p> --}}
         </div>
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="container" data-aos="fade-up" data-aos-once="false">
 
             <div class="swiper init-swiper">
                 <script type="application/json" class="swiper-config">
@@ -451,13 +445,13 @@
                 </path>
             </svg>
         </div>
-        <div class="container mb-5 text-center ">
+        <div class="container mb-5 text-center " data-aos="fade-up" data-aos-once="false">
 
             <h1 class="fs-1 text-white mt-5">Kegiatan</h1>
             <p class=text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="container" data-aos="fade-up" data-aos-once="false" style="z-index: 999999999 !important;">
 
             <div class="swiper mySwiper2 init-swiper">
                 <script type="application/json" class="swiper-config">
@@ -590,12 +584,12 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section">
 
-        <div class="container" data-aos="fade" data-aos-delay="100">
+        <div class="container">
 
             <div class="row gy-4">
 
-                <div class="col-lg-6">
-                    <div class="info-item d-flex flex-column" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-once="false">
+                    <div class="info-item d-flex flex-column">
                         <div class="container mb-5">
                             <h1 class="fs-1 my-text-dark">Kami ingin mendengar sesuatu darimu</h1>
                             <p class="my-text-dark fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
@@ -607,10 +601,10 @@
 
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-once="false">
                     <form action="/pesan" method="POST">
                         @csrf
-                        <div class="row gy-4">
+                        <div class="container row gy-4">
 
                             <div class="col-md-12 mb-0 mb-lg-1">
                                 <label for="name" class="form-label">Nama Lengkap</label>
