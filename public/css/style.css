@@ -17,7 +17,6 @@
 }
 
 @media (min-width: 1200px) {
-
     .hover-underline::after {
         content: "";
         position: absolute;
@@ -33,7 +32,6 @@
 }
 
 @media (min-width: 1024px) {
-
     /* .head-about{
     width: 35% !important;
   } */
@@ -669,7 +667,6 @@
     transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-
 /* Hover effect */
 .circle-img:hover,
 .circle-img-small:hover {
@@ -765,6 +762,11 @@
     /* tambah tebal */
     box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
     transform: translate(20%, 0) scale(1.05);
+}
+
+.profile-img:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
 }
 
 .fullwidth-photo-stack {
@@ -924,6 +926,7 @@
     width: 280px;
     height: 280px;
     object-fit: cover;
+    transition: all 0.3s ease;
 }
 
 .corner-icon {
@@ -941,16 +944,57 @@
     /* jarak dari teks */
     font-weight: normal;
 }
-
-
+.wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+}
+.wave-bottom svg {
+    width: 100%;
+    height: 100px; /* kecilin biar gak makan banyak space */
+    display: block;
+}
 
 @keyframes blink {
     to {
         visibility: hidden;
     }
 }
+.wave-top svg,
+.wave-bottom svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    line-height: 0;
+}
 
+.wave-top {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
 
+.wave-bottom {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+#testimonials {
+    position: relative;
+    overflow: hidden;
+}
+.section-wave {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
 
 /* Responsif di layar kecil (mobile < lg) */
 @media (max-width: 991px) {
@@ -996,4 +1040,81 @@
         height: 180px;
         object-fit: cover;
     }
+    .graphic-1 {
+        height: 60px !important;
+        top: -60px !important;
+        right: -55px !important;
+    }
+    .graphic-2 {
+        top: -50px !important;
+        left: -50px !important;
+        height: 60px !important;
+    }
+    .graphic-3 {
+        top: -100px !important;
+        right: 10px !important;
+        height: 50px !important;
+    }
+    .graphic-4 {
+        height: 330px !important;
+        top: 50px !important;
+    }
+    .graphic-8 {
+        height: 190px !important;
+        top: -10px !important;
+        left: -25px !;
+    }
+    .graphic-9 {
+        height: 280px !important;
+        top: 20px !important;
+    }
+}
+
+/* graphic 1 */
+.graphic-1,
+.graphic-2,
+.graphic-3,
+.graphic-4,
+.graphic-7,
+.graphic-8,
+.graphic-9 {
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.graphic-1 {
+    transform: scaleX(-1);
+    height: 80px;
+    top: -80px;
+    right: -68px;
+}
+.graphic-2 {
+    height: 80px;
+    left: 85px;
+}
+.graphic-3 {
+    height: 80px;
+    top: -80px;
+    right: 100px;
+}
+.graphic-4 {
+    height: 340px;
+    top: 50px;
+    left: -30px;
+}
+.graphic-7 {
+    height: 420px;
+    top: -10px;
+    left: -10px;
+}
+.graphic-8 {
+    height: 280px;
+    top: -10px;
+    left: 20px;
+}
+.graphic-9 {
+    height: 620px;
+    top: 50px;
+    /* left: 170px; */
 }
