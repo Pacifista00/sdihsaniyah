@@ -9,7 +9,7 @@ buat background
 -ganti font
 -konsultasi wa di jumbotron
 -section rusak padding di css dihapus
-garis disebelah heading
+-garis disebelah heading
 -sub nav active
 -buat card setiap apa. bg agak abu
 -PPDB dashboard terskip
@@ -21,3 +21,5 @@ card program sekolah png grafis
 -foto tentang belum bisa dimanage
 option ke 2 ekskul rusak
 aos belum
+data dari yg terbaru
+-hover list fasilitas belum
