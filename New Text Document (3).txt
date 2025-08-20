@@ -16,10 +16,10 @@ buat background
 header card dashboard
 -url misi merah
 -card program sekolah tabrakan
-card program sekolah png grafis
+-card program sekolah png grafis
 -foto kurikulum main page belum bisa dimanage
 -foto tentang belum bisa dimanage
 option ke 2 ekskul rusak
-aos belum
+-aos belum
 data dari yg terbaru
 -hover list fasilitas belum

@@ -8,7 +8,7 @@
     <section id="call-to-action" class="call-to-action section my-bg-orange parallax-bg">
 
         <div class="container">
-            <div data-aos="zoom-in" data-aos-delay="100">
+            <div data-aos="zoom-in" data-aos-once="false">
                 <div class="mt-5 pt-lg-5">
 
                     <h1 class="my-text-heading heading-cursor">Fasilitas Sekolah</h1>
@@ -21,12 +21,12 @@
     </section>
     <section>
         <div class="container">
-            <div class="my-5 text-center">
+            <div class="my-5 text-center" data-aos="fade-up" data-aos-once="false">
                 <h1 class="fs-1 mb-3">FASILITAS SEKOLAH</h1>
                 <p class="fs-6">Untuk menunjang segala proses belajar mengajar, kami memiliki fasilitas yang
                     sangat lengkap diantaranya.</p>
             </div>
-            <div class="row">
+            <div class="row" data-aos="fade-up" data-aos-once="false">
                 <div class="col-6 col-lg-4 text-center mb-3">
                     <div class="text-center my-4">
                         <div class="profile-wrapper position-relative d-inline-block">
