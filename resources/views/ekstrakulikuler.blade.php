@@ -24,17 +24,18 @@
             <div class="fullwidth-photo-stack position-relative" data-aos="fade-up" data-aos-once="false">
                 <img class="graphic-9" src="{{ asset('images/graphic/Asset 9.png') }}" alt="">
                 <!-- Foto besar -->
-                <div class="stack-photo big-stack" style="background-image: url('{{ asset('images/sampul4.jpg') }}');">
+                <div class="stack-photo big-stack"
+                    style="background-image: url('{{ asset('storage/' . $fotoEkskul[0]->foto ) }}');">
                 </div>
 
                 <!-- Foto kecil kiri -->
                 <div class="stack-photo small-stack stack-left"
-                    style="background-image: url('{{ asset('images/sampul5.jpg') }}');">
+                    style="background-image: url('{{ asset('storage/' . $fotoEkskul[1]->foto ) }}');">
                 </div>
 
                 <!-- Foto kecil kanan -->
                 <div class="stack-photo small-stack stack-right"
-                    style="background-image: url('{{ asset('images/sampul5.jpg') }}');">
+                    style="background-image: url('{{ asset('storage/' . $fotoEkskul[2]->foto) }}');">
                 </div>
             </div>
         </div>
@@ -45,14 +46,9 @@
                 <h1 class="fs-1 text-dark my-4">Program Ekstrakurikuler
                     Seni & Akademik</h1>
                 <div class="row">
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 1</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 2</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 3</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 4</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 5</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 6</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 7</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 8</div>
+                    @foreach ($ekskul1 as $ekskul1Item)
+                    <div class="col-6 col-lg-4 mb-3">{{ $ekskul1Item->judul }}</div>
+                    @endforeach
                 </div>
 
             </div>
@@ -64,14 +60,9 @@
                 <h1 class="fs-1 text-dark my-4">Program Ekstrakurikuler
                     Olahraga & Kepemimpinan</h1>
                 <div class="row">
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 1</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 2</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 3</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 4</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 5</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 6</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 7</div>
-                    <div class="col-6 col-lg-4 mb-3">Drum Band 8</div>
+                    @foreach ($ekskul2 as $ekskul2Item)
+                    <div class="col-6 col-lg-4 mb-3">{{ $ekskul2Item->judul }}</div>
+                    @endforeach
                 </div>
 
             </div>

@@ -4,7 +4,8 @@
     <div class="app-brand demo">
         <a href="index.html" class="app-brand-link">
             <span class="app-brand-logo demo">
-                <img src="{{ asset('images/logosd.png') }}" class="my-4" alt="" style="width: 30px; height: 30px; object-fit: cover;">
+                <img src="{{ asset('images/logosd.png') }}" class="my-4" alt=""
+                    style="width: 30px; height: 30px; object-fit: cover;">
             </span>
             <span class="fs-3 demo menu-text fw-bolder ms-2">Dashboard</span>
         </a>
@@ -192,11 +193,11 @@
                 <div data-i18n="Analytics">User</div>
             </a>
         </li>
-        @endif  
+        @endif
         <li class="menu-item">
             <a href="/dashboard/pesan" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-message-rounded"></i>
-                <div data-i18n="Analytics">Pesan</div>
+                <div data-i18n="Analytics">Pesan Pertanyaan</div>
             </a>
         </li>
 

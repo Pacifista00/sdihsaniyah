@@ -28,7 +28,7 @@ class DeskripsiController extends Controller
 
         $fototentang->update($data);
 
-        return redirect(url('/dashboard/foto-tentang'))->with('success', 'Foto berhasil diupdate.');
+        return redirect(url('/dashboard/foto-tentang-kami'))->with('success', 'Foto berhasil diupdate.');
     }
     public function update(Request $request, $id)
     {

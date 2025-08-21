@@ -85,7 +85,7 @@
                     </div>
                     <!-- Basic Bootstrap Table -->
                     <div class="card">
-                        <h5 class="card-header">Table Basic</h5>
+                        <h5 class="card-header">Testimoni</h5>
                         <div class="table-responsive text-nowrap">
                             <table class="table">
                                 <thead>
@@ -107,7 +107,7 @@
                                         </td>
                                         <td>{{ $testimoniItem->nama }}</td>
                                         <td>{{ $testimoniItem->sebagai }}</td>
-                                        <td>{{ $testimoniItem->deskripsi }}</td>
+                                        <td class="crop-text">{{ $testimoniItem->deskripsi }}</td>
 
                                         {{-- <td><span class="badge bg-label-primary me-1">Active</span></td> --}}
                                         <td class="mx-0">

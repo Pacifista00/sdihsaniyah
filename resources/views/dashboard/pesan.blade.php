@@ -76,7 +76,7 @@
                     </div>
                     <!-- Basic Bootstrap Table -->
                     <div class="card">
-                        <h5 class="card-header">Table Basic</h5>
+                        <h5 class="card-header">Pesan Pertanyaan</h5>
                         <div class="table-responsive text-nowrap">
                             <table class="table">
                                 <thead>
@@ -93,8 +93,8 @@
                                     <tr>
                                         <td>{{ $pesanItem->nama }}</td>
                                         <td>{{ $pesanItem->email }}</td>
-                                        <td>{{ $pesanItem->subjek }}</td>
-                                        <td>{{ $pesanItem->pesan }}</td>
+                                        <td class="crop-text">{{ $pesanItem->subjek }}</td>
+                                        <td class="crop-text">{{ $pesanItem->pesan }}</td>
 
                                         {{-- <td><span class="badge bg-label-primary me-1">Active</span></td> --}}
                                         <td class="mx-0">

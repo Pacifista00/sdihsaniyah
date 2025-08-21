@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="card mb-4">
-                                <h5 class="card-header">Default</h5>
+                                <h5 class="card-header">Foto 1</h5>
                                 <div class="card-body">
                                     <form action="/dashboard/prestasi/update-foto/{{ $fotoPrestasi[0]->id }}"
                                         method="POST" enctype="multipart/form-data">
@@ -46,7 +46,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="card mb-4">
-                                <h5 class="card-header">Default</h5>
+                                <h5 class="card-header">Foto 2</h5>
                                 <div class="card-body">
                                     <form action="/dashboard/prestasi/update-foto/{{ $fotoPrestasi[1]->id }}"
                                         method="POST" enctype="multipart/form-data">
@@ -66,7 +66,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="card mb-4">
-                                <h5 class="card-header">Default</h5>
+                                <h5 class="card-header">Foto 3</h5>
                                 <div class="card-body">
                                     <form action="/dashboard/prestasi/update-foto/{{ $fotoPrestasi[2]->id }}"
                                         method="POST" enctype="multipart/form-data">

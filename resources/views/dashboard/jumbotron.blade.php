@@ -95,8 +95,8 @@
                                             <img src="{{ asset('storage/' . $jumbotronItem->foto) }}"
                                                 class="img-table shadow-md" alt="">
                                         </td>
-                                        <td>{{ $jumbotronItem->judul }}</td>
-                                        <td>{{ $jumbotronItem->deskripsi }}</td>
+                                        <td class="crop-text">{{ $jumbotronItem->judul }}</td>
+                                        <td class="crop-text">{{ $jumbotronItem->deskripsi }}</td>
 
                                         {{-- <td><span class="badge bg-label-primary me-1">Active</span></td> --}}
                                         <td class="mx-0">

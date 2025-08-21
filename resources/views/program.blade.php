@@ -26,66 +26,23 @@
                 <p class=" fs-6">Berikut adalah Program Ungulan Sekolah SD Ihsaniyah 1 Kota Tegal</p>
             </div>
             <div class="row">
+                @foreach ($program as $programItem)
                 <div class="col-6 col-lg-4 text-center mb-3" data-aos="fade-up" data-aos-once="false">
                     <div class="text-center my-4">
                         <div class="profile-wrapper position-relative d-inline-block">
                             <!-- Foto bulat -->
-                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Foto Profil"
-                                class="profile-img rounded-circle border border-3 border-light">
+                            <img src="{{ asset('storage/' . $programItem->foto) }}" alt="Foto Profil"
+                                class="profile-img rounded-circle border border-3 border-light shadow">
 
                             <!-- Ikon PNG di pojok kanan bawah -->
                             <img class="graphic-8" src="{{ asset('images/graphic/Asset 8.png') }}" alt="">
                         </div>
 
                         <!-- Judul -->
-                        <h5 class="mt-3 fw-bold">Judul di Sini</h5>
+                        <h4 class="mt-3 fw-bold">{{ $programItem->judul }}</h4>
                     </div>
                 </div>
-                <div class="col-6 col-lg-4 text-center mb-3" data-aos="fade-up" data-aos-once="false">
-                    <div class="text-center my-4">
-                        <div class="profile-wrapper position-relative d-inline-block">
-                            <!-- Foto bulat -->
-                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Foto Profil"
-                                class="profile-img rounded-circle border border-3 border-light">
-
-                            <!-- Ikon PNG di pojok kanan bawah -->
-                            <img class="graphic-8" src="{{ asset('images/graphic/Asset 8.png') }}" alt="">
-                        </div>
-
-                        <!-- Judul -->
-                        <h5 class="mt-3 fw-bold">Judul di Sini</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4 text-center mb-3" data-aos="fade-up" data-aos-once="false">
-                    <div class="text-center my-4">
-                        <div class="profile-wrapper position-relative d-inline-block">
-                            <!-- Foto bulat -->
-                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Foto Profil"
-                                class="profile-img rounded-circle border border-3 border-light">
-
-                            <!-- Ikon PNG di pojok kanan bawah -->
-                            <img class="graphic-8" src="{{ asset('images/graphic/Asset 8.png') }}" alt="">
-                        </div>
-
-                        <!-- Judul -->
-                        <h5 class="mt-3 fw-bold">Judul di Sini</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4 text-center mb-3">
-                    <div class="text-center my-4">
-                        <div class="profile-wrapper position-relative d-inline-block">
-                            <!-- Foto bulat -->
-                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Foto Profil"
-                                class="profile-img rounded-circle border border-3 border-light">
-
-                            <!-- Ikon PNG di pojok kanan bawah -->
-                            <img class="graphic-8" src="{{ asset('images/graphic/Asset 8.png') }}" alt="">
-                        </div>
-
-                        <!-- Judul -->
-                        <h5 class="mt-3 fw-bold">Judul di Sini</h5>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

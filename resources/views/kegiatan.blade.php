@@ -152,8 +152,19 @@
                 </div>
                 <div class="col-md-4 ms-md-4 mt-0">
                     <div class="berita-terkini container" data-aos="fade-up" data-aos-once="false">
-                        <h2>Berita Terkini</h2>
+                        <h2>Berita Unggulan</h2>
                         <ul class="list-unstyled">
+                            <li class="d-flex align-items-start mb-3">
+                                <!-- Thumbnail -->
+                                <img src="{{ asset('images/sampul5.jpg') }}" alt="Berita" class="me-3 rounded-4"
+                                    style="width: 120px; height: 80px; object-fit: cover;">
+
+                                <!-- Judul -->
+                                <p class="mb-0">
+                                    Siswa SD Muhammadiyah Sapen Harumkan Indonesia di Panggung Internasional Korea
+                                    Selatan
+                                </p>
+                            </li>
                             <li class="d-flex align-items-start mb-3">
                                 <!-- Thumbnail -->
                                 <img src="{{ asset('images/sampul5.jpg') }}" alt="Berita" class="me-3 rounded-4"
@@ -200,7 +211,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="berita-pilihan container" data-aos="fade-up" data-aos-once="false">
+                    {{-- <div class="berita-pilihan container" data-aos="fade-up" data-aos-once="false">
                         <h2>Berita Pilihan</h2>
                         <ul class="list-unstyled">
                             <li class="d-flex align-items-start mb-3">
@@ -248,7 +259,7 @@
                                 </p>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
 
 
                 </div>

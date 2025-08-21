@@ -1,4 +1,5 @@
-<header id="header" class="header d-flex align-items-center fixed-top">
+<header id="header" class="header d-flex align-items-center fixed-top" data-aos="fade-down" data-aos-once="false"
+    style="z-index: 9999999999999">
     <div
         class="container-fluid container-lg position-relative d-flex align-items-center justify-content-between bg-white pill-navbar shadow">
 
@@ -9,20 +10,32 @@
 
         <nav id="navmenu" class="navmenu py-2">
             <ul>
-                <li><a href="{{ url('/') }}" class="active hover-underline">Beranda</a></li>
-                <li><a href="{{ url('/tentang-kami') }}" class="text-dark hover-underline">Tentang Kami</a></li>
-                <li><a href="{{ url('/program') }}" class="text-dark hover-underline">Program Sekolah</a></li>
-                <li class="dropdown" class="text-dark"><a href="#" class="text-dark"><span>Informasi</span><i
+                <li><a href="{{ url('/') }}"
+                        class="hover-underline text-dark {{ $active == 'index' ? 'active' : '' }}">Beranda</a></li>
+                <li><a href="{{ url('/tentang-kami') }}"
+                        class="text-dark hover-underline {{ $active == 'tentang-kami' ? 'active' : '' }}">Tentang
+                        Kami</a></li>
+                <li><a href="{{ url('/program') }}"
+                        class="text-dark hover-underline {{ $active == 'program' ? 'active' : '' }}">Program Sekolah</a>
+                </li>
+                <li class="dropdown" class="text-dark"><a href="#"
+                        class="text-dark {{ $active == 'index' ? 'active' : '' }}"><span>Informasi</span><i
                             class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li><a href="{{ url('/fasilitas') }}">Fasilitas</a></li>
-                        <li><a href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a></li>
-                        <li><a href="{{ url('/prestasi-siswa') }}">Prestasi Siswa</a></li>
-                        <li><a href="{{ url('/kegiatan') }}">Kegiatan</a></li>
-                        <li><a href="{{ url('/daftar-spmb') }}">Daftar SPMB</a></li>
+                        <li><a href="{{ url('/fasilitas') }}"
+                                class=" {{ $active == 'fasilitas' ? 'active' : '' }}">Fasilitas</a></li>
+                        <li><a href="{{ url('/ekstrakulikuler') }}"
+                                class=" {{ $active == 'ekstrakulikuler' ? 'active' : '' }}">Ekstrakulikuler</a></li>
+                        <li><a href="{{ url('/prestasi-siswa') }}"
+                                class=" {{ $active == 'prestasi' ? 'active' : '' }}">Prestasi Siswa</a></li>
+                        <li><a href="{{ url('/kegiatan') }}"
+                                class=" {{ $active == 'kegiatan' ? 'active' : '' }}">Kegiatan</a></li>
+                        <li><a href="{{ url('/daftar-spmb') }}" class=" ">Daftar
+                                SPMB</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ url('/kontak') }}" class="text-dark hover-underline">Kontak</a></li>
+                <li><a href="{{ url('/kontak') }}"
+                        class="text-dark hover-underline {{ $active == 'kontak' ? 'active' : '' }}">Kontak</a></li>
                 <li class="ms-3">
                     <button type="button" class="btn-kids rounded-pill px-4">Daftar</button>
                 </li>

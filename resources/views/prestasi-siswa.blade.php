@@ -24,36 +24,32 @@
             <div class="fullwidth-photo-stack position-relative">
                 <img class="graphic-9" src="{{ asset('images/graphic/Asset 9.png') }}" alt="">
                 <!-- Foto besar -->
-                <div class="stack-photo big-stack" style="background-image: url('{{ asset('images/sampul4.jpg') }}');">
+                <div class="stack-photo big-stack"
+                    style="background-image: url('{{ asset('storage/' . $fotoPrestasi[0]->foto ) }}');">
                 </div>
 
                 <!-- Foto kecil kiri -->
                 <div class="stack-photo small-stack stack-left"
-                    style="background-image: url('{{ asset('images/sampul5.jpg') }}');">
+                    style="background-image: url('{{ asset('storage/' . $fotoPrestasi[1]->foto) }}');">
                 </div>
 
                 <!-- Foto kecil kanan -->
                 <div class="stack-photo small-stack stack-right"
-                    style="background-image: url('{{ asset('images/sampul5.jpg') }}');">
+                    style="background-image: url('{{ asset('storage/' . $fotoPrestasi[2]->foto) }}');">
                 </div>
             </div>
         </div>
     </section>
-    <section class="py-4">
+    <section class="pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6" data-aos="fade-up" data-aos-once="false">
+                {{-- <div class="col-lg-6" data-aos="fade-up" data-aos-once="false">
                     <div class="text-center text-lg-start">
                         <h1 class="fs-1 my-4">Internasional</h1>
                         <div class="row">
-                            <div class="">Drum Band 1</div>
-                            <div class="">Drum Band 2</div>
-                            <div class="">Drum Band 3</div>
-                            <div class="">Drum Band 4</div>
-                            <div class="">Drum Band 5</div>
-                            <div class="">Drum Band 6</div>
-                            <div class="">Drum Band 7</div>
-                            <div class="">Drum Band 8</div>
+                            @foreach ($prestasiInternasional as $prestasiInternasionalItem)
+                            <div class="">{{ $prestasiInternasionalItem->judul }}</div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -61,14 +57,9 @@
                     <div class="text-center text-lg-start">
                         <h1 class="fs-1 my-4">Nasional</h1>
                         <div class="row">
-                            <div class="">Drum Band 1</div>
-                            <div class="">Drum Band 2</div>
-                            <div class="">Drum Band 3</div>
-                            <div class="">Drum Band 4</div>
-                            <div class="">Drum Band 5</div>
-                            <div class="">Drum Band 6</div>
-                            <div class="">Drum Band 7</div>
-                            <div class="">Drum Band 8</div>
+                            @foreach ($prestasiNasional as $prestasiNasionalItem)
+                            <div class="">{{ $prestasiNasionalItem->judul }}</div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -76,14 +67,9 @@
                     <div class="text-center text-lg-start">
                         <h1 class="fs-1 my-4">Provinsi</h1>
                         <div class="row">
-                            <div class="">Drum Band 1</div>
-                            <div class="">Drum Band 2</div>
-                            <div class="">Drum Band 3</div>
-                            <div class="">Drum Band 4</div>
-                            <div class="">Drum Band 5</div>
-                            <div class="">Drum Band 6</div>
-                            <div class="">Drum Band 7</div>
-                            <div class="">Drum Band 8</div>
+                            @foreach ($prestasiProvinsi as $prestasiProvinsiItem)
+                            <div class="">{{ $prestasiProvinsiItem->judul }}</div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -91,16 +77,19 @@
                     <div class="text-center text-lg-start">
                         <h1 class="fs-1 my-4">Kota</h1>
                         <div class="row">
-                            <div class="">Drum Band 1</div>
-                            <div class="">Drum Band 2</div>
-                            <div class="">Drum Band 3</div>
-                            <div class="">Drum Band 4</div>
-                            <div class="">Drum Band 5</div>
-                            <div class="">Drum Band 6</div>
-                            <div class="">Drum Band 7</div>
-                            <div class="">Drum Band 8</div>
+                            @foreach ($prestasiKota as $prestasiKotaItem)
+                            <div class="">{{ $prestasiKotaItem->judul }}</div>
+                            @endforeach
                         </div>
                     </div>
+                </div> --}}
+                <div class="row">
+                    @foreach ($prestasi as $prestasiItem)
+                    <div class="col-12 col-md-6 mb-2 d-flex align-items-center">
+                        <i class="bi bi-trophy me-2 my-text-primary"></i>
+                        <h6 class="mb-0 fw-medium">{{ $prestasiItem->judul }}</h6>
+                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

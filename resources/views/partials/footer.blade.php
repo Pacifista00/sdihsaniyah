@@ -1,10 +1,12 @@
 <footer id="footer" class="footer dark-background text-start p-0">
-    <div class="container p-4" data-aos="fade-up">
+    <div class="container p-4">
         <div class="row mt-4">
             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                 <h5 class="text-uppercase mb-4">SD Ihsaniyah 1 Kota Tegal</h5>
                 <p>
-                    Berkomitmen untuk mengembangkan kompetensi anak dengan didasari karakter yang kuat. Dengan harapan ilmu yang diperoleh dapat lebih mendekatkan diri kepada Allah SWT, berguna bagi agama Islam dan Negara.
+                    Berkomitmen untuk mengembangkan kompetensi anak dengan didasari karakter yang kuat. Dengan harapan
+                    ilmu yang diperoleh dapat lebih mendekatkan diri kepada Allah SWT, berguna bagi agama Islam dan
+                    Negara.
                 </p>
                 <div class="mt-4 d-flex gap-2">
                     <a href="https://www.facebook.com/profile.php?id=100095436735845" type="button"
@@ -22,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0 ps-lg-5">
+            <div class="col-6 col-lg-2 mb-4 mb-md-0 ps-lg-5">
                 <h5 class="text-uppercase mb-4">Menu</h5>
 
                 <div class="form-outline form-white mb-4">
@@ -38,6 +40,26 @@
                         </li>
                         <li class="mb-2">
                             <a href="#alur" class="text-white text-decoration-none">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-lg-2 mb-4 mb-md-0 ps-lg-5">
+                <h5 class="text-uppercase mb-4">Informasi</h5>
+
+                <div class="form-outline form-white mb-4">
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">
+                            <a href="#home" class="text-white text-decoration-none">Fasilitas</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#tentang" class="text-white text-decoration-none">Ekstrakulikuler</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#fakultas" class="text-white text-decoration-none">Prestasi</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#alur" class="text-white text-decoration-none">Kegiatan</a>
                         </li>
                     </ul>
                 </div>

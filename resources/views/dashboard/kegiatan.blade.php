@@ -47,26 +47,34 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col mb-3">
-                                                        <label for="foto2" class="form-label">Foto 2 <small>(Opsional)</small></label>
-                                                        <input type="file" id="foto2" class="form-control" name="foto2" />
+                                                        <label for="foto2" class="form-label">Foto 2
+                                                            <small>(Opsional)</small></label>
+                                                        <input type="file" id="foto2" class="form-control"
+                                                            name="foto2" />
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col mb-3">
-                                                        <label for="foto3" class="form-label">Foto 3 <small>(Opsional)</small></label>
-                                                        <input type="file" id="foto3" class="form-control" name="foto3" />
+                                                        <label for="foto3" class="form-label">Foto 3
+                                                            <small>(Opsional)</small></label>
+                                                        <input type="file" id="foto3" class="form-control"
+                                                            name="foto3" />
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col mb-3">
-                                                        <label for="foto4" class="form-label">Foto 4 <small>(Opsional)</small></label>
-                                                        <input type="file" id="foto4" class="form-control" name="foto4" />
+                                                        <label for="foto4" class="form-label">Foto 4
+                                                            <small>(Opsional)</small></label>
+                                                        <input type="file" id="foto4" class="form-control"
+                                                            name="foto4" />
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col mb-3">
-                                                        <label for="foto5" class="form-label">Foto 5 <small>(Opsional)</small></label>
-                                                        <input type="file" id="foto5" class="form-control" name="foto5" />
+                                                        <label for="foto5" class="form-label">Foto 5
+                                                            <small>(Opsional)</small></label>
+                                                        <input type="file" id="foto5" class="form-control"
+                                                            name="foto5" />
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -80,8 +88,7 @@
                                                     <div class="col mb-3">
                                                         <label for="tanggal" class="form-label">Tanggal Kegiatan</label>
                                                         <input type="date" id="tanggal" class="form-control"
-                                                            placeholder="Masukkan Tanggal"
-                                                            name="tanggal" />
+                                                            placeholder="Masukkan Tanggal" name="tanggal" />
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -90,6 +97,16 @@
                                                         <textarea type="text" id="deskripsi" class="form-control"
                                                             placeholder="Masukkan Deskripsi"
                                                             name="deskripsi"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col mb-3">
+                                                        <label for="unggulan" class="form-label">Atur sebagai berita
+                                                            unggulan?</label>
+                                                        <select id="unggulan" class="form-select" name="unggulan">
+                                                            <option value="1">Ya</option>
+                                                            <option value="0">Tidak</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -108,7 +125,7 @@
                     </div>
                     <!-- Basic Bootstrap Table -->
                     <div class="card">
-                        <h5 class="card-header">Table Basic</h5>
+                        <h5 class="card-header">Kegiatan</h5>
                         <div class="table-responsive text-nowrap">
                             <table class="table">
                                 <thead>
@@ -121,6 +138,7 @@
                                         <th>Judul</th>
                                         <th>Tanggal</th>
                                         <th>Deskripsi</th>
+                                        <th>Unggulan</th>
                                         {{-- <th>Status</th> --}}
                                         <th>Aksi</th>
                                     </tr>
@@ -134,27 +152,35 @@
                                         </td>
                                         <td>
                                             {!! $kegiatanItem->foto2
-                                                ? '<img src="'.asset('storage/'.$kegiatanItem->foto2).'" class="img-table shadow-md" alt="">'
-                                                : '<span class="text-gray-500 italic">Foto kosong</span>' !!}
+                                            ? '<img src="'.asset('storage/'.$kegiatanItem->foto2).'"
+                                                class="img-table shadow-md" alt="">'
+                                            : '<span class="text-gray-500 italic">Foto kosong</span>' !!}
                                         </td>
                                         <td>
                                             {!! $kegiatanItem->foto3
-                                                ? '<img src="'.asset('storage/'.$kegiatanItem->foto3).'" class="img-table shadow-md" alt="">'
-                                                : '<span class="text-gray-500 italic">Foto kosong</span>' !!}
+                                            ? '<img src="'.asset('storage/'.$kegiatanItem->foto3).'"
+                                                class="img-table shadow-md" alt="">'
+                                            : '<span class="text-gray-500 italic">Foto kosong</span>' !!}
                                         </td>
                                         <td>
                                             {!! $kegiatanItem->foto4
-                                                ? '<img src="'.asset('storage/'.$kegiatanItem->foto4).'" class="img-table shadow-md" alt="">'
-                                                : '<span class="text-gray-500 italic">Foto kosong</span>' !!}
+                                            ? '<img src="'.asset('storage/'.$kegiatanItem->foto4).'"
+                                                class="img-table shadow-md" alt="">'
+                                            : '<span class="text-gray-500 italic">Foto kosong</span>' !!}
                                         </td>
                                         <td>
                                             {!! $kegiatanItem->foto5
-                                                ? '<img src="'.asset('storage/'.$kegiatanItem->foto5).'" class="img-table shadow-md" alt="">'
-                                                : '<span class="text-gray-500 italic">Foto kosong</span>' !!}
+                                            ? '<img src="'.asset('storage/'.$kegiatanItem->foto5).'"
+                                                class="img-table shadow-md" alt="">'
+                                            : '<span class="text-gray-500 italic">Foto kosong</span>' !!}
                                         </td>
-                                        <td>{{ $kegiatanItem->judul }}</td>
+                                        <td class="crop-text">{{ $kegiatanItem->judul }}</td>
                                         <td>{{ $kegiatanItem->tanggal }}</td>
-                                        <td>{{ $kegiatanItem->deskripsi }}</td>
+                                        <td class="crop-text">{{ $kegiatanItem->deskripsi }}</td>
+                                        <td>
+                                            {{ $kegiatanItem->unggulan ? 'Ya' : 'Tidak' }}
+                                        </td>
+
 
                                         {{-- <td><span class="badge bg-label-primary me-1">Active</span></td> --}}
                                         <td class="mx-0">
@@ -187,7 +213,8 @@
                                                     <div class="modal-body">
                                                         <div class="row">
                                                             <div class="col mb-3">
-                                                                <label for="foto" class="form-label">Foto Thumbnail</label>
+                                                                <label for="foto" class="form-label">Foto
+                                                                    Thumbnail</label>
                                                                 <input type="file" id="foto" class="form-control"
                                                                     name="foto" />
                                                             </div>
@@ -230,7 +257,8 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col mb-3">
-                                                                <label for="tanggal" class="form-label">Tanggal Kegiatan</label>
+                                                                <label for="tanggal" class="form-label">Tanggal
+                                                                    Kegiatan</label>
                                                                 <input type="text" id="tanggal" class="form-control"
                                                                     placeholder="Masukkan tanggal" name="tanggal"
                                                                     value="{{ $kegiatanItem->tanggal }}" />
@@ -246,6 +274,23 @@
                                                                     name="deskripsi">{{ $kegiatanItem->deskripsi }}</textarea>
                                                             </div>
                                                         </div>
+                                                        <div class="row">
+                                                            <div class="col mb-3">
+                                                                <label for="unggulan"
+                                                                    class="form-label">Unggulan</label>
+                                                                <select id="unggulan" class="form-select"
+                                                                    name="unggulan">
+                                                                    <option value="1" {{ (old('unggulan',
+                                                                        $kegiatanItem->unggulan) == 1) ? 'selected' : ''
+                                                                        }}>Ya</option>
+                                                                    <option value="0" {{ (old('unggulan',
+                                                                        $kegiatanItem->unggulan) == 0) ? 'selected' : ''
+                                                                        }}>Tidak
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-outline-secondary"
