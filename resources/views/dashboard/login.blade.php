@@ -1,9 +1,9 @@
 @extends('dashboard.layouts.main')
 @section('content-dashboard')
-    <div class="d-flex min-vh-100 justify-content-center align-items-center" style="background-image: url('{{ asset('images/sampul5.jpg') }}'); background-size: cover; 
+<div class="d-flex min-vh-100 justify-content-center align-items-center" style="background-image: url('{{ asset('images/sampul5.jpg') }}'); background-size: cover; 
             background-position: center; 
             background-repeat: no-repeat;">
-        <div class="container-xxl">
+    <div class="container-xxl">
         <div class="authentication-wrapper authentication-basic container-p-y">
             <div class="authentication-inner">
                 <!-- Register -->
@@ -13,7 +13,8 @@
                         <div class="app-brand justify-content-center">
                             <a href="index.html" class="app-brand-link gap-2">
                                 <span class="app-brand-logo demo">
-                                    <img src="{{ asset('images/logosd.png') }}" class="my-4" alt="" style="width: 180px; height: 180px; object-fit: cover;">
+                                    <img src="{{ asset('images/logosd.png') }}" class="my-4" alt=""
+                                        style="width: 180px; height: 180px; object-fit: cover;">
                                 </span>
                             </a>
                         </div>
@@ -56,21 +57,40 @@
                         <p class="text-center">
                             <span>Belum mempunyai akun?</span>
                             <a href="#!">
-                                <span>Buat akun</span>
+                                <span data-bs-toggle="modal" data-bs-target="#buatAkun">Buat akun</span>
                             </a>
                         </p>
+                        <div class="modal fade" id="buatAkun" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel1">Pemberitahuan</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5>Hubungi tim IT untuk pembuatan akun!</h5>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                            Tutup
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- /Register -->
             </div>
         </div>
-        </div>
     </div>
+</div>
 
-    <!-- / Content -->
-{{-- 
-    <div class="buy-now">
-        <a href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/" target="_blank"
-            class="btn btn-danger btn-buy-now">Upgrade to Pro</a>
-    </div> --}}
+<!-- / Content -->
+{{--
+<div class="buy-now">
+    <a href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/" target="_blank"
+        class="btn btn-danger btn-buy-now">Upgrade to Pro</a>
+</div> --}}
 @endsection

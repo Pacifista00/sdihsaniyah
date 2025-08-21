@@ -25,15 +25,15 @@
                             <div class="col-auto position-relative d-inline-block">
                                 <img class="graphic-7" src="{{ asset('images/graphic/Asset 12.png') }}" alt="">
                                 <!-- Gambar besar -->
-                                <img src="{{ asset('images/sampul2.jpeg') }}" alt="Gambar Besar"
+                                <img src="{{ asset('storage/'. $fotoTentang[0]->foto ) }}" alt="Gambar Besar"
                                     class="circle-img shadow">
 
                                 <!-- Gambar kecil 1 -->
-                                <img src="{{ asset('images/sampul2.jpeg') }}" alt="Gambar Kecil 1"
+                                <img src="{{ asset('storage/'. $fotoTentang[1]->foto ) }}" alt="Gambar Kecil 1"
                                     class="circle-img-small shadow small-img-1">
 
                                 <!-- Gambar kecil 2 -->
-                                <img src="{{ asset('images/sampul2.jpeg') }}" alt="Gambar Kecil 2"
+                                <img src="{{ asset('storage/'. $fotoTentang[2]->foto ) }}" alt="Gambar Kecil 2"
                                     class="circle-img-small shadow small-img-2">
                             </div>
                         </div>
@@ -42,32 +42,20 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-once="false">
                     <h1>SD Ihsaniyah 1 Kota Tegal</h1>
-                    <p class="my-3">SD Ihsaniyah 1 Kota Tegal didaulat menjadi Sekolah Rujukan Jenjang Sekolah Dasar
-                        oleh Pemerintah
-                        Kota Tegal dan Dinas Pendidikan dan Kebudayaan Kota Tegal. Alhamdulillah Terima Kasih atas doa,
-                        dukungan dan usaha kita semua sehingga SD Ihsaniyah 1 Kota Tegal berhasil meraih predikat
-                        tersebut.</p>
+                    <p class="my-3">{{ $deskripsi->deskripsi }}</p>
                     <h4>Visi :</h4>
-                    <p class="my-3">SD Ihsaniyah 1 Kota Tegal didaulat menjadi Sekolah Rujukan Jenjang Sekolah Dasar
-                        oleh Pemerintah
-                        Kota Tegal dan Dinas Pendidikan dan Kebudayaan Kota Tegal. Alhamdulillah Terima Kasih atas doa,
-                        dukungan dan usaha kita semua sehingga SD Ihsaniyah 1 Kota Tegal berhasil meraih predikat
-                        tersebut.</p>
+                    <p class="my-3">{{ $visi->deskripsi }}</p>
                     <h4>Misi :</h4>
                     <ul>
-                        <li>Meningkatkan kualitas iman dan taqwa setiap pribadi peserta didik.</li>
-                        <li>Menanamkan aqidah, ibadah, dan akhlak sesuai dengan Al-Qur’an dan As-Sunnah.</li>
-                        <li>Mengoptimalkan proses pembelajaran dan bimbingan bagi peserta didik.</li>
-                        <li>Mengembangkan pengetahuan di bidang IPTEK, bahasa, bakat, dan minat peserta didik.</li>
-                        <li>Menjalin kerja sama yang harmonis antara warga sekolah dengan lingkungan.</li>
+                        @foreach ($misi as $misiItem)
+                        <li>{{ $misiItem->judul }}</li>
+                        @endforeach
                     </ul>
                     <h4>Tujuan Sekolah :</h4>
                     <ul>
-                        <li>Mampu mengamalkan seluruh hasil proses pembelajaran dalam kegiatan pembiasaan.</li>
-                        <li>Menguasai dasar-dasar ilmu diniyah sebagai bekal untuk mengamalkan ajaran Islam.</li>
-                        <li>Menguasai dasar-dasar ilmu pengetahuan dan teknologi.</li>
-                        <li>Meraih prestasi akademik maupun non-akademik minimal tingkat kecamatan.</li>
-                        <li>Menjadi sekolah pelopor yang diminati masyarakat.</li>
+                        @foreach ($tujuan as $tujuanItem)
+                        <li>{{ $tujuanItem->judul }}</li>
+                        @endforeach
                     </ul>
 
 

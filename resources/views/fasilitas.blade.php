@@ -27,21 +27,23 @@
                     sangat lengkap diantaranya.</p>
             </div>
             <div class="row" data-aos="fade-up" data-aos-once="false">
-                <div class="col-6 col-lg-4 text-center mb-3">
+                @foreach ($fasilitas as $fasilitasItem)
+                <div class="col-6 col-lg-4 text-center mb-3" data-aos="fade-up" data-aos-once="false">
                     <div class="text-center my-4">
                         <div class="profile-wrapper position-relative d-inline-block">
                             <!-- Foto bulat -->
-                            <img src="{{ asset('images/sampul2.jpeg') }}" alt="Foto Profil"
-                                class="profile-img rounded-circle border border-3 border-light">
+                            <img src="{{ asset('storage/' . $fasilitasItem->foto) }}" alt="Foto Profil"
+                                class="profile-img rounded-circle border border-3 border-light shadow">
 
                             <!-- Ikon PNG di pojok kanan bawah -->
                             <img class="graphic-8" src="{{ asset('images/graphic/Asset 8.png') }}" alt="">
                         </div>
 
                         <!-- Judul -->
-                        <h5 class="mt-3 fw-bold">Judul di Sini</h5>
+                        <h4 class="mt-3 fw-bold">{{ $fasilitasItem->judul }}</h4>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -61,14 +63,15 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="container mb-5">
-                        <h1 class="fs-1 text-dark">Kami ingin mendengar sesuatu darimu</h1>
+                    <div class="container mb-4">
+                        <h1 class="fs-1 text-dark">Fasilitas Lainnya</h1>
+                        <p class="fs-5">Beragam fasilitas tambahan untuk menunjang kenyamanan dan aktivitas siswa.</p>
                     </div>
                     <ul>
                         <li class="mb-3">Media pembelajaran yang lengkap</li>
-                        <li class="mb-3">Media pembelajaran yang lengkap</li>
-                        <li class="mb-3">Media pembelajaran yang lengkap</li>
-                        <li class="mb-3">Media pembelajaran yang lengkap</li>
+                        <li class="mb-3">Ruang Tunggu Siswa</li>
+                        <li class="mb-3">Ruang UKS bersih</li>
+                        <li class="mb-3">Ruang kelas dilengkapi LCD Proyektor</li>
                     </ul>
                 </div><!-- End Contact Form -->
 

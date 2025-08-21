@@ -35,8 +35,7 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
-                                        <form action="{{ url('/register') }}" method="POST"
-                                            >
+                                        <form action="{{ url('/register') }}" method="POST">
                                             @csrf
                                             <div class="modal-body">
                                                 <div class="row">
@@ -62,9 +61,11 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col mb-3">
-                                                        <label for="password_confirm" class="form-label">Konfirmasi Password</label>
-                                                        <input type="password" id="password_confirm" class="form-control"
-                                                            placeholder="Masukkan password_confirm" name="password_confirm" />
+                                                        <label for="password_confirm" class="form-label">Konfirmasi
+                                                            Password</label>
+                                                        <input type="password" id="password_confirm"
+                                                            class="form-control" placeholder="Masukkan password_confirm"
+                                                            name="password_confirm" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -83,7 +84,7 @@
                     </div>
                     <!-- Basic Bootstrap Table -->
                     <div class="card">
-                        <h5 class="card-header">Table Basic</h5>
+                        <h5 class="card-header">User</h5>
                         <div class="table-responsive text-nowrap">
                             <table class="table">
                                 <thead>
@@ -109,7 +110,8 @@
                                             <div class="mb-1">
                                                 <button class="btn btn-warning w-100 py-0 py-md-1 px-3 rounded-pill"
                                                     style="font-size: 0.75rem;" data-bs-toggle="modal"
-                                                    data-bs-target="#ubahPassword{{ $userItem->id }}">Ubah Password</button>
+                                                    data-bs-target="#ubahPassword{{ $userItem->id }}">Ubah
+                                                    Password</button>
                                             </div>
                                             <div class="mb-1">
                                                 <button class="btn btn-danger w-100 py-0 py-md-1 px-3 rounded-pill"
@@ -128,8 +130,7 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
-                                                <form action="/dashboard/user/update/{{ $userItem->id }}"
-                                                    method="POST">
+                                                <form action="/dashboard/user/update/{{ $userItem->id }}" method="POST">
                                                     @csrf
                                                     @method('PUT')
                                                     <div class="modal-body">
@@ -179,18 +180,22 @@
                                                     <div class="modal-body">
                                                         <div class="row">
                                                             <div class="col mb-3">
-                                                                <label for="password" class="form-label">password</label>
-                                                                <input type="password" id="password" class="form-control"
-                                                                    placeholder="Masukkan Password Baru" name="password"
-                                                                     />
+                                                                <label for="password"
+                                                                    class="form-label">password</label>
+                                                                <input type="password" id="password"
+                                                                    class="form-control"
+                                                                    placeholder="Masukkan Password Baru"
+                                                                    name="password" />
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col mb-3">
-                                                                <label for="password_confirm" class="form-label">Konfirmasi Password</label>
-                                                                <input type="password" id="password_confirm" class="form-control"
-                                                                    placeholder="Masukkan Konfirmasi Password" name="password_confirm"
-                                                                     />
+                                                                <label for="password_confirm"
+                                                                    class="form-label">Konfirmasi Password</label>
+                                                                <input type="password" id="password_confirm"
+                                                                    class="form-control"
+                                                                    placeholder="Masukkan Konfirmasi Password"
+                                                                    name="password_confirm" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -216,8 +221,8 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
-                                                <form action="/dashboard/user/delete/{{ $userItem->id }}"
-                                                    method="POST" enctype="multipart/form-data">
+                                                <form action="/dashboard/user/delete/{{ $userItem->id }}" method="POST"
+                                                    enctype="multipart/form-data">
                                                     @csrf
                                                     @method('DELETE')
                                                     <div class="modal-body">

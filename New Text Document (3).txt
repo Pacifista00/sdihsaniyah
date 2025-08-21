@@ -13,7 +13,7 @@ buat background
 -sub nav active
 -buat card setiap apa. bg agak abu
 -PPDB dashboard terskip
-header card dashboard
+-header card dashboard
 -url misi merah
 -card program sekolah tabrakan
 -card program sekolah png grafis
@@ -23,3 +23,6 @@ option ke 2 ekskul rusak
 -aos belum
 data dari yg terbaru
 -hover list fasilitas belum
+fasilitas lainnya kurang
+kurang info di dashboard pesan
+-kurang navbar active

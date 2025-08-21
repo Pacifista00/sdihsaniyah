@@ -74,12 +74,13 @@
                     </div>
                     <!-- Basic Bootstrap Table -->
                     <div class="card">
-                        <h5 class="card-header">Table Basic</h5>
+                        <h5 class="card-header">Prestasi</h5>
                         <div class="table-responsive text-nowrap">
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th>Judul</th>
+                                        <th>Kategori</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -88,6 +89,7 @@
                                     <tr>
 
                                         <td>{{ $prestasiItem->judul }}</td>
+                                        <td>{{ $prestasiItem->kategori }}</td>
 
                                         {{-- <td><span class="badge bg-label-primary me-1">Active</span></td> --}}
                                         <td class="mx-0">

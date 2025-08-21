@@ -164,9 +164,9 @@ class DashboardController extends Controller
     }
     public function fotoPrestasi()
     {
-        return view('dashboard.prestasi', [
+        return view('dashboard.foto-prestasi', [
             'loggedUser' => Auth::user(),
-            'fotoPrestasis' => FotoPrestasi::all(),
+            'fotoPrestasi' => FotoPrestasi::all(),
             'active' => 'foto prestasi'
         ]);
     }

@@ -135,6 +135,15 @@
       </script>
     @endif
 
+    <script>
+        document.querySelectorAll('.crop-text').forEach(td => {
+            const maxChars = 50; // batas karakter
+            if (td.textContent.length > maxChars) {
+                td.textContent = td.textContent.slice(0, maxChars) + '...';
+            }
+        });
+    </script>
+
         <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="{{ asset('dashboard-assets/vendor/libs/jquery/jquery.js') }}"></script>

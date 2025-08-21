@@ -17,6 +17,7 @@ class Kegiatan extends Model
         'foto5',
         'judul',
         'tanggal',
-        'deskripsi'
+        'deskripsi',
+        'unggulan'
     ];
 }

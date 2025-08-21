@@ -15,6 +15,7 @@ class KegiatanController extends Controller
                 'judul' => 'required|string|max:255',
                 'deskripsi' => 'required|string',
                 'tanggal' => 'required',
+                'unggulan' => 'required',
                 'foto' => 'required|image|mimes:jpg,jpeg,png|max:2048',
                 'foto2' => 'image|mimes:jpg,jpeg,png|max:2048',
                 'foto3' => 'image|mimes:jpg,jpeg,png|max:2048',
@@ -28,7 +29,8 @@ class KegiatanController extends Controller
                 'judul' => $request->judul,
                 'deskripsi' => $request->deskripsi,
                 'tanggal' => $request->tanggal,
-                'foto' => $path
+                'foto' => $path,
+                'unggulan' => $request->unggulan
             ];
 
             if ($request->hasFile('foto2')) {
@@ -57,6 +59,7 @@ class KegiatanController extends Controller
             'judul' => 'required|string|max:255',
             'deskripsi' => 'required|string',
             'tanggal' => 'required',
+            'unggulan' => 'required',
             'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
             'foto2' => 'image|mimes:jpg,jpeg,png|max:2048',
             'foto3' => 'image|mimes:jpg,jpeg,png|max:2048',
@@ -70,6 +73,7 @@ class KegiatanController extends Controller
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
             'tanggal' => $request->tanggal,
+            'unggulan' => $request->unggulan,
         ];
 
         if ($request->hasFile('foto')) {

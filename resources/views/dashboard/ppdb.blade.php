@@ -54,7 +54,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col mb-3">
-                                                        <label for="kuota_tersisa" class="form-label">Kuota Tersisa</label>
+                                                        <label for="kuota_tersisa" class="form-label">Kuota
+                                                            Tersisa</label>
                                                         <input type="number" id="kuota_tersisa" class="form-control"
                                                             placeholder="Masukkan Kuota Tersisa" name="kuota_tersisa" />
                                                     </div>
@@ -83,7 +84,7 @@
                     </div>
                     <!-- Basic Bootstrap Table -->
                     <div class="card">
-                        <h5 class="card-header">Table Basic</h5>
+                        <h5 class="card-header">PPDB</h5>
                         <div class="table-responsive text-nowrap">
                             <table class="table">
                                 <thead>
@@ -101,8 +102,8 @@
                                     <tr>
                                         <td>{{ $ppdbItem->angkatan }}</td>
                                         <td>{{ $ppdbItem->total_kuota }}</td>
-                                        <td>{{ $ppdbItem->kuota_terisi }}</td>
-                                        <td>{{ $ppdbItem->kuota_terisi }}</td>
+                                        <td>{{ $ppdbItem->total_kuota - $ppdbItem->kuota_tersisa }}</td>
+                                        <td>{{ $ppdbItem->kuota_tersisa }}</td>
 
                                         {{-- <td><span class="badge bg-label-primary me-1">Active</span></td> --}}
                                         <td class="mx-0">
@@ -128,14 +129,15 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
-                                                <form action="/dashboard/ppdb/update/{{ $ppdbItem->id }}"
-                                                    method="POST" enctype="multipart/form-data">
+                                                <form action="/dashboard/ppdb/update/{{ $ppdbItem->id }}" method="POST"
+                                                    enctype="multipart/form-data">
                                                     @csrf
                                                     @method('PUT')
                                                     <div class="modal-body">
                                                         <div class="row">
                                                             <div class="col mb-3">
-                                                                <label for="angkatan" class="form-label">Angkatan</label>
+                                                                <label for="angkatan"
+                                                                    class="form-label">Angkatan</label>
                                                                 <input type="text" id="angkatan" class="form-control"
                                                                     placeholder="Masukkan angkatan" name="angkatan"
                                                                     value="{{ $ppdbItem->angkatan }}" />
@@ -143,17 +145,23 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col mb-3">
-                                                                <label for="total_kuota" class="form-label">Total Kuota</label>
-                                                                <input type="number" id="total_kuota" class="form-control"
-                                                                    placeholder="Masukkan Total Kuota" name="total_kuota"
+                                                                <label for="total_kuota" class="form-label">Total
+                                                                    Kuota</label>
+                                                                <input type="number" id="total_kuota"
+                                                                    class="form-control"
+                                                                    placeholder="Masukkan Total Kuota"
+                                                                    name="total_kuota"
                                                                     value="{{ $ppdbItem->total_kuota }}" />
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col mb-3">
-                                                                <label for="kuota_tersisa" class="form-label">kuota_tersisa</label>
-                                                                <input type="number" id="kuota_tersisa" class="form-control"
-                                                                    placeholder="Masukkan Kuota Tersisa" name="kuota_tersisa"
+                                                                <label for="kuota_tersisa"
+                                                                    class="form-label">kuota_tersisa</label>
+                                                                <input type="number" id="kuota_tersisa"
+                                                                    class="form-control"
+                                                                    placeholder="Masukkan Kuota Tersisa"
+                                                                    name="kuota_tersisa"
                                                                     value="{{ $ppdbItem->kuota_tersisa }}" />
                                                             </div>
                                                         </div>
@@ -190,8 +198,8 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
-                                                <form action="/dashboard/ppdb/delete/{{ $ppdbItem->id }}"
-                                                    method="POST" enctype="multipart/form-data">
+                                                <form action="/dashboard/ppdb/delete/{{ $ppdbItem->id }}" method="POST"
+                                                    enctype="multipart/form-data">
                                                     @csrf
                                                     @method('DELETE')
                                                     <div class="modal-body">

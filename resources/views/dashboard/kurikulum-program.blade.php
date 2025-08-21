@@ -29,7 +29,7 @@
                             <div class="card">
                                 <div class="card-header d-flex justify-content-between align-items-center">
                                     <div>
-                                        <h5 class="mb-0">Table Basic</h5>
+                                        <h5 class="mb-0">Kurikulum</h5>
                                     </div>
                                     <button class="btn btn-success rounded-pill" data-bs-toggle="modal"
                                         data-bs-target="#tambahKurikulum">Tambah</button>
@@ -184,7 +184,7 @@
                             <div class="card">
                                 <div class="card-header d-flex justify-content-between align-items-center">
                                     <div>
-                                        <h5 class="mb-0">Table Basic</h5>
+                                        <h5 class="mb-0">Program Unggulan</h5>
                                     </div>
                                     <button class="btn btn-success rounded-pill" data-bs-toggle="modal"
                                         data-bs-target="#tambahProgramUnggulan">Tambah</button>

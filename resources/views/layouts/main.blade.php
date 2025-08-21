@@ -39,7 +39,7 @@
   ======================================================== -->
 </head>
 
-<body class="index-page bg-white my-text-dark">
+<body class="index-page my-text-dark">
   @yield('content')
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -83,6 +83,15 @@
         });
   </script>
   @endif
+  <script>
+    document.querySelectorAll('.crop-text-kegiatan').forEach(el => {
+            const maxChars = 38; // batas karakter
+            const text = el.textContent.trim();
+            if (text.length > maxChars) {
+                el.textContent = text.slice(0, maxChars) + '...';
+            }
+        });
+  </script>
 
   {{-- aos --}}
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

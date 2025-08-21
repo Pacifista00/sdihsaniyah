@@ -24,7 +24,7 @@
                     </div>
                     <!-- Basic Bootstrap Table -->
                     <div class="card mb-4">
-                        <h5 class="card-header">Default</h5>
+                        <h5 class="card-header">Prestasi Section</h5>
                         <div class="card-body">
                             <form action="/dashboard/prestasi-section/update/{{ $prestasi[0]->id }}" method="POST">
                                 @csrf

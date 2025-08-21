@@ -24,7 +24,7 @@
                     </div>
                     <!-- Basic Bootstrap Table -->
                     <div class="card mb-4">
-                        <h5 class="card-header">Default</h5>
+                        <h5 class="card-header">Kontak & Sosial Media</h5>
                         <div class="card-body">
                             <form action="/dashboard/kontak/update/{{ $kontak[0]->id }}" method="POST">
                                 @csrf
