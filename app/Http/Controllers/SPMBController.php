@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Pendaftar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\FacadesStorage;
+use App\Mail\PendaftaranMail;
+use Illuminate\Support\Facades\Mail;
 
 class SPMBController extends Controller
 {
@@ -66,7 +67,7 @@ class SPMBController extends Controller
             'foto' => 'file|mimes:jpg,jpeg,png|max:2048',
         ]);
 
-        $data = $data = [
+        $data = [
             'nik' => $request->nik,
             'nisn' => $request->nisn,
             'nama_lengkap' => $request->nama_lengkap,
@@ -127,7 +128,14 @@ class SPMBController extends Controller
         ];
 
         // 3. Simpan ke database
-        Pendaftar::create($data);
+        $pendaftar = Pendaftar::create($data);
+
+        if ($pendaftar->email_ayah) {
+            Mail::to($pendaftar->email_ayah)->queue(new PendaftaranMail($pendaftar));
+        }
+        if ($pendaftar->email_ibu) {
+            Mail::to($pendaftar->email_ibu)->queue(new PendaftaranMail($pendaftar));
+        }
 
         // 4. Redirect dengan pesan sukses
         return redirect()->back()->with('success', 'Pendaftaran berhasil disimpan!');

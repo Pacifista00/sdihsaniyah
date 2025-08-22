@@ -48,9 +48,7 @@
         </div>
     </section>
     <section id="contact" class="contact section">
-
         <div class="container" data-aos="fade" data-aos-delay="100">
-
             <div class="row gy-4">
 
                 <div class="col-lg-6">
