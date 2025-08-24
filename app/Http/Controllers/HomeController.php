@@ -6,6 +6,7 @@ use App\Models\Angkatan;
 use App\Models\Deskripsi;
 use App\Models\Ekstrakulikuler;
 use App\Models\Fasilitas;
+use App\Models\FasilitasLainnya;
 use App\Models\FotoEkstrakulikuler;
 use App\Models\FotoKurikulum;
 use App\Models\FotoPrestasi;
@@ -66,7 +67,8 @@ class HomeController extends Controller
     {
         return view('fasilitas', [
             'active' => 'fasilitas',
-            'fasilitas' => Fasilitas::all()
+            'fasilitas' => Fasilitas::all(),
+            'fasilitasLain' => FasilitasLainnya::all()
         ]);
     }
     public function ekstrakulikuler()

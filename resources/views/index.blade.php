@@ -324,7 +324,6 @@
             </svg>
         </div>
         <div class="container mb-5 text-center " data-aos="fade-up" data-aos-once="false">
-
             <h1 class="fs-1 text-white mt-5">Kegiatan</h1>
             <p class=text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>

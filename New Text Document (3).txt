@@ -21,8 +21,10 @@ buat background
 -foto tentang belum bisa dimanage
 option ke 2 ekskul rusak
 -aos belum
-data dari yg terbaru
+-data dari yg terbaru
 -hover list fasilitas belum
-fasilitas lainnya kurang
-kurang info di dashboard pesan
+-fasilitas lainnya kurang
+-kurang info di dashboard pesan
 -kurang navbar active
+detail pendaftar belum ada unduh dokumen
+pagination belum ada

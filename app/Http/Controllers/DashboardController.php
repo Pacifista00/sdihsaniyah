@@ -6,6 +6,7 @@ use App\Models\Angkatan;
 use App\Models\Deskripsi;
 use App\Models\Ekstrakulikuler;
 use App\Models\Fasilitas;
+use App\Models\FasilitasLainnya;
 use App\Models\Footer;
 use App\Models\FotoEkstrakulikuler;
 use App\Models\FotoKurikulum;
@@ -146,6 +147,14 @@ class DashboardController extends Controller
             'active' => 'fasilitas'
         ]);
     }
+    public function fasilitasLain()
+    {
+        return view('dashboard.fasilitas-lainnya', [
+            'loggedUser' => Auth::user(),
+            'fasilitass' => FasilitasLainnya::all(),
+            'active' => 'fasilitas lain'
+        ]);
+    }
     public function fotoEkstrakulikuler()
     {
         return view('dashboard.foto-ekstrakulikuler', [
@@ -182,7 +191,7 @@ class DashboardController extends Controller
     {
         return view('dashboard.kegiatan', [
             'loggedUser' => Auth::user(),
-            'kegiatans' => Kegiatan::all(),
+            'kegiatans' => Kegiatan::latest()->get(),
             'active' => 'kegiatan'
         ]);
     }
@@ -198,7 +207,7 @@ class DashboardController extends Controller
     {
         return view('dashboard.spmb', [
             'loggedUser' => Auth::user(),
-            'pendaftars' => Pendaftar::all(),
+            'pendaftars' => Pendaftar::latest()->get(),
             'active' => 'spmb'
         ]);
     }
