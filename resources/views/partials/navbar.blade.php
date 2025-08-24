@@ -19,7 +19,8 @@
                         class="text-dark hover-underline {{ $active == 'program' ? 'active' : '' }}">Program Sekolah</a>
                 </li>
                 <li class="dropdown" class="text-dark"><a href="#"
-                        class="text-dark {{ $active == 'index' ? 'active' : '' }}"><span>Informasi</span><i
+                        class="text-dark {{ in_array($active, ['fasilitas','ekstrakulikuler','prestasi','kegiatan','spmb']) ? 'active' : '' }}"
+><span>Informasi</span><i
                             class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
                         <li><a href="{{ url('/fasilitas') }}"
@@ -30,14 +31,16 @@
                                 class=" {{ $active == 'prestasi' ? 'active' : '' }}">Prestasi Siswa</a></li>
                         <li><a href="{{ url('/kegiatan') }}"
                                 class=" {{ $active == 'kegiatan' ? 'active' : '' }}">Kegiatan</a></li>
-                        <li><a href="{{ url('/daftar-spmb') }}" class=" ">Daftar
+                        <li><a href="{{ url('/daftar-spmb') }}" class="{{ $active == 'spmb' ? 'active' : '' }}">Daftar
                                 SPMB</a></li>
                     </ul>
                 </li>
                 <li><a href="{{ url('/kontak') }}"
                         class="text-dark hover-underline {{ $active == 'kontak' ? 'active' : '' }}">Kontak</a></li>
                 <li class="ms-3">
-                    <button type="button" class="btn-kids rounded-pill px-4">Daftar</button>
+                        <a href="{{ url('/daftar-spmb') }}">
+                                <button type="button" class="btn-kids rounded-pill px-4">Daftar</button>
+                        </a>
                 </li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list text-secondary"></i>

@@ -81,7 +81,7 @@ class HomeController extends Controller
     public function prestasiSiswa()
     {
         return view('prestasi-siswa', [
-            'active' => 'prestasi-siswa',
+            'active' => 'prestasi',
             'fotoPrestasi' => FotoPrestasi::latest()->take(3)->get(),
             'prestasi' => Prestasi::all(),
             'prestasiInternasional' => Prestasi::where('kategori', 'internasional')->get(),
