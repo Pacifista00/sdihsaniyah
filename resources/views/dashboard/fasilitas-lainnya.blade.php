@@ -24,10 +24,10 @@
                             </h4>
                         </div>
                         <div>
-                            {{-- <button class="btn btn-success rounded-pill py-2" data-bs-toggle="modal"
-                                data-bs-target="#tambahJumbotron">Tambah</button> --}}
-                            <!-- Modal -->
-                            {{-- <div class="modal fade" id="tambahJumbotron" tabindex="-1" aria-hidden="true">
+                            <button class="btn btn-success rounded-pill py-2" data-bs-toggle="modal"
+                                data-bs-target="#tambahMisi">Tambah</button>
+                            <!-- Modal Tambah Misi -->
+                            <div class="modal fade" id="tambahMisi" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -35,16 +35,9 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
-                                        <form action="{{ url('/dashboard/pesan/insert') }}" method="POST"
-                                            enctype="multipart/form-data">
+                                        <form action="{{ url('/dashboard/fasilitas-lainnya/insert') }}" method="POST">
                                             @csrf
                                             <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col mb-3">
-                                                        <label for="foto" class="form-label">Foto</label>
-                                                        <input type="file" id="foto" class="form-control" name="foto" />
-                                                    </div>
-                                                </div>
                                                 <div class="row">
                                                     <div class="col mb-3">
                                                         <label for="judul" class="form-label">Judul</label>
@@ -52,14 +45,7 @@
                                                             placeholder="Masukkan judul" name="judul" />
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col mb-3">
-                                                        <label for="deskripsi" class="form-label">Deskripsi</label>
-                                                        <textarea type="text" id="deskripsi" class="form-control"
-                                                            placeholder="Masukkan Deskripsi"
-                                                            name="deskripsi"></textarea>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-outline-secondary"
@@ -71,90 +57,79 @@
                                         </form>
                                     </div>
                                 </div>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                     <!-- Basic Bootstrap Table -->
                     <div class="card">
-                        <h5 class="card-header">Pesan Pertanyaan</h5>
+                        <h5 class="card-header">Fasilitas Lainnya</h5>
                         <div class="table-responsive text-nowrap">
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Nama</th>
-                                        <th>Email</th>
-                                        <th>Subjek</th>
-                                        <th>Pesan</th>
+                                        <th>Judul</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody class="table-border-bottom-0">
-                                    @foreach ($pesans as $pesanItem)
+                                    @foreach ($fasilitass as $fasilitasItem)
                                     <tr>
-                                        <td>{{ $pesanItem->nama }}</td>
-                                        <td>{{ $pesanItem->email }}</td>
-                                        <td class="crop-text">{{ $pesanItem->subjek }}</td>
-                                        <td class="crop-text">{{ $pesanItem->pesan }}</td>
+
+                                        <td>{{ $fasilitasItem->judul }}</td>
 
                                         {{-- <td><span class="badge bg-label-primary me-1">Active</span></td> --}}
                                         <td class="mx-0">
-                                            {{-- <div class="mb-1">
+                                            <div class="mb-1">
                                                 <button class="btn btn-success w-100 py-0 py-md-1 px-3 rounded-pill"
                                                     style="font-size: 0.75rem;" data-bs-toggle="modal"
-                                                    data-bs-target="#editJumbotron{{ $pesanItem->id }}">Edit</button>
-                                            </div> --}}
-                                            <div class="mb-1">
-                                                <button class="btn btn-info w-100 py-0 py-md-1 px-3 rounded-pill"
-                                                    style="font-size: 0.75rem;" data-bs-toggle="modal"
-                                                    data-bs-target="#detailPesan{{ $pesanItem->id }}">Detail</button>
+                                                    data-bs-target="#editMisi{{ $fasilitasItem->id }}">Edit</button>
                                             </div>
                                             <div class="mb-1">
                                                 <button class="btn btn-danger w-100 py-0 py-md-1 px-3 rounded-pill"
                                                     style="font-size: 0.75rem;" data-bs-toggle="modal"
-                                                    data-bs-target="#hapusPesan{{ $pesanItem->id }}">Hapus</button>
+                                                    data-bs-target="#hapusMisi{{ $fasilitasItem->id }}">Hapus</button>
                                             </div>
                                         </td>
                                     </tr>
-                                    {{-- modal detail start --}}
-                                    <div class="modal fade" id="detailPesan{{ $pesanItem->id }}" tabindex="-1"
+                                    {{-- modal edit start --}}
+                                    <div class="modal fade" id="editMisi{{ $fasilitasItem->id }}" tabindex="-1"
                                         aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel1">Detail Pesan
-                                                    </h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel1">Edit</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <h6>Nama</h6>
-                                                            <h6>Email</h6>
-                                                            <h6>Subjek</h6>
-                                                            <h6>Pesan</h6>
-
-                                                        </div>
-                                                        <div class="col-8">
-                                                            <h6 style="white-space: pre-line">: {{ $pesanItem->nama }}
-                                                            </h6>
-                                                            <h6 style="white-space: pre-line">: {{ $pesanItem->email }}
-                                                            </h6>
-                                                            <h6 style="white-space: pre-line">: {{ $pesanItem->subjek }}
-                                                            </h6>
-                                                            <h6 style="white-space: pre-line">: {{ $pesanItem->pesan }}
-                                                            </h6>
-
+                                                <form
+                                                    action="/dashboard/fasilitas-lainnya/update/{{ $fasilitasItem->id }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('PUT')
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col mb-3">
+                                                                <label for="judul" class="form-label">Judul</label>
+                                                                <input type="text" id="judul" class="form-control"
+                                                                    placeholder="Masukkan judul" name="judul"
+                                                                    value="{{ $fasilitasItem->judul }}" />
+                                                            </div>
                                                         </div>
                                                     </div>
-
-                                                </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-outline-secondary"
+                                                            data-bs-dismiss="modal">
+                                                            Tutup
+                                                        </button>
+                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
-                                    {{-- modal detail end --}}
+                                    {{-- modal edit end --}}
                                     {{-- modal hapus start --}}
-                                    <div class="modal fade" id="hapusPesan{{ $pesanItem->id }}" tabindex="-1"
+                                    <div class="modal fade" id="hapusMisi{{ $fasilitasItem->id }}" tabindex="-1"
                                         aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
@@ -163,8 +138,9 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
-                                                <form action="/dashboard/pesan/delete/{{ $pesanItem->id }}"
-                                                    method="POST" enctype="multipart/form-data">
+                                                <form
+                                                    action="/dashboard/fasilitas-lainnya/delete/{{ $fasilitasItem->id }}"
+                                                    method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <div class="modal-body">

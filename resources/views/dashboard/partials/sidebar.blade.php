@@ -113,10 +113,23 @@
             </a>
         </li>
         <li class="menu-item">
-            <a href="/dashboard/fasilitas" class="menu-link">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-building-house"></i>
-                <div data-i18n="Analytics">Fasilitas Sekolah</div>
+                <div data-i18n="Account Settings">Fasilitas</div>
             </a>
+
+            <ul class=" menu-sub">
+                <li class="menu-item">
+                    <a href="/dashboard/fasilitas" class="menu-link">
+                        <div data-i18n="Without">Fasilitas</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/dashboard/fasilitas-lainnya" class="menu-link">
+                        <div data-i18n="Without">Fasilitas Lainnya</div>
+                    </a>
+                </li>
+            </ul>
         </li>
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -174,7 +187,7 @@
         <li class="menu-item">
             <a href="/dashboard/spmb" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-id-card"></i>
-                <div data-i18n="Analytics">Pendaftar</div>
+                <div data-i18n="Analytics">Report Pendaftar</div>
             </a>
         </li>
         <li class="menu-item">
@@ -197,7 +210,7 @@
         <li class="menu-item">
             <a href="/dashboard/pesan" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-message-rounded"></i>
-                <div data-i18n="Analytics">Pesan Pertanyaan</div>
+                <div data-i18n="Analytics">Pesan/Pertanyaan</div>
             </a>
         </li>
 

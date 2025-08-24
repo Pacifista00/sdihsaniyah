@@ -66,10 +66,9 @@
                         <p class="fs-5">Beragam fasilitas tambahan untuk menunjang kenyamanan dan aktivitas siswa.</p>
                     </div>
                     <ul>
-                        <li class="mb-3">Media pembelajaran yang lengkap</li>
-                        <li class="mb-3">Ruang Tunggu Siswa</li>
-                        <li class="mb-3">Ruang UKS bersih</li>
-                        <li class="mb-3">Ruang kelas dilengkapi LCD Proyektor</li>
+                        @foreach ($fasilitasLain as $fasilitasLainItem)
+                        <li class="mb-3">{{ $fasilitasLainItem->judul }}</li>
+                        @endforeach
                     </ul>
                 </div><!-- End Contact Form -->
 

@@ -4,7 +4,9 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeskripsiController;
 use App\Http\Controllers\EkstrakulikulerController;
+use App\Http\Controllers\ExportController;
 use App\Http\Controllers\FasilitasController;
+use App\Http\Controllers\FasilitasLainController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JumbotronController;
@@ -77,6 +79,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/tujuan', [DashboardController::class, 'tujuan']);
     Route::get('/dashboard/program', [DashboardController::class, 'program']);
     Route::get('/dashboard/fasilitas', [DashboardController::class, 'fasilitas']);
+    Route::get('/dashboard/fasilitas-lainnya', [DashboardController::class, 'fasilitasLain']);
     Route::get('/dashboard/foto-ekstrakulikuler', [DashboardController::class, 'fotoEkstrakulikuler']);
     Route::get('/dashboard/ekstrakulikuler', [DashboardController::class, 'ekstrakulikuler']);
     Route::get('/dashboard/foto-prestasi', [DashboardController::class, 'fotoPrestasi']);
@@ -136,6 +139,10 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/dashboard/fasilitas/update/{id}', [FasilitasController::class, 'update']);
     Route::delete('/dashboard/fasilitas/delete/{id}', [FasilitasController::class, 'destroy']);
 
+    Route::post('/dashboard/fasilitas-lainnya/insert', [FasilitasLainController::class, 'store']);
+    Route::put('/dashboard/fasilitas-lainnya/update/{id}', [FasilitasLainController::class, 'update']);
+    Route::delete('/dashboard/fasilitas-lainnya/delete/{id}', [FasilitasLainController::class, 'destroy']);
+
     Route::put('/dashboard/ekstrakulikuler/update-foto/{id}', [EkstrakulikulerController::class, 'updateFoto']);
 
     Route::post('/dashboard/ekstrakulikuler/insert', [EkstrakulikulerController::class, 'store']);
@@ -169,4 +176,8 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/dashboard/user/delete/{id}', [UserController::class, 'destroy']);
 
     Route::put('/dashboard/footer/update/{id}', [FooterController::class, 'update']);
+
+    Route::get('/export/pdf', [ExportController::class, 'exportPDF']);
+    Route::get('/export/pdf/{id}', [ExportController::class, 'exportForm']);
+
 });
