@@ -28,3 +28,5 @@ option ke 2 ekskul rusak
 -kurang navbar active
 detail pendaftar belum ada unduh dokumen
 pagination belum ada
+tinggi berat jangan float
+tombol pencarian

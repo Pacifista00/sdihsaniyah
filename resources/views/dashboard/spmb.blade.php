@@ -23,11 +23,13 @@
                                 {{ $active }}
                             </h4>
                             <div class="d-flex gap-2">
-                                <button
-                                    class="btn btn-success py-1 py-md-2 px-4 rounded-pill d-flex align-items-center">
-                                    <i class="menu-icon tf-icons bx bx-file me-2"></i>
-                                    Export CSV
-                                </button>
+                                <a href="/export/excel">
+                                    <button
+                                        class="btn btn-success py-1 py-md-2 px-4 rounded-pill d-flex align-items-center">
+                                        <i class="menu-icon tf-icons bx bx-file me-2"></i>
+                                        Export Excel
+                                    </button>
+                                </a>
 
                                 {{-- <button
                                     class="btn btn-danger py-1 py-md-2 px-4 rounded-pill d-flex align-items-center">
