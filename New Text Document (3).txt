@@ -26,5 +26,7 @@ option ke 2 ekskul rusak
 -fasilitas lainnya kurang
 -kurang info di dashboard pesan
 -kurang navbar active
-detail pendaftar belum ada unduh dokumen
-pagination belum ada
+-detail pendaftar belum ada unduh dokumen
+-pagination belum ada
+-tinggi berat jangan float
+-tombol pencarian

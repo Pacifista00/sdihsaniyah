@@ -26,6 +26,7 @@
                         <div>
                             <button class="btn btn-success rounded-pill py-2" data-bs-toggle="modal"
                                 data-bs-target="#tambahkegiatan">Tambah</button>
+
                             <!-- Modal -->
                             <div class="modal fade" id="tambahkegiatan" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
@@ -123,6 +124,13 @@
                             </div>
                         </div>
                     </div>
+                    <form action="/dashboard/kegiatan" method="GET" class="mb-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Cari Berdasarkan Judul"
+                                aria-label="Cari Berdasarkan Nama" name="cari" value="{{ request('cari') }}" />
+                            <button class="btn btn-outline-primary" type="submit" id="button-addon2">Cari</button>
+                        </div>
+                    </form>
                     <!-- Basic Bootstrap Table -->
                     <div class="card">
                         <h5 class="card-header">Kegiatan</h5>
@@ -154,25 +162,25 @@
                                             {!! $kegiatanItem->foto2
                                             ? '<img src="'.asset('storage/'.$kegiatanItem->foto2).'"
                                                 class="img-table shadow-md" alt="">'
-                                            : '<span class="text-gray-500 italic">Foto kosong</span>' !!}
+                                            : '<span class="text-gray-500 italic">-</span>' !!}
                                         </td>
                                         <td>
                                             {!! $kegiatanItem->foto3
                                             ? '<img src="'.asset('storage/'.$kegiatanItem->foto3).'"
                                                 class="img-table shadow-md" alt="">'
-                                            : '<span class="text-gray-500 italic">Foto kosong</span>' !!}
+                                            : '<span class="text-gray-500 italic">-</span>' !!}
                                         </td>
                                         <td>
                                             {!! $kegiatanItem->foto4
                                             ? '<img src="'.asset('storage/'.$kegiatanItem->foto4).'"
                                                 class="img-table shadow-md" alt="">'
-                                            : '<span class="text-gray-500 italic">Foto kosong</span>' !!}
+                                            : '<span class="text-gray-500 italic">-</span>' !!}
                                         </td>
                                         <td>
                                             {!! $kegiatanItem->foto5
                                             ? '<img src="'.asset('storage/'.$kegiatanItem->foto5).'"
                                                 class="img-table shadow-md" alt="">'
-                                            : '<span class="text-gray-500 italic">Foto kosong</span>' !!}
+                                            : '<span class="text-gray-500 italic">-</span>' !!}
                                         </td>
                                         <td class="crop-text">{{ $kegiatanItem->judul }}</td>
                                         <td>{{ $kegiatanItem->tanggal }}</td>
@@ -276,8 +284,9 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col mb-3">
-                                                                <label for="unggulan"
-                                                                    class="form-label">Unggulan</label>
+                                                                <label for="unggulan" class="form-label">Atur sebagai
+                                                                    berita
+                                                                    unggulan</label>
                                                                 <select id="unggulan" class="form-select"
                                                                     name="unggulan">
                                                                     <option value="1" {{ (old('unggulan',
@@ -343,6 +352,54 @@
                             </table>
                         </div>
                     </div>
+                    <div class="d-flex justify-content-center mt-3">
+                        @if ($kegiatans->lastPage() > 1)
+                        <div class="d-flex justify-content-center">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    {{-- Tombol 'First' --}}
+                                    <li class="page-item first {{ $kegiatans->onFirstPage() ? 'disabled' : '' }}">
+                                        <a class="page-link" href="{{ $kegiatans->url(1) }}"><i
+                                                class="tf-icon bx bx-chevrons-left"></i></a>
+                                    </li>
+
+                                    {{-- Tombol 'Previous' --}}
+                                    <li class="page-item prev {{ $kegiatans->onFirstPage() ? 'disabled' : '' }}">
+                                        <a class="page-link" href="{{ $kegiatans->previousPageUrl() }}"><i
+                                                class="tf-icon bx bx-chevron-left"></i></a>
+                                    </li>
+
+                                    {{-- Tautan Nomor Halaman --}}
+                                    @php
+                                    $startPage = max(1, $kegiatans->currentPage() - 2);
+                                    $endPage = min($kegiatans->lastPage(), $kegiatans->currentPage() + 2);
+                                    @endphp
+
+                                    @for ($i = $startPage; $i <= $endPage; $i++) <li
+                                        class="page-item {{ ($i == $kegiatans->currentPage()) ? 'active' : '' }}">
+                                        <a class="page-link" href="{{ $kegiatans->url($i) }}">{{ $i }}</a>
+                                        </li>
+                                        @endfor
+
+                                        {{-- Tombol 'Next' --}}
+                                        <li
+                                            class="page-item next {{ $kegiatans->currentPage() == $kegiatans->lastPage() ? 'disabled' : '' }}">
+                                            <a class="page-link" href="{{ $kegiatans->nextPageUrl() }}"><i
+                                                    class="tf-icon bx bx-chevron-right"></i></a>
+                                        </li>
+
+                                        {{-- Tombol 'Last' --}}
+                                        <li
+                                            class="page-item last {{ $kegiatans->currentPage() == $kegiatans->lastPage() ? 'disabled' : '' }}">
+                                            <a class="page-link" href="{{ $kegiatans->url($kegiatans->lastPage()) }}"><i
+                                                    class="tf-icon bx bx-chevrons-right"></i></a>
+                                        </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        @endif
+                    </div>
+
                     <!--/ Basic Bootstrap Table -->
                 </div>
                 <!-- / Content -->

@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -24,8 +23,8 @@ return new class extends Migration
             $table->string('anak_ke');
             $table->string('jumlah_saudara');
             $table->string('bahasa');
-            $table->decimal('berat');
-            $table->decimal('tinggi');
+            $table->integer('berat');
+            $table->integer('tinggi');
             $table->string('riwayat_penyakit');
             $table->string('hobi');
             $table->string('bakat');

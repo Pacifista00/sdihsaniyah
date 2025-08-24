@@ -23,11 +23,13 @@
                                 {{ $active }}
                             </h4>
                             <div class="d-flex gap-2">
-                                <button
-                                    class="btn btn-success py-1 py-md-2 px-4 rounded-pill d-flex align-items-center">
-                                    <i class="menu-icon tf-icons bx bx-file me-2"></i>
-                                    Export CSV
-                                </button>
+                                <a href="/export/excel">
+                                    <button
+                                        class="btn btn-success py-1 py-md-2 px-4 rounded-pill d-flex align-items-center">
+                                        <i class="menu-icon tf-icons bx bx-file me-2"></i>
+                                        Export Excel
+                                    </button>
+                                </a>
 
                                 {{-- <button
                                     class="btn btn-danger py-1 py-md-2 px-4 rounded-pill d-flex align-items-center">
@@ -40,6 +42,14 @@
                         </div>
                     </div>
                     <!-- Basic Bootstrap Table -->
+                    <form action="/dashboard/spmb" method="GET" class="mb-3">
+                        <div class="input-group">
+                            <!-- Tambahkan atribut `name="cari"` agar nilai input bisa diambil di controller -->
+                            <input type="text" class="form-control" placeholder="Cari Berdasarkan Nama"
+                                aria-label="Cari Berdasarkan Nama" name="cari" value="{{ request('cari') }}" />
+                            <button class="btn btn-outline-primary" type="submit" id="button-addon2">Cari</button>
+                        </div>
+                    </form>
                     <div class="card">
                         <h5 class="card-header">Pendaftar</h5>
                         <div class="table-responsive text-nowrap">
@@ -107,6 +117,20 @@
                                                         <img src="{{ asset('storage/' . $pendaftarItem->foto) }}"
                                                             class="shadow-md mb-4" alt=""
                                                             style="width:165px; height:225px; object-fit:cover; border-radius:8px;">
+                                                        <div class="d-flex gap-2 my-3">
+                                                            <a
+                                                                href="{{ asset('storage/' . $pendaftarItem->berkas_akta) }}">
+                                                                <button
+                                                                    class="btn btn-danger w-100 py-0 py-md-1 px-3 rounded-pill"
+                                                                    style="font-size: 0.75rem;">Akta Kelahiran</button>
+                                                            </a>
+                                                            <a
+                                                                href="{{ asset('storage/' . $pendaftarItem->berkas_kk) }}">
+                                                                <button
+                                                                    class="btn btn-danger w-100 py-0 py-md-1 px-3 rounded-pill"
+                                                                    style="font-size: 0.75rem;">Kartu Keluarga</button>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-4">
@@ -785,7 +809,56 @@
                                     @endforeach
                                 </tbody>
                             </table>
+
                         </div>
+
+                    </div>
+                    <div class="d-flex justify-content-center mt-3">
+                        {{-- Hapus atau ganti kode pagination sebelumnya jika ada --}}
+
+                        @if ($pendaftars->lastPage() > 1)
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                {{-- Tombol 'First' --}}
+                                <li class="page-item first {{ $pendaftars->onFirstPage() ? 'disabled' : '' }}">
+                                    <a class="page-link" href="{{ $pendaftars->url(1) }}"><i
+                                            class="tf-icon bx bx-chevrons-left"></i></a>
+                                </li>
+
+                                {{-- Tombol 'Previous' --}}
+                                <li class="page-item prev {{ $pendaftars->onFirstPage() ? 'disabled' : '' }}">
+                                    <a class="page-link" href="{{ $pendaftars->previousPageUrl() }}"><i
+                                            class="tf-icon bx bx-chevron-left"></i></a>
+                                </li>
+
+                                {{-- Tautan Nomor Halaman --}}
+                                @php
+                                $startPage = max(1, $pendaftars->currentPage() - 2);
+                                $endPage = min($pendaftars->lastPage(), $pendaftars->currentPage() + 2);
+                                @endphp
+
+                                @for ($i = $startPage; $i <= $endPage; $i++) <li
+                                    class="page-item {{ ($i == $pendaftars->currentPage()) ? 'active' : '' }}">
+                                    <a class="page-link" href="{{ $pendaftars->url($i) }}">{{ $i }}</a>
+                                    </li>
+                                    @endfor
+
+                                    {{-- Tombol 'Next' --}}
+                                    <li
+                                        class="page-item next {{ $pendaftars->currentPage() == $pendaftars->lastPage() ? 'disabled' : '' }}">
+                                        <a class="page-link" href="{{ $pendaftars->nextPageUrl() }}"><i
+                                                class="tf-icon bx bx-chevron-right"></i></a>
+                                    </li>
+
+                                    {{-- Tombol 'Last' --}}
+                                    <li
+                                        class="page-item last {{ $pendaftars->currentPage() == $pendaftars->lastPage() ? 'disabled' : '' }}">
+                                        <a class="page-link" href="{{ $pendaftars->url($pendaftars->lastPage()) }}"><i
+                                                class="tf-icon bx bx-chevrons-right"></i></a>
+                                    </li>
+                            </ul>
+                        </nav>
+                        @endif
                     </div>
                     <!--/ Basic Bootstrap Table -->
                 </div>

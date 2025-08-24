@@ -177,7 +177,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::put('/dashboard/footer/update/{id}', [FooterController::class, 'update']);
 
-    Route::get('/export/pdf', [ExportController::class, 'exportPDF']);
+    Route::get('/export/excel', [ExportController::class, 'exportExcel']);
     Route::get('/export/pdf/{id}', [ExportController::class, 'exportForm']);
 
 });
