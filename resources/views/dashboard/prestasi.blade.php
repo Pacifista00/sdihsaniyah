@@ -207,6 +207,53 @@
                         </div>
                     </div>
                     <!--/ Basic Bootstrap Table -->
+                    <div class="d-flex justify-content-center mt-3">
+                        @if ($prestasis->lastPage() > 1)
+                        <div class="d-flex justify-content-center">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    {{-- Tombol 'First' --}}
+                                    <li class="page-item first {{ $prestasis->onFirstPage() ? 'disabled' : '' }}">
+                                        <a class="page-link" href="{{ $prestasis->url(1) }}"><i
+                                                class="tf-icon bx bx-chevrons-left"></i></a>
+                                    </li>
+
+                                    {{-- Tombol 'Previous' --}}
+                                    <li class="page-item prev {{ $prestasis->onFirstPage() ? 'disabled' : '' }}">
+                                        <a class="page-link" href="{{ $prestasis->previousPageUrl() }}"><i
+                                                class="tf-icon bx bx-chevron-left"></i></a>
+                                    </li>
+
+                                    {{-- Tautan Nomor Halaman --}}
+                                    @php
+                                    $startPage = max(1, $prestasis->currentPage() - 2);
+                                    $endPage = min($prestasis->lastPage(), $prestasis->currentPage() + 2);
+                                    @endphp
+
+                                    @for ($i = $startPage; $i <= $endPage; $i++) <li
+                                        class="page-item {{ ($i == $prestasis->currentPage()) ? 'active' : '' }}">
+                                        <a class="page-link" href="{{ $prestasis->url($i) }}">{{ $i }}</a>
+                                        </li>
+                                        @endfor
+
+                                        {{-- Tombol 'Next' --}}
+                                        <li
+                                            class="page-item next {{ $prestasis->currentPage() == $prestasis->lastPage() ? 'disabled' : '' }}">
+                                            <a class="page-link" href="{{ $prestasis->nextPageUrl() }}"><i
+                                                    class="tf-icon bx bx-chevron-right"></i></a>
+                                        </li>
+
+                                        {{-- Tombol 'Last' --}}
+                                        <li
+                                            class="page-item last {{ $prestasis->currentPage() == $prestasis->lastPage() ? 'disabled' : '' }}">
+                                            <a class="page-link" href="{{ $prestasis->url($prestasis->lastPage()) }}"><i
+                                                    class="tf-icon bx bx-chevrons-right"></i></a>
+                                        </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        @endif
+                    </div>
                 </div>
                 <!-- / Content -->
 

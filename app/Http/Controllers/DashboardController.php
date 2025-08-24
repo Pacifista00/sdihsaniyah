@@ -183,15 +183,25 @@ class DashboardController extends Controller
     {
         return view('dashboard.prestasi', [
             'loggedUser' => Auth::user(),
-            'prestasis' => Prestasi::all(),
+            'prestasis' => Prestasi::paginate(10), // Gunakan paginasi
             'active' => 'prestasi'
         ]);
     }
-    public function kegiatan()
+    public function kegiatan(Request $request)
     {
+        $search = $request->input('cari');
+
+        $kegiatansQuery = Kegiatan::latest();
+
+        if ($search) {
+            $kegiatansQuery->where('judul', 'like', '%' . $search . '%');
+        }
+
+        $kegiatans = $kegiatansQuery->paginate(10);
+
         return view('dashboard.kegiatan', [
             'loggedUser' => Auth::user(),
-            'kegiatans' => Kegiatan::latest()->get(),
+            'kegiatans' => $kegiatans, // Tambahkan paginasi di sini
             'active' => 'kegiatan'
         ]);
     }
@@ -203,11 +213,21 @@ class DashboardController extends Controller
             'active' => 'kontak'
         ]);
     }
-    public function spmb()
+    public function spmb(Request $request)
     {
+        $search = $request->input('cari');
+
+        $pendaftarsQuery = Pendaftar::latest();
+
+        if ($search) {
+            $pendaftarsQuery->where('nama_lengkap', 'like', '%' . $search . '%');
+        }
+
+        $pendaftars = $pendaftarsQuery->paginate(10);
+
         return view('dashboard.spmb', [
             'loggedUser' => Auth::user(),
-            'pendaftars' => Pendaftar::latest()->get(),
+            'pendaftars' => $pendaftars,
             'active' => 'spmb'
         ]);
     }

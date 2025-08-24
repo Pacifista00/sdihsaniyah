@@ -137,7 +137,7 @@
 
     <script>
         document.querySelectorAll('.crop-text').forEach(td => {
-            const maxChars = 50; // batas karakter
+            const maxChars = 40; // batas karakter
             if (td.textContent.length > maxChars) {
                 td.textContent = td.textContent.slice(0, maxChars) + '...';
             }
