@@ -17,17 +17,20 @@
                         {{ $jumbotronItem->judul }}</h1>
                     <p class="animate__animated animate__fadeInUp">{{ $jumbotronItem->deskripsi }}</p>
                     <div class="d-flex flex-column flex-lg-row align-items-center gap-3 scrollto ">
-                        <button
-                            class="btn-green btn-jumbotron rounded-pill d-flex justify-content-center align-items-center">
-                            Konsultasi Whatsapp
-                            <i class="bi bi-whatsapp fs-4 ms-1"></i>
-                        </button>
-
-                        <button
-                            class="btn-white-transparent btn-jumbotron rounded-pill d-flex justify-content-center align-items-center">
-                            Daftar Sekarang
-                            <i class="bi bi-arrow-up-right-circle fs-4 ms-1"></i>
-                        </button>
+                        <a href="https://wa.me/{{ $kontak->whatsapp }}">
+                            <button
+                                class="btn-green btn-jumbotron rounded-pill d-flex justify-content-center align-items-center">
+                                Konsultasi Whatsapp
+                                <i class="bi bi-whatsapp fs-4 ms-1"></i>
+                            </button>
+                        </a>
+                        <a href="/daftar-spmb">
+                            <button
+                                class="btn-white-transparent btn-jumbotron rounded-pill d-flex justify-content-center align-items-center">
+                                Daftar Sekarang
+                                <i class="bi bi-arrow-up-right-circle fs-4 ms-1"></i>
+                            </button>
+                        </a>
 
                         <style>
                             @media (max-width: 991.98px) {
@@ -74,11 +77,11 @@
                     </small>
                     <h1 class="head-about p-0 m-0 fs-1 heading-line">{{ $profil->judul }}</h1>
                     <div class="d-flex gap-3 mt-3 mt-lg-4 mb-3 mb-lg-0">
-                        <a href="#about" class="btn btn-green scrollto rounded-pill btn-anim">
+                        <a href="/tentang-kami" class="btn btn-green scrollto rounded-pill btn-anim">
                             <span>Tentang Kami</span>
                             <i class="bi bi-arrow-right ms-2"></i>
                         </a>
-                        <a href="#about" class="btn btn-orange scrollto rounded-pill btn-anim">
+                        <a href="/fasilitas" class="btn btn-orange scrollto rounded-pill btn-anim">
                             <span>Fasilitas</span>
                             <i class="bi bi-arrow-right ms-2"></i>
                         </a>
@@ -121,23 +124,26 @@
                 <div class="col-lg-4">
                     <div class="card rounded-5 card-ppdb position-relative my-text-dark">
                         <!-- Gambar melayang -->
-                        <div class="position-absolute" style="top:-30px; right:-5px; width:90px; height:90px;">
+                        <div class="position-absolute" style="top:-25px; right:-10px; width:85px; height:85px;">
+                            <!-- Background Shape -->
                             <img src="{{ asset('images/shape.png') }}" alt="icon" class="rotating"
-                                style="width:130%; height:130%; object-fit:contain; position:absolute; top:0; left:-10%;">
+                                style="width:100%; height:100%; object-fit:contain; position:absolute; top:0; left:0; z-index:0;">
 
+                            <!-- Teks di tengah -->
                             <span class="my-text-dark fw-bold text-white"
-                                style="position:absolute; top:65%; left:55%; transform:translate(-50%, -50%); font-size:14px; z-index:1;">
-                                Sisa
-                                <span class="fs-2 m-0 p-0">{{ $ppdb[2]->kuota_tersisa }}</span>
+                                style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center; font-size:12px; line-height:1.2; z-index:1;">
+                                Sisa <br>
+                                <span class="fs-3 m-0 p-0">{{ $ppdb[2]->kuota_tersisa }}</span>
                             </span>
                         </div>
+
 
 
 
                         <div class="card-body p-4 mt-2 text-center">
                             <h2 class="card-title w-75 mx-auto">{{ $ppdb[2]->angkatan }}</h2>
                             <p class="card-text my-4">{{ $ppdb[2]->deskripsi }}</p>
-                            <a href="#" class="btn w-100 rounded-pill btn-orange">Daftar</a>
+                            <a href="/daftar-spmb" class="btn w-100 rounded-pill btn-orange">Daftar</a>
                         </div>
                     </div>
                 </div>
@@ -147,7 +153,7 @@
                         <div class="card-body p-4 mt-2 my-text-dark">
                             <h2 class="card-title w-75 mx-auto">{{ $ppdb[1]->angkatan }}</h2>
                             <p class="card-text my-4">{{ $ppdb[1]->deskripsi }}</p>
-                            <a href="#" class="btn w-100 rounded-pill btn-orange">Daftar</a>
+                            <a href="/daftar-spmb" class="btn w-100 rounded-pill btn-orange">Daftar</a>
                         </div>
                     </div>
                 </div>
@@ -156,7 +162,7 @@
                         <div class="card-body p-4 mt-2">
                             <h2 class="card-title w-75 mx-auto">{{ $ppdb[0]->angkatan }}</h2>
                             <p class="card-text my-4">{{ $ppdb[0]->deskripsi }}</p>
-                            <a href="#" class="btn w-100 rounded-pill btn-orange">Daftar</a>
+                            <a href="/daftar-spmb" class="btn w-100 rounded-pill btn-orange">Daftar</a>
                         </div>
                     </div>
                 </div>
@@ -244,8 +250,8 @@
                 </div>
 
                 <div class="col-xl-3 cta-btn-container text-center d-flex align-items-center justify-content-center">
-                    <a href="#about" class="btn btn-green scrollto rounded-pill btn-anim">
-                        <span>Fasilitas</span>
+                    <a href="/prestasi" class="btn btn-green scrollto rounded-pill btn-anim">
+                        <span>Prestasi</span>
                         <i class="bi bi-arrow-right ms-2"></i>
                     </a>
                 </div>
@@ -358,7 +364,7 @@
                 </script>
                 <div class="swiper-wrapper">
                     @foreach ($kegiatan as $kegiatanItem)
-                    <div class="swiper-slide">
+                    <a href="/kegiatan/{{$kegiatanItem->id}}" class="swiper-slide">
                         <div class="testimonial-item-kegiatan text-center bg-transparent">
                             <div class="testimonial-img-wrapper shadow">
                                 <img src="{{ asset('storage/'. $kegiatanItem->foto ) }}" alt="" class="img-kegiatan">
@@ -370,7 +376,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     @endforeach
                 </div>
                 <div class="swiper-pagination"></div>

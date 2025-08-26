@@ -4,9 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Selecao Bootstrap Template</title>
+  <title>SD Ihsaniyah 1 Kota Tegal</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+  <meta name="author" content="Devforlife.id, Adam Samudera">
+  <link rel="icon" type="image/png" href="{{ asset('images/logosd.png') }}">
 
   <!-- Favicons -->
   <link href="{{ asset('img/favicon.png') }}" rel="icon">
@@ -30,13 +32,6 @@
 
   <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
 
-  <!-- =======================================================
-  * Template Name: Selecao
-  * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page my-text-dark">
@@ -86,6 +81,20 @@
   <script>
     document.querySelectorAll('.crop-text-kegiatan').forEach(el => {
             const maxChars = 38; // batas karakter
+            const text = el.textContent.trim();
+            if (text.length > maxChars) {
+                el.textContent = text.slice(0, maxChars) + '...';
+            }
+        });
+    document.querySelectorAll('.crop-text-kegiatan-main').forEach(el => {
+            const maxChars = 120; // batas karakter
+            const text = el.textContent.trim();
+            if (text.length > maxChars) {
+                el.textContent = text.slice(0, maxChars) + '...';
+            }
+        });
+    document.querySelectorAll('.crop-text-kegiatan-title').forEach(el => {
+            const maxChars = 55; // batas karakter
             const text = el.textContent.trim();
             if (text.length > maxChars) {
                 el.textContent = text.slice(0, maxChars) + '...';

@@ -43,6 +43,7 @@ class HomeController extends Controller
             'testimoni' => Testimoni::latest()->get(),
             'kegiatan' => Kegiatan::latest()->get(),
             'pertanyaan' => Pertanyaan::latest()->first(),
+            'kontak' => Kontak::latest()->first()
         ]);
     }
     public function tentangKami()
@@ -95,7 +96,16 @@ class HomeController extends Controller
     public function kegiatan()
     {
         return view('kegiatan', [
-            'active' => 'kegiatan'
+            'active' => 'kegiatan',
+            'kegiatan' => Kegiatan::all(),
+            'topKegiatan' => Kegiatan::where('unggulan', 1)->get()
+        ]);
+    }
+    public function detailKegiatan($id)
+    {
+        return view('detail-kegiatan', [
+            'active' => 'kegiatan',
+            'kegiatan' => Kegiatan::findOrFail($id)
         ]);
     }
     public function kontak()

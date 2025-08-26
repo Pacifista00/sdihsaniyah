@@ -1046,6 +1046,18 @@
     left: 50%; /* pindahkan ke tengah relatif parent */
     transform: translateX(-50%);
 }
+.thumbnail-kegiatan {
+    height: 600px;
+    width: 80%;
+    object-fit: cover;
+}
+.img-rect {
+    width: 200px; /* lebar tetap */
+    height: 120px; /* tinggi tetap */
+    object-fit: cover;
+    border-radius: 0.5rem; /* opsional biar mirip rounded-4 bootstrap */
+}
+
 /* Responsif di layar kecil (mobile < lg) */
 @media (max-width: 991px) {
     .profile-image-large {
@@ -1120,6 +1132,13 @@
     .graphic-9 {
         height: 280px;
         top: 20px;
+    }
+    .thumbnail-kegiatan {
+        height: 400px;
+        width: 100%;
+    }
+    .container-kegiatan {
+        width: 100%;
     }
 }
 @media (max-width: 768px) {
@@ -1208,5 +1227,8 @@
     .graphic-9 {
         height: 220px;
         top: 50px;
+    }
+    .thumbnail-kegiatan {
+        height: 300px;
     }
 }

@@ -60,6 +60,9 @@ return new class extends Migration {
             $table->string('berkas_kk');
             $table->string('berkas_akta');
             $table->string('foto');
+            // status
+            $table->enum('status', ['Menunggu', 'Tidak Diterima', 'Diterima'])->nullable();
+            $table->string('berkas_psikotes')->nullable();
             $table->timestamps();
         });
     }

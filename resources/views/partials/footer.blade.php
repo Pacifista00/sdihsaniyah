@@ -30,16 +30,16 @@
                 <div class="form-outline form-white mb-4">
                     <ul class="list-unstyled mb-0">
                         <li class="mb-2">
-                            <a href="#home" class="text-white text-decoration-none">Beranda</a>
+                            <a href="/" class="text-white text-decoration-none">Beranda</a>
                         </li>
                         <li class="mb-2">
-                            <a href="#tentang" class="text-white text-decoration-none">Tentang Kami</a>
+                            <a href="/tentang-kami" class="text-white text-decoration-none">Tentang Kami</a>
                         </li>
                         <li class="mb-2">
-                            <a href="#fakultas" class="text-white text-decoration-none">Program Sekolah</a>
+                            <a href="/program" class="text-white text-decoration-none">Program Sekolah</a>
                         </li>
                         <li class="mb-2">
-                            <a href="#alur" class="text-white text-decoration-none">Kontak</a>
+                            <a href="/kontak" class="text-white text-decoration-none">Kontak</a>
                         </li>
                     </ul>
                 </div>
@@ -50,16 +50,16 @@
                 <div class="form-outline form-white mb-4">
                     <ul class="list-unstyled mb-0">
                         <li class="mb-2">
-                            <a href="#home" class="text-white text-decoration-none">Fasilitas</a>
+                            <a href="/fasilitas" class="text-white text-decoration-none">Fasilitas</a>
                         </li>
                         <li class="mb-2">
-                            <a href="#tentang" class="text-white text-decoration-none">Ekstrakulikuler</a>
+                            <a href="/ekstrakulikuler" class="text-white text-decoration-none">Ekstrakulikuler</a>
                         </li>
                         <li class="mb-2">
-                            <a href="#fakultas" class="text-white text-decoration-none">Prestasi</a>
+                            <a href="/fakultas" class="text-white text-decoration-none">Prestasi</a>
                         </li>
                         <li class="mb-2">
-                            <a href="#alur" class="text-white text-decoration-none">Kegiatan</a>
+                            <a href="/kegiatan" class="text-white text-decoration-none">Kegiatan</a>
                         </li>
                     </ul>
                 </div>
@@ -69,7 +69,7 @@
                 <p>Jangan ragu untuk mendaftarkan anak anda di SD Ihsaniyah 1 Kota Tegal, pilihan tepat untuk
                     masa
                     depanmu.</p>
-                <a href="{{ url('/form-pendaftaran') }}" class="btn btn-green rounded-pill w-100 fw-semibold">Daftar
+                <a href="{{ url('/daftar-spmb') }}" class="btn btn-green rounded-pill w-100 fw-semibold">Daftar
                     Sekarang!</a>
 
             </div>
