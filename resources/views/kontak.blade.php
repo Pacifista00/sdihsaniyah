@@ -29,18 +29,18 @@
 
                     <div class="my-4">
                         <div class="contact-card"> <i class="bi bi-whatsapp"></i>
-                            <div class="text"> <small>WhatsApp Call Center</small> <strong>628112642733</strong>
+                            <div class="text"> <small>WhatsApp Call Center</small> <strong>{{ $kontak->whatsapp
+                                    }}</strong>
                             </div>
                         </div>
                         <div class="contact-card"> <i class="bi bi-envelope"></i>
-                            <div class="text"> <small>Email</small> <strong>info@sdmuhsapen-yog.sch.id</strong> </div>
+                            <div class="text"> <small>Email</small> <strong>{{ $kontak->email }}</strong> </div>
                         </div>
                         <div class="contact-card"> <i class="bi bi-telephone"></i>
-                            <div class="text"> <small>Telepon</small> <strong>0274556674</strong> </div>
+                            <div class="text"> <small>Telepon</small> <strong>{{ $kontak->telepon }}</strong> </div>
                         </div>
                         <div class="contact-card"> <i class="bi bi-clock"></i>
-                            <div class="text"> <small>Jam Kerja</small> <strong>Senin-Jumat 07:00-14:30
-                                    WIB</strong> </div>
+                            <div class="text"> <small>Jam Kerja</small> <strong>{{ $kontak->jam_kerja }}</strong> </div>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                                         <i class="bi bi-instagram"></i>
                                         <div class="text">
                                             <small>Instagram</small>
-                                            <strong>628112642733</strong>
+                                            <strong>{{ $kontak->instagram }}</strong>
                                         </div>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@
                                         <i class="bi bi-facebook"></i>
                                         <div class="text">
                                             <small>Facebook</small>
-                                            <strong>info@sdmuhsapen-yog.sch.id</strong>
+                                            <strong>{{ $kontak->facebook }}</strong>
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@
                                         <i class="bi bi-youtube"></i>
                                         <div class="text">
                                             <small>Youtube</small>
-                                            <strong>0274556674</strong>
+                                            <strong>{{ $kontak->youtube }}</strong>
                                         </div>
                                     </div>
                                 </div>

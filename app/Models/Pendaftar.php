@@ -55,6 +55,8 @@ class Pendaftar extends Model
         'berkas_kk',
         'berkas_akta',
         'foto',
+        'status',
+        'berkas_psikotes',
     ];
 
     public function angkatan()

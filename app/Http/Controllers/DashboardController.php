@@ -228,7 +228,8 @@ class DashboardController extends Controller
         return view('dashboard.spmb', [
             'loggedUser' => Auth::user(),
             'pendaftars' => $pendaftars,
-            'active' => 'spmb'
+            'active' => 'spmb',
+            'angkatan' => Angkatan::all()
         ]);
     }
     public function pesan()

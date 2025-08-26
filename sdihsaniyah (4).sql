@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 21, 2025 at 07:51 AM
+-- Generation Time: Aug 26, 2025 at 09:27 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -146,6 +146,29 @@ INSERT INTO `fasilitas` (`id`, `foto`, `judul`, `created_at`, `updated_at`) VALU
 (7, 'fasilitas/IlDIlI5Prp7ycf2tDEngNNhvaMIONAbG5zXlaoq4.jpg', 'Tempat cuci tangan', '2025-08-20 20:29:35', '2025-08-20 20:29:35'),
 (8, 'fasilitas/t4fQ0W6rbM5yYWb0EiB8jO5MTbqP4EDNu1hAfR0v.jpg', 'Kantin sehat bersertifikat BPOM Gambar Fasilitas', '2025-08-20 20:29:54', '2025-08-20 20:29:54'),
 (9, 'fasilitas/PQXlRWigSQd6mYa2mhEegdLyFSRYFibNKDtqCajq.jpg', 'Toilet bersih', '2025-08-20 20:30:04', '2025-08-20 20:30:04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fasilitas_lainnyas`
+--
+
+CREATE TABLE `fasilitas_lainnyas` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `fasilitas_lainnyas`
+--
+
+INSERT INTO `fasilitas_lainnyas` (`id`, `judul`, `created_at`, `updated_at`) VALUES
+(1, 'Media pembelajaran yang lengkap', '2025-08-23 19:54:17', '2025-08-23 19:54:17'),
+(2, 'Ruang Tunggu Siswa', '2025-08-23 19:54:27', '2025-08-23 19:54:27'),
+(3, 'Ruang UKS bersih', '2025-08-23 19:54:34', '2025-08-23 19:54:34'),
+(4, 'Ruang kelas dilengkapi LCD Proyektor', '2025-08-23 19:54:42', '2025-08-23 19:54:52');
 
 -- --------------------------------------------------------
 
@@ -298,9 +321,11 @@ CREATE TABLE `kegiatans` (
 --
 
 INSERT INTO `kegiatans` (`id`, `foto`, `foto2`, `foto3`, `foto4`, `foto5`, `judul`, `tanggal`, `deskripsi`, `unggulan`, `created_at`, `updated_at`) VALUES
-(1, 'kegiatans/dwp7t1iqfhgBW7n4NIiLFIeIw6JCVNmyOxUQPRyR.jpg', NULL, NULL, NULL, NULL, 'Profil SD Ihsaniyah 1 Kota Tegal', '2025-08-21', 'kookookoo', 1, '2025-08-20 20:51:16', '2025-08-20 20:56:47'),
-(2, 'kegiatans/6yhygm9nuM99At77hgxzonvLfMGKhmZqFoY9I0LM.jpg', NULL, NULL, NULL, NULL, 'asd', '2025-08-22', 'asd', 0, '2025-08-20 20:54:13', '2025-08-20 20:54:13'),
-(3, 'kegiatans/8ckjwWOzQlaAEAgz1GXYmjHvxfSh5au5W9A1hYy3.jpg', NULL, NULL, NULL, NULL, 'asdasdasd', '2025-08-15', '✨SANTUNAN RAMADHAN✨\r\n\r\nBerbagi Menebar Kebaikan\r\n\r\nRamadhan adalah waktu yang tepat untuk peduli dan berbagi. Berbagi bukan tentang seberapa banyak yang kita beri, tapi seberapa tulus kita memberi. Kebahagiaan sejati adalah saat kita bisa berbagi dengan sesama. Semoga berkah Ramadhan selalu menyertai.🤲🏻\r\n\r\nJazakumullah khairan katsiiron, semoga segala amal kebaikan kita mendapat Ridho dari Allah dan bisa menjadikan amalan yang akan membawa kita masuk syurga Allah SWT. Aminnn..🤲\r\n\r\nSemoga semua sodaqoh kita melalui Santunan Ramadhan akan membawa keberkahan dunia dan akhirat. Aamiin', 0, '2025-08-20 20:57:05', '2025-08-20 20:57:39');
+(1, 'kegiatans/dwp7t1iqfhgBW7n4NIiLFIeIw6JCVNmyOxUQPRyR.jpg', NULL, NULL, NULL, NULL, 'Profil SD Ihsaniyah 1 Kota Tegal', '2025-08-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia magnam, odit, ratione quasi asperiores maxime,\r\nblanditiis expedita cum facere quisquam porro delectus eum dolores ullam odio officiis sequi reprehenderit deserunt\r\nharum nulla ipsum! Eligendi facilis vero officia deserunt deleniti, blanditiis illum laborum molestias at quibusdam\r\nullam quia ipsam tenetur earum laboriosam. Deserunt adipisci quae numquam hic, alias excepturi maiores nemo. Minima\r\nmaiores quos porro rem voluptate temporibus sequi itaque quas. Quae placeat recusandae delectus minus, ea dignissimos\r\nincidunt laudantium a?', 1, '2025-08-20 20:51:16', '2025-08-25 23:32:27'),
+(2, 'kegiatans/6yhygm9nuM99At77hgxzonvLfMGKhmZqFoY9I0LM.jpg', NULL, NULL, NULL, NULL, 'asd', '2025-08-22', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia magnam, odit, ratione quasi asperiores maxime,\r\nblanditiis expedita cum facere quisquam porro delectus eum dolores ullam odio officiis sequi reprehenderit deserunt\r\nharum nulla ipsum! Eligendi facilis vero officia deserunt deleniti, blanditiis illum laborum molestias at quibusdam\r\nullam quia ipsam tenetur earum laboriosam. Deserunt adipisci quae numquam hic, alias excepturi maiores nemo. Minima\r\nmaiores quos porro rem voluptate temporibus sequi itaque quas. Quae placeat recusandae delectus minus, ea dignissimos\r\nincidunt laudantium a?', 0, '2025-08-20 20:54:13', '2025-08-25 23:32:20'),
+(3, 'kegiatans/8ckjwWOzQlaAEAgz1GXYmjHvxfSh5au5W9A1hYy3.jpg', NULL, 'kegiatans/l6UW6himaDXwsXI1RFiBpcUNhcK2if3FbLbiNN5S.jpg', NULL, NULL, 'asdasdasd', '2025-08-15', '✨SANTUNAN RAMADHAN✨\r\n\r\nBerbagi Menebar Kebaikan\r\n\r\nRamadhan adalah waktu yang tepat untuk peduli dan berbagi. Berbagi bukan tentang seberapa banyak yang kita beri, tapi seberapa tulus kita memberi. Kebahagiaan sejati adalah saat kita bisa berbagi dengan sesama. Semoga berkah Ramadhan selalu menyertai.🤲🏻\r\n\r\nJazakumullah khairan katsiiron, semoga segala amal kebaikan kita mendapat Ridho dari Allah dan bisa menjadikan amalan yang akan membawa kita masuk syurga Allah SWT. Aminnn..🤲\r\n\r\nSemoga semua sodaqoh kita melalui Santunan Ramadhan akan membawa keberkahan dunia dan akhirat. Aamiin', 1, '2025-08-20 20:57:05', '2025-08-25 10:53:22'),
+(4, 'kegiatans/DvUAISLCPBJR5WhBY74A5SmDmtN17U7AwOeZkQTE.jpg', 'kegiatans/H3S6lvf7h8JYGie3YuxN16BVZcLwAyhHRaw4mS0Q.jpg', 'kegiatans/YQEW0QXO5SlM9vLiuh8LQssbrGi1rCB8tW5Env08.png', 'kegiatans/I6s1y5sqydFyuF75h5l2yoxuOJaQwWgercWgSQWC.jpg', 'kegiatans/WdrKxoFYmxckovG3bP7q9e8yFAHfd2urxbjVA7q6.jpg', 'Profil SD Ihsaniyah 1 Kota Tegal', '2025-08-20', 'aasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 1, '2025-08-25 10:33:55', '2025-08-25 23:11:04'),
+(5, 'kegiatans/1B0HkQgZK9tYEEVDITqj760m2KbPunOgFFLHwVvK.jpg', NULL, NULL, NULL, NULL, 'Profil SD Ihsaniyah 1 Kota Tegal', '2025-08-14', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ratione expedita quae similique quis cupiditate exercitationem? Iusto facilis et impedit, exercitationem ullam quaerat esse non optio sunt, sed reiciendis ea officia eum? Eius non delectus reprehenderit eos suscipit nemo soluta officiis libero doloribus! Modi quidem magnam vitae ducimus eius iure!', 0, '2025-08-25 10:34:21', '2025-08-25 23:31:58');
 
 -- --------------------------------------------------------
 
@@ -326,7 +351,7 @@ CREATE TABLE `kontaks` (
 --
 
 INSERT INTO `kontaks` (`id`, `whatsapp`, `email`, `telepon`, `jam_kerja`, `instagram`, `facebook`, `youtube`, `created_at`, `updated_at`) VALUES
-(1, '0878-9910-1232', 'webihsaniyah1@gmail.com', '0283 – 341942', 'Senin-Jumat 07:00-14:30 WIB', 'ihsaniyah', 'ihsaniyaha', 'ihsaniyah', '2025-08-21 03:57:59', '2025-08-20 20:59:16');
+(1, '6287899101232', 'webihsaniyah1@gmail.com', '0283 – 341942', 'Senin-Jumat 07:00-14:30 WIB', 'ihsaniyah', 'ihsaniyaha', 'ihsaniyah', '2025-08-21 03:57:59', '2025-08-25 07:39:59');
 
 -- --------------------------------------------------------
 
@@ -395,7 +420,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (26, '2025_08_17_181459_create_pesans_table', 1),
 (27, '2025_08_18_025915_create_angkatans_table', 1),
 (28, '2025_08_18_060802_create_pendaftars_table', 1),
-(29, '2025_08_18_170019_create_footers_table', 1);
+(29, '2025_08_18_170019_create_footers_table', 1),
+(30, '2025_08_24_024728_create_fasilitas_lainnyas_table', 2);
 
 -- --------------------------------------------------------
 
@@ -452,8 +478,8 @@ CREATE TABLE `pendaftars` (
   `anak_ke` varchar(255) NOT NULL,
   `jumlah_saudara` varchar(255) NOT NULL,
   `bahasa` varchar(255) NOT NULL,
-  `berat` decimal(8,2) NOT NULL,
-  `tinggi` decimal(8,2) NOT NULL,
+  `berat` int(11) NOT NULL,
+  `tinggi` int(11) NOT NULL,
   `riwayat_penyakit` varchar(255) NOT NULL,
   `hobi` varchar(255) NOT NULL,
   `bakat` varchar(255) NOT NULL,
@@ -486,9 +512,19 @@ CREATE TABLE `pendaftars` (
   `berkas_kk` varchar(255) NOT NULL,
   `berkas_akta` varchar(255) NOT NULL,
   `foto` varchar(255) NOT NULL,
+  `status` enum('Menunggu','Tidak Diterima','Diterima','') DEFAULT NULL,
+  `berkas_psikotes` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `pendaftars`
+--
+
+INSERT INTO `pendaftars` (`id`, `nik`, `nisn`, `nama_lengkap`, `nama_panggilan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `agama`, `anak_ke`, `jumlah_saudara`, `bahasa`, `berat`, `tinggi`, `riwayat_penyakit`, `hobi`, `bakat`, `alamat`, `angkatan_id`, `jenis_kelas`, `asal_pendidikan`, `nama_sekolah`, `alamat_sekolah`, `nama_ayah`, `nik_ayah`, `tempat_lahir_ayah`, `tanggal_lahir_ayah`, `pendidikan_ayah`, `pekerjaan_ayah`, `penghasilan_ayah`, `alamat_ayah`, `no_telepon_ayah`, `email_ayah`, `nama_ibu`, `nik_ibu`, `tempat_lahir_ibu`, `tanggal_lahir_ibu`, `pendidikan_ibu`, `pekerjaan_ibu`, `penghasilan_ibu`, `alamat_ibu`, `no_telepon_ibu`, `email_ibu`, `berkas_kk`, `berkas_akta`, `foto`, `status`, `berkas_psikotes`, `created_at`, `updated_at`) VALUES
+(14, '14124124', '451', '45', '123', '321', '2025-08-08', 'laki-laki', 'kristen', '231', '231', '312', 231, 231, '213', '321', '321', '231', 1, 'bilingual', 'ra', '231', '321', '312', '321', '321', '2025-08-14', '312', '321', '312', '312', '231', 'astronouttanparoket@gmail.com', '123', '123', '321', '2025-08-07', '231', '123', '231', '213', '321', 'sd@gasdf.com', 'pendaftar/kk/nHTHlDK1ycPQtIqThxsDjSiVGaQTWX67y6w7iVN4.pdf', 'pendaftar/akta/q2ZesXORiOnehDfIvc4uNb8rBck1b5ipVxlgJYyQ.pdf', 'pendaftar/foto/v7pN1J1Fleia26xy9b1e4uFppERxerx7MKmZp6kn.jpg', 'Diterima', NULL, '2025-08-24 06:05:30', '2025-08-24 06:05:30'),
+(15, '2434123', '12334235', '123', '123', '231', '2025-08-27', 'perempuan', 'islam', '123', '132', '321', 23, 231, '213', '231', '231', '231', 2, 'intensif', 'kb', '231', '321', '231', '123', '231', '2025-08-13', '312', '321', '231', '312', '312', 'astronouttanparoket@gmail.com', '231', '213', '231', '2025-08-05', '231', '312', '231', '213', '213', 'sd@gasdf.com', 'pendaftar/kk/4tvLt9M5rSEgXwhUiixuPS01yLt2WHO9t496pg31.pdf', 'pendaftar/akta/ftcFcv4sA4ALaACIKbhYVWCpahipMBqOe7ympeTM.pdf', 'pendaftar/foto/tzJ6SEUFG8HTPtoawRLApqAphG4laMec8PIbRk0c.jpg', 'Diterima', 'pendaftar/kk/5gzXStLllMLDvjemsqFIyzhNF89k06rg4HwmdLPE.pdf', '2025-08-24 06:06:56', '2025-08-26 00:26:18');
 
 -- --------------------------------------------------------
 
@@ -815,6 +851,12 @@ ALTER TABLE `fasilitas`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `fasilitas_lainnyas`
+--
+ALTER TABLE `fasilitas_lainnyas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `footers`
 --
 ALTER TABLE `footers`
@@ -1003,6 +1045,12 @@ ALTER TABLE `fasilitas`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `fasilitas_lainnyas`
+--
+ALTER TABLE `fasilitas_lainnyas`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `footers`
 --
 ALTER TABLE `footers`
@@ -1042,7 +1090,7 @@ ALTER TABLE `jumbotrons`
 -- AUTO_INCREMENT for table `kegiatans`
 --
 ALTER TABLE `kegiatans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `kontaks`
@@ -1060,7 +1108,7 @@ ALTER TABLE `kurikulums`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `misis`
@@ -1072,7 +1120,7 @@ ALTER TABLE `misis`
 -- AUTO_INCREMENT for table `pendaftars`
 --
 ALTER TABLE `pendaftars`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`

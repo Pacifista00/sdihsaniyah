@@ -28,6 +28,11 @@
                 <form action="/daftar" method="POST" class="mb-4" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
+                        <style>
+                            .form-control {
+                                border: 1px solid #aaa;
+                            }
+                        </style>
                         <div class="col-md-6 col-lg-3">
                             <div class="mb-3">
                                 <label for="nik" class="form-label mb-0 pb-1">NIK</label>

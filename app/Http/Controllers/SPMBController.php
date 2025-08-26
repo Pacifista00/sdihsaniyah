@@ -114,6 +114,7 @@ class SPMBController extends Controller
             'alamat_ibu' => $request->alamat_ibu,
             'no_telepon_ibu' => $request->no_telepon_ibu,
             'email_ibu' => $request->email_ibu,
+            'status' => 'Menunggu',
 
             // Berkas
             'berkas_kk' => $request->hasFile('berkas_kk')
@@ -197,6 +198,7 @@ class SPMBController extends Controller
             'berkas_kk' => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:2048',
             'berkas_akta' => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:2048',
             'foto' => 'nullable|file|mimes:jpg,jpeg,png|max:2048',
+            'berkas_psikotes' => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:2048',
         ]);
 
         // 2. Data update
@@ -271,6 +273,15 @@ class SPMBController extends Controller
 
             $data['foto'] = $request->file('foto')->store('pendaftar/foto', 'public');
         }
+        if ($request->hasFile('berkas_psikotes')) {
+            // Hapus file lama jika ada
+            if (!empty($pendaftar->berkas_psikotes) && Storage::disk('public')->exists($pendaftar->berkas_psikotes)) {
+                Storage::disk('public')->delete($pendaftar->berkas_psikotes);
+            }
+
+            // Simpan file baru
+            $data['berkas_psikotes'] = $request->file('berkas_psikotes')->store('pendaftar/kk', 'public');
+        }
 
 
         // 4. Update ke database
@@ -296,9 +307,45 @@ class SPMBController extends Controller
             Storage::disk('public')->delete($pendaftar->foto);
         }
 
+        if ($pendaftar->berkas_psikotes && Storage::disk('public')->exists($pendaftar->berkas_psikotes)) {
+            Storage::disk('public')->delete($pendaftar->berkas_psikotes);
+        }
+
         // Hapus record dari database
         $pendaftar->delete();
 
         return redirect()->back()->with('success', 'Data pendaftar berhasil dihapus!');
+    }
+    public function updateStatus(Request $request, $id)
+    {
+        $request->validate([
+            'status' => 'required'
+        ]);
+
+        $pendaftar = Pendaftar::findOrFail($id);
+
+        $pendaftar->update([
+            'status' => $request->status
+        ]);
+
+        return redirect()->back()->with('success', 'Status berhasil diperbarui!');
+    }
+    public function updatePsikotes(Request $request, $id)
+    {
+        $request->validate([
+            'berkas_psikotes' => 'required|file|mimes:pdf,jpg,png|max:2048',
+        ]);
+
+        $pendaftar = Pendaftar::findOrFail($id);
+
+        if (!empty($pendaftar->berkas_psikotes) && Storage::disk('public')->exists($pendaftar->berkas_psikotes)) {
+            Storage::disk('public')->delete($pendaftar->berkas_psikotes);
+        }
+
+        $pendaftar->update([
+            'berkas_psikotes' => $request->file('berkas_psikotes')->store('pendaftar/berkas_psikotes', 'public')
+        ]);
+
+        return redirect()->back()->with('success', 'Berkas berhasil diperbarui!');
     }
 }

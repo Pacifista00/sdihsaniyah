@@ -51,11 +51,11 @@ Route::get('/fasilitas', [HomeController::class, 'fasilitas']);
 Route::get('/ekstrakulikuler', [HomeController::class, 'ekstrakulikuler']);
 Route::get('/prestasi-siswa', [HomeController::class, 'prestasiSiswa']);
 Route::get('/kegiatan', [HomeController::class, 'kegiatan']);
+Route::get('/kegiatan/{id}', [HomeController::class, 'detailKegiatan']);
 Route::get('/kontak', [HomeController::class, 'kontak']);
 Route::get('/daftar-spmb', [HomeController::class, 'spmb']);
 Route::post('/daftar', [SPMBController::class, 'store']);
 Route::post('/pesan', [PesanController::class, 'store']);
-
 
 Route::middleware(['guest'])->group(function () {
     Route::get('/login', [AuthController::class, 'index']);
@@ -162,6 +162,8 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/dashboard/kontak/update/{id}', [KontakController::class, 'update']);
 
     Route::put('/dashboard/pendaftar/update/{id}', [SPMBController::class, 'update']);
+    Route::put('/dashboard/pendaftar/status/update/{id}', [SPMBController::class, 'updateStatus']);
+    Route::put('/dashboard/pendaftar/psikotes/update/{id}', [SPMBController::class, 'updatePsikotes']);
     Route::delete('/dashboard/pendaftar/delete/{id}', [SPMBController::class, 'destroy']);
 
     Route::put('/dashboard/pesan/update/{id}', [PesanController::class, 'update']);

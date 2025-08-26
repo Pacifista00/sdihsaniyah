@@ -58,7 +58,8 @@
                                     <tr>
                                         <th>Foto</th>
                                         <th>Nama</th>
-                                        <th>Tanggal Pendaftaran</th>
+                                        {{-- <th>Tanggal Pendaftaran</th> --}}
+                                        <th>Status</th>
                                         {{-- <th>Deskripsi</th> --}}
                                         <th>Aksi</th>
                                     </tr>
@@ -71,7 +72,19 @@
                                                 class="img-table shadow-md" alt="">
                                         </td>
                                         <td>{{ $pendaftarItem->nama_lengkap }}</td>
-                                        <td>{{ $pendaftarItem->created_at }}</td>
+                                        {{-- <td>{{ $pendaftarItem->created_at }}</td> --}}
+                                        <td data-bs-toggle="modal" data-bs-target="#editStatus{{ $pendaftarItem->id }}"
+                                            style="cursor: pointer;">
+                                            @if ($pendaftarItem->status === 'Menunggu')
+                                            <span class="badge bg-warning text-dark">{{ $pendaftarItem->status }}</span>
+                                            @elseif ($pendaftarItem->status === 'Tidak Diterima')
+                                            <span class="badge bg-danger">{{ $pendaftarItem->status }}</span>
+                                            @elseif ($pendaftarItem->status === 'Diterima')
+                                            <span class="badge bg-success">{{ $pendaftarItem->status }}</span>
+                                            @else
+                                            <span class="badge bg-secondary">-</span>
+                                            @endif
+                                        </td>
 
                                         {{-- <td><span class="badge bg-label-primary me-1">Active</span></td> --}}
                                         <td class="mx-0">
@@ -101,6 +114,52 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    {{-- modal edit status start --}}
+                                    <div class="modal fade" id="editStatus{{ $pendaftarItem->id }}" tabindex="-1"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel1">Edit</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <form
+                                                    action="/dashboard/pendaftar/status/update/{{ $pendaftarItem->id }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('PUT')
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col mb-3">
+                                                                <label for="judul" class="form-label">Judul</label>
+                                                                <select name="status" class="form-select">
+                                                                    <option value="Menunggu" {{ $pendaftarItem->status
+                                                                        == 'Menunggu' ? 'selected' : '' }}>Menunggu
+                                                                    </option>
+                                                                    <option value="Tidak Diterima" {{ $pendaftarItem->
+                                                                        status == 'Tidak Diterima' ? 'selected' : ''
+                                                                        }}>Tidak Diterima</option>
+                                                                    <option value="Diterima" {{ $pendaftarItem->status
+                                                                        == 'Diterima' ? 'selected' : '' }}>Diterima
+                                                                    </option>
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-outline-secondary"
+                                                            data-bs-dismiss="modal">
+                                                            Tutup
+                                                        </button>
+                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- modal edit status end --}}
                                     {{-- modal detail start --}}
                                     <div class="modal fade" id="detailPendaftar{{ $pendaftarItem->id }}" tabindex="-1"
                                         aria-hidden="true">
@@ -118,18 +177,29 @@
                                                             class="shadow-md mb-4" alt=""
                                                             style="width:165px; height:225px; object-fit:cover; border-radius:8px;">
                                                         <div class="d-flex gap-2 my-3">
-                                                            <a
-                                                                href="{{ asset('storage/' . $pendaftarItem->berkas_akta) }}">
+                                                            <a href="{{ asset('storage/' . $pendaftarItem->berkas_akta) }}"
+                                                                target="__blank">
                                                                 <button
                                                                     class="btn btn-danger w-100 py-0 py-md-1 px-3 rounded-pill"
                                                                     style="font-size: 0.75rem;">Akta Kelahiran</button>
                                                             </a>
-                                                            <a
-                                                                href="{{ asset('storage/' . $pendaftarItem->berkas_kk) }}">
+                                                            <a href="{{ asset('storage/' . $pendaftarItem->berkas_kk) }}"
+                                                                target="__blank">
                                                                 <button
                                                                     class="btn btn-danger w-100 py-0 py-md-1 px-3 rounded-pill"
                                                                     style="font-size: 0.75rem;">Kartu Keluarga</button>
                                                             </a>
+                                                            @if (!empty($pendaftarItem->berkas_psikotes))
+                                                            <a href="{{ asset('storage/' . $pendaftarItem->berkas_psikotes) }}"
+                                                                target="_blank">
+                                                                <button
+                                                                    class="btn btn-danger w-100 py-0 py-md-1 px-3 rounded-pill"
+                                                                    style="font-size: 0.75rem;">
+                                                                    Psikotes
+                                                                </button>
+                                                            </a>
+                                                            @endif
+
                                                         </div>
                                                     </div>
                                                     <div class="row">
@@ -306,6 +376,19 @@
                                                                     Akta</label>
                                                                 <input type="file" id="berkasAkta" class="form-control"
                                                                     name="berkas_akta" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col mb-3">
+                                                                <label for="berkasPsikotes" class="form-label">
+                                                                    Berkas Psikotes {!! $pendaftarItem->berkas_psikotes
+                                                                    == null ? '<span
+                                                                        class="text-danger">(Kosong)</span>'
+                                                                    : '' !!}
+                                                                </label>
+
+                                                                <input type="file" id="berkasPsikotes"
+                                                                    class="form-control" name="berkas_psikotes" />
                                                             </div>
                                                         </div>
                                                         <div class="row">
@@ -503,6 +586,24 @@
                                                                 </select>
                                                             </div>
                                                         </div>
+                                                        <div class="row">
+                                                            <div class="col mb-3">
+                                                                <label for="angkatan"
+                                                                    class="form-label">Angkatan</label>
+                                                                <select id="angkatan" name="angkatan_id"
+                                                                    class="form-control">
+                                                                    <option value="">-- Pilih Angkatan --</option>
+                                                                    @foreach ($angkatan as $item)
+                                                                    <option value="{{ $item->id }}" {{ $item->id ==
+                                                                        $pendaftarItem->angkatan_id ? 'selected' : ''
+                                                                        }}>
+                                                                        {{ $item->angkatan }}
+                                                                    </option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
                                                         <div class="row">
                                                             <div class="col mb-3">
                                                                 <label for="asal_pendidikan" class="form-label">Asal
