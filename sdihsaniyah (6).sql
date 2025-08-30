@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2025 at 09:27 AM
+-- Generation Time: Aug 30, 2025 at 02:26 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -421,7 +421,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (27, '2025_08_18_025915_create_angkatans_table', 1),
 (28, '2025_08_18_060802_create_pendaftars_table', 1),
 (29, '2025_08_18_170019_create_footers_table', 1),
-(30, '2025_08_24_024728_create_fasilitas_lainnyas_table', 2);
+(30, '2025_08_24_024728_create_fasilitas_lainnyas_table', 2),
+(31, '2025_08_28_083633_create_petunjuk_pembayarans_table', 3);
 
 -- --------------------------------------------------------
 
@@ -588,6 +589,27 @@ CREATE TABLE `pesans` (
 
 INSERT INTO `pesans` (`id`, `nama`, `email`, `subjek`, `pesan`, `created_at`, `updated_at`) VALUES
 (1, 'Mas budi', 'doktortj@gmail.com', 'as', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis eveniet repellendus sit pariatur. Qui, illo. Doloribus blanditiis iusto distinctio sapiente?', '2025-08-20 21:03:39', '2025-08-20 21:03:39');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `petunjuk_pembayarans`
+--
+
+CREATE TABLE `petunjuk_pembayarans` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `foto` varchar(255) NOT NULL,
+  `deskripsi` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `petunjuk_pembayarans`
+--
+
+INSERT INTO `petunjuk_pembayarans` (`id`, `foto`, `deskripsi`, `created_at`, `updated_at`) VALUES
+(1, 'petunjuk-pembayaran/fC1BGkvj2eKmDlME9mDGBSKkaSRlHVH7tERbcW9U.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, expedita molestiae quam quidem necessitatibus assumenda quasi et esse odit soluta?a', '2025-08-28 08:58:23', '2025-08-28 02:03:56');
 
 -- --------------------------------------------------------
 
@@ -956,6 +978,12 @@ ALTER TABLE `pesans`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `petunjuk_pembayarans`
+--
+ALTER TABLE `petunjuk_pembayarans`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `prestasis`
 --
 ALTER TABLE `prestasis`
@@ -1108,7 +1136,7 @@ ALTER TABLE `kurikulums`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `misis`
@@ -1138,6 +1166,12 @@ ALTER TABLE `pertanyaans`
 -- AUTO_INCREMENT for table `pesans`
 --
 ALTER TABLE `pesans`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `petunjuk_pembayarans`
+--
+ALTER TABLE `petunjuk_pembayarans`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --

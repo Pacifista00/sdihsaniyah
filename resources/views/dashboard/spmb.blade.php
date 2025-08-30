@@ -23,13 +23,56 @@
                                 {{ $active }}
                             </h4>
                             <div class="d-flex gap-2">
-                                <a href="/export/excel">
-                                    <button
-                                        class="btn btn-success py-1 py-md-2 px-4 rounded-pill d-flex align-items-center">
-                                        <i class="menu-icon tf-icons bx bx-file me-2"></i>
-                                        Export Excel
-                                    </button>
-                                </a>
+                                <button class="btn btn-success py-1 py-md-2 px-4 rounded-pill d-flex align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#exportExcel">
+                                    <i class="menu-icon tf-icons bx bx-file me-2"></i>
+                                    Export Excel
+                                </button>
+                                <div class="modal fade" id="exportExcel" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel1">Export Excel</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col mb-3">
+                                                        <label for="angkatan" class="form-label">Pilih Angkatan</label>
+                                                        <select id="angkatan" name="angkatan" class="form-control">
+                                                            <option value="">-- Pilih Angkatan --</option>
+                                                            @foreach($angkatan as $item)
+                                                            <option value="{{ $item->id }}">{{ $item->angkatan }}
+                                                            </option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary"
+                                                    data-bs-dismiss="modal">
+                                                    Tutup
+                                                </button>
+                                                <button type="button" class="btn btn-primary"
+                                                    id="btnExport">Export</button>
+                                            </div>
+                                        </div>
+
+                                        <script>
+                                            document.getElementById('btnExport').addEventListener('click', function () {
+                                                let angkatanId = document.getElementById('angkatan').value;
+                                                if (angkatanId) {
+                                                    window.location.href = `/export/excel/${angkatanId}`;
+                                                } else {
+                                                    alert('Silakan pilih angkatan terlebih dahulu.');
+                                                }
+                                            });
+                                        </script>
+
+                                    </div>
+                                </div>
 
                                 {{-- <button
                                     class="btn btn-danger py-1 py-md-2 px-4 rounded-pill d-flex align-items-center">
@@ -59,8 +102,8 @@
                                         <th>Foto</th>
                                         <th>Nama</th>
                                         {{-- <th>Tanggal Pendaftaran</th> --}}
+                                        <th>Angkatan</th>
                                         <th>Status</th>
-                                        {{-- <th>Deskripsi</th> --}}
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -72,6 +115,7 @@
                                                 class="img-table shadow-md" alt="">
                                         </td>
                                         <td>{{ $pendaftarItem->nama_lengkap }}</td>
+                                        <td>{{ $pendaftarItem->angkatan->angkatan }}</td>
                                         {{-- <td>{{ $pendaftarItem->created_at }}</td> --}}
                                         <td data-bs-toggle="modal" data-bs-target="#editStatus{{ $pendaftarItem->id }}"
                                             style="cursor: pointer;">

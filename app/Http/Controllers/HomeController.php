@@ -17,6 +17,7 @@ use App\Models\Kontak;
 use App\Models\Kurikulum;
 use App\Models\Misi;
 use App\Models\Pertanyaan;
+use App\Models\PetunjukPembayaran;
 use App\Models\Prestasi;
 use App\Models\PrestasiSection;
 use App\Models\Profil;
@@ -119,6 +120,7 @@ class HomeController extends Controller
     {
         return view('spmb', [
             'active' => 'spmb',
+            'petunjuk' => PetunjukPembayaran::latest()->first(),
             'angkatan' => Angkatan::all()
         ]);
     }

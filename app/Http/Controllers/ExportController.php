@@ -17,10 +17,14 @@ class ExportController extends Controller
         $pdf = Pdf::loadView('pdf.pendaftaran', compact('pendaftar'))
             ->setPaper('f4', 'portrait'); // bisa ganti ke f4 kalau perlu
 
-        return $pdf->download('formulir-ppdb-' . $pendaftar->nama_lengkap . '.pdf');
+        return $pdf->stream('formulir-ppdb-' . $pendaftar->nama_lengkap . '.pdf');
     }
     public function exportExcel()
     {
         return Excel::download(new PendaftarExport, 'pendaftar.xlsx');
+    }
+    public function exportExcelOneYear($idAngkatan)
+    {
+        return Excel::download(new PendaftarExport($idAngkatan), 'Pendaftar_angkatan_' . $idAngkatan . '.xlsx');
     }
 }
