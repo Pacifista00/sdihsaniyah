@@ -181,6 +181,12 @@
                 <div data-i18n="Analytics">Kontak</div>
             </a>
         </li>
+        <li class="menu-item">
+            <a href="/dashboard/petunjuk-pembayaran" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-credit-card"></i>
+                <div data-i18n="Analytics">Petunjuk Pembayaran</div>
+            </a>
+        </li>
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Akademik</span>
         </li>

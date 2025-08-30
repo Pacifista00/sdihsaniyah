@@ -264,79 +264,13 @@
     <section id="testimonials" class="testimonials section pb-0">
 
         <div class="container text-center" data-aos="fade-up" data-aos-once="false">
-            <h1 class="fs-1 my-text-dark">Testimoni</h1>
+            <h1 class="fs-1 my-text-dark mb-4">Kegiatan</h1>
             {{-- <p class="my-text-dark fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p> --}}
         </div>
 
         <div class="container" data-aos="fade-up" data-aos-once="false">
 
             <div class="swiper init-swiper">
-                <script type="application/json" class="swiper-config">
-                    {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 3000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 10
-                }
-              }
-            }
-                </script>
-                <div class="swiper-wrapper">
-                    @foreach ($testimoni as $testimoniItem)
-                    <div class="swiper-slide">
-                        <div class="testimonial-item m-0 bg-transparent">
-                            <img src="{{ asset('storage/'. $testimoniItem->foto ) }}" class="my-testi-img m-0" alt="">
-                            <h3 class="my-text-dark">{{ $testimoniItem->nama }}</h3>
-                            <h4>{{ $testimoniItem->sebagai }}</h4>
-
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                <span class="my-text-dark">{{ $testimoniItem->deskripsi }}</span>
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-        </div>
-
-    </section><!-- /Testimonials Section -->
-
-    <section id="testimonials" class="testimonials section my-bg-primary">
-
-        <div class="wave-top">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
-                <path fill="#ffffff" fill-opacity="1"
-                    d="M0,64L48,80C96,96,192,128,288,133.3C384,139,480,117,576,96C672,75,768,53,864,53.3C960,53,1056,75,1152,80C1248,85,1344,75,1392,69.3L1440,64L1440,0L0,0Z">
-                </path>
-            </svg>
-        </div>
-        <div class="container mb-5 text-center " data-aos="fade-up" data-aos-once="false">
-            <h1 class="fs-1 text-white mt-5">Kegiatan</h1>
-            <p class=text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </div>
-
-        <div class="container" data-aos="fade-up" data-aos-once="false" style="z-index: 999999999 !important;">
-
-            <div class="swiper mySwiper2 init-swiper">
                 <script type="application/json" class="swiper-config">
                     {
               "loop": true,
@@ -377,6 +311,71 @@
                             </div>
                         </div>
                     </a>
+                    @endforeach
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <section id="testimonials" class="testimonials section my-bg-primary">
+        <div class="wave-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+                <path fill="#ffffff" fill-opacity="1"
+                    d="M0,64L48,80C96,96,192,128,288,133.3C384,139,480,117,576,96C672,75,768,53,864,53.3C960,53,1056,75,1152,80C1248,85,1344,75,1392,69.3L1440,64L1440,0L0,0Z">
+                </path>
+            </svg>
+        </div>
+        <div class="container mb-5 text-center " data-aos="fade-up" data-aos-once="false">
+            <h1 class="fs-1 text-white mt-5">Testimoni</h1>
+            <p class=text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-once="false" style="z-index: 999999999 !important;">
+            <div class="swiper mySwiper2 init-swiper">
+                <script type="application/json" class="swiper-config">
+                    {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 3000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 10
+                }
+              }
+            }
+                </script>
+                <div class="swiper-wrapper">
+                    @foreach ($testimoni as $testimoniItem)
+                    <div class="swiper-slide">
+                        <div class="testimonial-item m-0 bg-transparent">
+                            <img src="{{ asset('storage/'. $testimoniItem->foto ) }}" class="my-testi-img m-0" alt="">
+                            <h3 class="text-white">{{ $testimoniItem->nama }}</h3>
+                            <h4 class="text-white-50">{{ $testimoniItem->sebagai }}</h4>
+
+                            <p>
+                                <i class="bi bi-quote quote-icon-left"></i>
+                                <span class="text-white">{{ $testimoniItem->deskripsi }}</span>
+                                <i class="bi bi-quote quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div>
                     @endforeach
                 </div>
                 <div class="swiper-pagination"></div>

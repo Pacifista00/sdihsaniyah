@@ -20,6 +20,7 @@ use App\Models\Misi;
 use App\Models\Pendaftar;
 use App\Models\Pertanyaan;
 use App\Models\Pesan;
+use App\Models\PetunjukPembayaran;
 use App\Models\Prestasi;
 use App\Models\PrestasiSection;
 use App\Models\Profil;
@@ -211,6 +212,14 @@ class DashboardController extends Controller
             'loggedUser' => Auth::user(),
             'kontak' => Kontak::latest()->get(),
             'active' => 'kontak'
+        ]);
+    }
+    public function petunjukPembayaran()
+    {
+        return view('dashboard.petunjuk-pembayaran', [
+            'loggedUser' => Auth::user(),
+            'petunjuk' => PetunjukPembayaran::latest()->get(),
+            'active' => 'petunjuk'
         ]);
     }
     public function spmb(Request $request)

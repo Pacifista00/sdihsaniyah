@@ -353,6 +353,15 @@
                                 <input type="file" class="form-control rounded-5" id="foto" name="foto">
                             </div>
                         </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="bukti" class="form-label mb-0">Upload Bukti Pembayaran</label>
+                                <small class="form-label mb-0 pb-1 d-block text-info" style="cursor: pointer;"
+                                    data-bs-toggle="modal" data-bs-target="#modalPembayaran">Petunjuk
+                                    Pembayaran<i class="bi bi-info-circle ms-1"></i></small>
+                                <input type="file" class="form-control rounded-5" id="bukti" name="bukti">
+                            </div>
+                        </div>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn rounded-pill btn-green my-3 px-5">Daftar</button>
@@ -361,8 +370,36 @@
             </div>
         </div>
     </section>
-
 </main>
+{{-- modal petunjuk pembayaran --}}
+<style>
+    .modal-backdrop {
+        z-index: 2137483648 !important;
+    }
+
+    .modal {
+        z-index: 999999999999999999 !important;
+    }
+
+    .swal2-container {
+        z-index: 99999999999999 !important;
+    }
+</style>
+<div class="modal fade" id="modalPembayaran" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Petunjuk Pembayaran</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="{{ asset('storage/' . $petunjuk->foto ) }}" alt=""
+                    style="width: 18rem; height: 18rem; object-fit: cover;">
+                <p class="mt-3">{{ $petunjuk->deskripsi }}</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 @include('partials.footer')
 

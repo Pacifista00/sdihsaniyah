@@ -16,6 +16,7 @@ use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\MisiController;
 use App\Http\Controllers\PertanyaanController;
 use App\Http\Controllers\PesanController;
+use App\Http\Controllers\PetunjukPembayaranController;
 use App\Http\Controllers\PPDBController;
 use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\PrestasiSectionController;
@@ -86,6 +87,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/prestasi', [DashboardController::class, 'prestasi']);
     Route::get('/dashboard/kegiatan', [DashboardController::class, 'kegiatan']);
     Route::get('/dashboard/kontak', [DashboardController::class, 'kontak']);
+    Route::get('/dashboard/petunjuk-pembayaran', [DashboardController::class, 'petunjukPembayaran']);
     Route::get('/dashboard/spmb', [DashboardController::class, 'spmb']);
     Route::get('/dashboard/pesan', [DashboardController::class, 'pesan']);
     Route::get('/dashboard/ppdb', [DashboardController::class, 'ppdb']);
@@ -161,6 +163,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::put('/dashboard/kontak/update/{id}', [KontakController::class, 'update']);
 
+    Route::put('/dashboard/petunjuk-pembayaran/update/{id}', [PetunjukPembayaranController::class, 'update']);
+
     Route::put('/dashboard/pendaftar/update/{id}', [SPMBController::class, 'update']);
     Route::put('/dashboard/pendaftar/status/update/{id}', [SPMBController::class, 'updateStatus']);
     Route::put('/dashboard/pendaftar/psikotes/update/{id}', [SPMBController::class, 'updatePsikotes']);
@@ -180,6 +184,7 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/dashboard/footer/update/{id}', [FooterController::class, 'update']);
 
     Route::get('/export/excel', [ExportController::class, 'exportExcel']);
+    Route::get('/export/excel/{idAngkatan}', [ExportController::class, 'exportExcelOneYear']);
     Route::get('/export/pdf/{id}', [ExportController::class, 'exportForm']);
 
 });
